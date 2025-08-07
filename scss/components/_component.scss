@@ -1,0 +1,112 @@
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: $main-font;
+   color: $color-white;
+}
+
+.container {
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+
+   @include mq(mobile) {
+      width: 480px;
+   }
+
+   @include mq(tablet) {
+      width: 768px;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   @include mq(desktop) {
+      width: 1200px;
+      padding-left: 25px;
+      padding-right: 25px;
+   }
+}
+
+.padding-lr {
+
+    @include mq(tablet) {
+      padding: 0px 35px;
+    }
+
+    @include mq(desktop) {
+      padding: 0px 30px;
+    }
+}
+
+.section {
+   padding: 40px 0;
+
+   @include mq(tablet) {
+      padding: 50px 0;
+   }
+
+   @include mq(desktop) {
+      padding: 60px 0;
+   }
+}
+
+.link {
+   text-decoration: none;
+   color: currentColor;
+}
+
+.list {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+// .header,
+// .features,
+// .ourwork,
+// .clients {
+//    background-color: $color-white-bg;
+// }
+
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.active {
+   color: $color-black;
+   background-color: $color-white-bg;  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+p {
+    margin: 0;
+}
