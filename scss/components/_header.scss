@@ -224,6 +224,7 @@
      }
 
      &__link {
+        position: relative;
         padding-top: 10px;
         padding-bottom: 10px;
         color: $color-white;
@@ -231,7 +232,29 @@
         font-weight: 600;
         line-height: 1.45;
      }
+
+    &__link.current {
+        font-size: 24px;
+        line-height: 1.33;
+    }
 }
+
+
+
+    // .current.site-nav__link::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 0;
+    //     display: block;
+    //     width: 100%;
+    //     height: 2px;
+    //     border-radius: 2px;
+    //     background-color: $color-white;
+    //     opacity: 1;
+    //     }
+
+
 
 .header-socials__list {
     display: flex;

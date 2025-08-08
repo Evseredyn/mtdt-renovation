@@ -346,10 +346,6 @@ p {
   margin: 0;
 }
 
-.site-nav__link.current {
-  font-size: 24px;
-}
-
 .header {
   background-color: #11447B;
 }
@@ -548,12 +544,17 @@ p {
   gap: 60px;
 }
 .site-nav__link {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #FFFFFF;
   font-size: 22px;
   font-weight: 600;
   line-height: 1.45;
+}
+.site-nav__link.current {
+  font-size: 24px;
+  line-height: 1.33;
 }
 
 .header-socials__list {
