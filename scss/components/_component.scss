@@ -114,3 +114,132 @@ img {
 p {
     margin: 0;
 }
+
+.main {
+    height: 200px;
+    background-color: #fff;
+}
+
+.socials__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.socials__link {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; // Для позиціонування псевдоелемента
+
+    // Анімація transform, якщо потрібна
+    transition: transform $duration $timing-function;
+
+    &.instagram {
+        background-image: url('../images/instagram.png');
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/instagram-hover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: opacity $duration $timing-function;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.facebook {
+        background-image: url('../images/facebook.png');
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/facebook-hover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: opacity $duration $timing-function;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.google {
+        background-image: url('../images/google.png');
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/google-hover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: opacity $duration $timing-function;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.whatsapp {
+        background-image: url('../images/whatsapp.png');
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/whatsapp-hover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: opacity $duration $timing-function;
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
