@@ -1,5 +1,4 @@
 .hero {
-    position: relative;
     padding: 20px 0;
     min-height: 650px;
     background: url('../images/hero-1.jpg');
@@ -9,6 +8,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    &>.container {
+        position: relative;
+    }
 
     &__title {
         max-width: 90%;
@@ -58,9 +61,20 @@
 
         @include mq(desktop) {
             position: absolute;
-            top: 20px;
-            left: 60%;
+            top: 0;
+            right: 30px;
             width: 410px;
+        }
+
+        @include mq(desktop) {
+            top: 0;
+            right: 25px;
+            width: 420px;
+        }
+
+        @include mq(monitor) {
+            right: 225px;
+            width: 430px;
         }
         
         &__flex {

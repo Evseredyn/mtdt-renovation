@@ -271,6 +271,8 @@ body {
 @media screen and (min-width: 1920px) {
   .container {
     max-width: 1920px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }
 
@@ -673,7 +675,6 @@ p {
 }
 
 .hero {
-  position: relative;
   padding: 20px 0;
   min-height: 650px;
   background: url("../images/hero-1.jpg");
@@ -682,6 +683,9 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.hero > .container {
+  position: relative;
 }
 .hero__title {
   max-width: 90%;
@@ -735,9 +739,22 @@ p {
 @media screen and (min-width: 1440px) {
   .hero-form {
     position: absolute;
-    top: 20px;
-    left: 60%;
+    top: 0;
+    right: 30px;
     width: 410px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-form {
+    top: 0;
+    right: 25px;
+    width: 420px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero-form {
+    right: 225px;
+    width: 430px;
   }
 }
 .hero-form__flex {
