@@ -458,55 +458,6 @@ p {
   opacity: 1;
 }
 
-.accordion-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  margin-right: 10px;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Для плавної анімації повороту */
-}
-
-.accordion-icon::before,
-.accordion-icon::after {
-  content: "";
-  position: absolute;
-  background-color: #333; /* Колір іконки */
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-
-.accordion-icon::before { /* Вертикальна лінія плюса */
-  top: 0;
-  left: 9px; /* Центруємо */
-  width: 2px;
-  height: 100%;
-}
-
-.accordion-icon::after { /* Горизонтальна лінія плюса */
-  top: 9px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-}
-
-/* При активному стані (коли питання розгорнуто) */
-.accordion-toggle[aria-expanded=true] .accordion-icon::before {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg); /* Щоб вертикальна лінія зникла або стала горизонтальною */
-  opacity: 0; /* Можна приховати */
-}
-
-.accordion-toggle[aria-expanded=true] .accordion-icon::after {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg); /* Залишити горизонтальну лінію */
-}
-
 .header {
   background-color: #11447B;
 }
