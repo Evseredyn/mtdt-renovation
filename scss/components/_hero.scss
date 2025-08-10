@@ -1,5 +1,7 @@
 .hero {
+    position: relative;
     padding: 20px 0;
+    min-height: 650px;
     background: url('../images/hero-1.jpg');
     margin-left: auto;
     margin-right: auto;
@@ -55,7 +57,10 @@
         background-color: rgba(255, 255, 255, 0.7);
 
         @include mq(desktop) {
-        width: 410px;
+            position: absolute;
+            top: 20px;
+            left: 60%;
+            width: 410px;
         }
         
         &__flex {
@@ -103,6 +108,75 @@
         //     resize: vertical;
         //     min-height: 80px;
         // }
+
+        &__policy-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-black;
+            cursor: pointer;   
+        }
+        
+        &__inner-wrapper {
+            display: inline-block;
+        }
+
+        &__link {
+            margin-left: 4px;
+            color: $color-akcent;
+            font-weight: 400;
+        }
+        
+        &__checkbox {
+            /* Скрываем стандартный чекбокс */
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        &__icon-check {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $color-black;
+            border-radius: 4px;
+            position: relative;
+            margin-right: 10px;
+            flex-shrink: 0; /* Чтобы не сжимался */
+        }
+
+        &.hero-form__checkbox:checked + &__icon-check {
+            background-color: $color-dark-bg;
+            border-color: $color-dark-bg;
+        }
+
+        &__checkbox:checked + &__icon-check::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1px;
+            width: 7px;
+            height: 12px;
+            border: solid $color-akcent;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+
+        &__policy-link {
+            color: var(--primary-color); /* Цвет ссылки в тексте */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        &__policy-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
         
         &__submit-btn {
             width: 70%;
@@ -138,17 +212,6 @@
 
     &__item:not(:last-child) {
         margin-bottom: 10px;
-    }
-
-    &__policy-option {
-        display: flex;
-        align-items: center;
-        margin-top: 100px;
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-weight: 400;
-        color: $color-black;
-        cursor: pointer;        
     }
 
     &__btn {

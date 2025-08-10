@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -672,7 +673,9 @@ p {
 }
 
 .hero {
+  position: relative;
   padding: 20px 0;
+  min-height: 650px;
   background: url("../images/hero-1.jpg");
   margin-left: auto;
   margin-right: auto;
@@ -731,6 +734,9 @@ p {
 }
 @media screen and (min-width: 1440px) {
   .hero-form {
+    position: absolute;
+    top: 20px;
+    left: 60%;
     width: 410px;
   }
 }
@@ -777,6 +783,73 @@ p {
   -webkit-box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
           box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
 }
+.hero-form__policy-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
+}
+.hero-form__inner-wrapper {
+  display: inline-block;
+}
+.hero-form__link {
+  margin-left: 4px;
+  color: #ba8f6e;
+  font-weight: 400;
+}
+.hero-form__checkbox {
+  /* Скрываем стандартный чекбокс */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.hero-form__icon-check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; /* Чтобы не сжимался */
+}
+.hero-form.hero-form__checkbox:checked + .hero-form__icon-check {
+  background-color: #11447B;
+  border-color: #11447B;
+}
+.hero-form__checkbox:checked + .hero-form__icon-check::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  border: solid #ba8f6e;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.hero-form__policy-link {
+  color: var(--primary-color); /* Цвет ссылки в тексте */
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.hero-form__policy-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
 .hero-form__submit-btn {
   width: 70%;
   background-color: #ba8f6e;
@@ -810,20 +883,6 @@ p {
 }
 .hero__item:not(:last-child) {
   margin-bottom: 10px;
-}
-.hero__policy-option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 100px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #000000;
-  cursor: pointer;
 }
 .hero__btn {
   display: inline-block;
