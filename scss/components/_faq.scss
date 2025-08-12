@@ -1,0 +1,198 @@
+.faq__subheading {
+    color: $color-akcent;
+}
+
+/* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
+.accordion-two-column-wrapper {
+    width: 100%;
+    /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
+    @include mq(desktop) { 
+        display: flex; /* Робимо головний контейнер Flexbox */
+        // gap: 20px; /* Відстань між колонками */
+        /* max-width та margin: auto для .container вже є, тут не потрібні */
+    }
+}
+
+.accordion-questions-list {
+    /* На мобільному це просто список елементів */
+    @include mq(desktop) { /* Це ліва колонка */
+        flex: 0 0 40%; /* Займає 40% ширини, не зростає, не зменшується */
+        /* border: 1px solid var(--border-color); /* Можна додати свою рамку */
+        // border-radius: 5px;
+        /* padding: 10px; */ /* Можливі внутрішні паддинги */
+    }
+}
+
+.accordion-item {
+    margin-bottom: 0px;
+    box-sizing: border-box;
+    overflow: hidden; /* Важливо для анімації max-height */
+    @include mq(desktop) {
+        // border: 1px solid var(--border-color); /* Повертаємо рамку для окремих питань */
+        // margin-bottom: 10px; /* Знову додаємо відступи */
+    }
+}
+
+.accordion-header {
+    background-color: $color-white;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color $duration $timing-function;
+    @include mq(desktop) {
+        // border-radius: 4px; /* Заокруглені кути для окремих заголовків */
+    }
+}
+
+.accordion-toggle {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-black;
+    cursor: pointer;
+}
+
+/* Стилізація іконки (+/-) */
+.accordion-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    // margin-right: 15px;
+    flex-shrink: 0;
+}
+.accordion-icon::before,
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    background-color: $color-black; /* Колір іконки в неактивному стані */
+    transition: transform $duration $timing-function;
+}
+.accordion-icon::before { /* Вертикальна лінія плюса */
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 100%;
+}
+.accordion-icon::after { /* Горизонтальна лінія плюса */
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+.accordion-question-text {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+/* Стилі для відкритого стану акордеону (мобільний та десктоп) */
+.accordion-item.is-active .accordion-header {
+    background-color: $color-akcent;
+}
+.accordion-item.is-active .accordion-header .accordion-question-text {
+    color: $color-white; /* Змінюємо колір тексту питання */
+}
+.accordion-item.is-active .accordion-icon::before {
+    transform: rotate(90deg) scaleY(0); /* Анімація для перетворення плюса в мінус */
+}
+.accordion-item.is-active .accordion-icon::after {
+    background-color: $color-white; /* Колір іконки в активному стані */
+}
+
+/* Контент відповіді для мобільної версії */
+.accordion-content-mobile {
+    background-color: $color-white;
+    background-color: $color-bg-faq;
+    padding: 0 20px; /* Паддинги з боків для згорнутого стану */
+    max-height: 0; /* Приховано за замовчуванням */
+    opacity: 0;
+    transition: max-height $duration $timing-function, opacity $duration $timing-function, padding $duration $timing-function;
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+.accordion-content-mobile>p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-black;
+}
+
+.accordion-item.is-active .accordion-content-mobile {
+    max-height: 500px; /* Достатньо велике значення для розгортання */
+    opacity: 1;
+    padding: 20px; /* Паддинги для відкритого контенту */
+}
+
+/* Права колонка з відповідями для десктопу - за замовчуванням прихована на мобільному */
+.accordion-answer-display-desktop {
+    display: none; /* Приховано на мобільному */
+    @include mq(desktop) {
+        position: relative; /* Важливо для абсолютного позиціонування відповідей всередині */
+        display: block; /* Права колонка стає видимою */
+        flex: 1; /* Займає весь залишок простору */
+        // border: 1px solid var(--border-color);
+        // border-radius: 5px;
+        padding: 20px; /* Паддинги для правої колонки */
+        background-color: $color-bg-faq;
+        // min-height: 300px; /* Мінімальна висота для правої колонки */
+        box-sizing: border-box;
+    }
+}
+
+.accordion-content-desktop {
+    position: absolute; /* Всі відповіді позиціонуються абсолютно */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px; /* Паддинги для вмісту відповіді */
+    background-color: $color-white;
+    box-sizing: border-box; 
+    opacity: 0;
+    visibility: hidden; /* Ховаємо, щоб не займало місця */
+    transition: opacity $duration $timing-function, visibility $duration $timing-function;
+    overflow-y: auto; /* Додаємо прокрутку, якщо контент більший */
+
+    /* Стилі для контенту відповідей у правій колонці */
+    @include mq(desktop) {
+    display: block; /* Забезпечуємо відображення */
+    }
+
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+        @include mq(desktop) {
+        // opacity: 1;
+        // visibility: visible;
+        // display: block; /* Забезпечуємо відображення */
+        }
+    }  
+}
+
+.accordion-desktop-question {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: $color-black;
+    margin-bottom: 25px; /* Відступ від тексту відповіді */
+}
+
+.accordion-desktop-answer {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 400;
+    color: $color-black;
+    margin-bottom: 15px; /* Відступ від тексту відповіді */
+}

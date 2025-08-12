@@ -165,7 +165,7 @@
     <!-- Why Clients Choose Us -->
     <section class="advantages">
         <div class="container">
-            <h2 class="advantages__heading">Why Clients Choose Us</h2>
+            <h2 class="heading">Why Clients Choose Us</h2>
             <ul class="advantages__list">
                 <li class="advantages__item">
                     <h3 class="advantages__title">Custom Renovation Planning</h3>
@@ -185,8 +185,8 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="testimonials__heading">Testimonials</h2>
-            <h3 class="testimonials__subheading">You Can Review Us On Platform: Google My Business.</h3>
+            <h2 class="heading">Testimonials</h2>
+            <h3 class="subheading">You Can Review Us On Platform: Google My Business.</h3>
             <ul class="testimonials__list">
                 <li class="testimonials__item">
                     <div class="testimonials__client">
@@ -257,8 +257,8 @@
     <!-- Recent Projects -->
     <section class="projects">
         <div class="container">
-            <h2 class="projects__heading">Recent Projects</h2>
-            <h3 class="projects__subheading">You can click before / after photos to compare</h3>
+            <h2 class="heading">Recent Projects</h2>
+            <h3 class="subheading">You can click before / after photos to compare</h3>
             <ul class="projects__list list">
                 <li class="projects__item"><button class="projects__btn active" type="button">Home</button></li>
                 <li class="projects__item"><button class="projects__btn" type="button">Kitchen</button></li>
@@ -302,8 +302,8 @@
     <!-- Get Free Estimate -->
     <section class="free-estimate">
         <div class="container">
-            <h2>Get Free Estimate</h2>
-            <h3>and we will do even better for you!</h3>
+            <h3>Get Free Estimate</h3>
+            <p>and we will do even better for you!</p>
             <form class="free-estimate-mob">
                 <div class="hero-form__flex">
                     <div class="hero-form__field">
@@ -350,11 +350,11 @@
             </form>
         </div>
     </section>
-    <!-- How We Work -->
+<!-- How We Work -->
     <section class="process">
         <div class="container">
-            <h2 class="process__heading">How We Work</h2>
-            <h3 class="process__subheading">Our renovation process</h3>
+            <h2 class="heading">How We Work</h2>
+            <h3 class="subheading">Our renovation process</h3>
             <ul class="process__list">
                 <li class="process__item">
                     <img class="process__img" src="./images/process/stage-1.png" alt="stage-1">
@@ -379,88 +379,113 @@
             </ul>
         </div>
     </section>
-    <!-- Contact-us-section -->
-    <section class="faq">
+<!-- FAQ -->
+    <section class="faq section">
         <div class="container">
-            <h2 class="process__heading">How We Work</h2>
-            <h3 class="process__subheading">Our renovation process</h3>
-            <div class="two-column-accordion-wrapper">
+            <h2 class="heading">FAQ</h2>
+            <h3 class="faq__subheading subheading">Frequently asked questions and all you want to know!</h3>
+            <div class="accordion-two-column-wrapper">
                 <div class="accordion-questions-list">
-                    <div class="accordion-question-item is-active">
-                        <button class="accordion-toggle" data-target="answer-content-1" aria-expanded="true" aria-controls="answer-content-1">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">What types of home renovation services do you offer?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-1-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">What types of home renovation services do you offer?</p>
+                            </button>
+                        </div>
+                        <div id="answer-1-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>We specialize in cosmetic updates, functional improvements, and lifestyle renovations tailored to modern living in Los Angeles. From kitchens and bathrooms to full interior upgrades, we work closely with you to bring comfort, style, and value to your home.</p>
+                        </div>
                     </div>
-                
-                    <div class="accordion-question-item">
-                        <button class="accordion-toggle" data-target="answer-content-2" aria-expanded="false" aria-controls="answer-content-2">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">Can you help with the design or layout of my home?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-2-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">Can you help with the design or layout of my home?</p>
+                            </button>
+                        </div>
+                        <div id="answer-2-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>Yes, we provide design support to help you choose materials, finishes, and layouts that match your lifestyle. Our team will guide you to create a space that is both beautiful and practical.</p>
+                        </div>
                     </div>
-                
-                    <div class="accordion-question-item">
-                        <button class="accordion-toggle" data-target="answer-content-3" aria-expanded="false" aria-controls="answer-content-3">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">Do you offer eco-friendly renovation options?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-3-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">Do you offer eco-friendly renovation options?</p>
+                            </button>
+                        </div>
+                        <div id="answer-3-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>Absolutely. We offer energy-efficient solutions and can work with sustainable materials upon request to reduce the environmental impact of your home.</p>
+                        </div>
                     </div>
-                
-                    <div class="accordion-question-item">
-                        <button class="accordion-toggle" data-target="answer-content-4" aria-expanded="false" aria-controls="answer-content-2">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">Can you provide a detailed cost estimate before starting?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-4-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">Can you provide a detailed cost estimate before starting?</p>
+                            </button>
+                        </div>
+                        <div id="answer-4-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>Yes, we always provide a clear estimate that includes labor, materials, and other expected costs. Our goal is full transparency and no surprises.</p>
+                        </div>
                     </div>
-                
-                    <div class="accordion-question-item">
-                        <button class="accordion-toggle" data-target="answer-content-5" aria-expanded="false" aria-controls="answer-content-3">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">What is usually the most expensive part of a renovation?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-5-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">What is usually the most expensive part of a renovation?</p>
+                            </button>
+                        </div>
+                        <div id="answer-5-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>Structural changes, like removing walls or installing new windows and doors, tend to increase costs. We’ll always discuss options that balance budget and impact.</p>
+                        </div>
                     </div>
-                
-                    <div class="accordion-question-item">
-                        <button class="accordion-toggle" data-target="answer-content-6" aria-expanded="false" aria-controls="answer-content-2">
-                            <span class="accordion-icon"></span>
-                            <span class="accordion-question-text">How long does a typical home renovation take?</span>
-                        </button>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <button class="accordion-toggle" aria-expanded="false" aria-controls="answer-6-mobile">
+                                <span class="accordion-icon"></span>
+                                <p class="accordion-question-text">How long does a typical home renovation take?</p>
+                            </button>
+                        </div>
+                        <div id="answer-6-mobile" class="accordion-content-mobile" role="region" aria-hidden="true">
+                            <p>It depends on the scope. Smaller projects may take a few days or weeks, while larger, more detailed renovations can take several months. We’ll provide a clear timeline before we begin.</p>
+                        </div>
                     </div>
                 </div>
-            
-                <div class="accordion-answer-display">
-                    <div id="answer-content-1" class="accordion-answer-content is-active" role="region" aria-hidden="false">
-                        <p>We specialize in cosmetic updates, functional improvements, and lifestyle renovations tailored to modern living in Los Angeles. From kitchens and bathrooms to full interior upgrades, we work closely with you to bring comfort, style, and value to your home.</p>
+                <div class="accordion-answer-display-desktop">
+                    <div id="answer-1-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">What types of home renovation services do you offer?</p>
+                        <p class="accordion-desktop-answer">We specialize in cosmetic updates, functional improvements, and lifestyle renovations tailored to modern living in Los Angeles. From kitchens and bathrooms to full interior upgrades, we work closely with you to bring comfort, style, and value to your home.</p>
                     </div>
-                
-                    <div id="answer-content-2" class="accordion-answer-content" role="region" aria-hidden="true">
-                        <p>Yes, we provide design support to help you choose materials, finishes, and layouts that match your lifestyle. Our team will guide you to create a space that is both beautiful and practical.</p>
+                    <div id="answer-2-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">Can you help with the design or layout of my home?</p>
+                        <p class="accordion-desktop-answer">Yes, we provide design support to help you choose materials, finishes, and layouts that match your lifestyle. Our team will guide you to create a space that is both beautiful and practical.</p>
                     </div>
-                
-                    <div id="answer-content-3" class="accordion-answer-content" role="region" aria-hidden="true">
-                        <p>Absolutely. We offer energy-efficient solutions and can work with sustainable materials upon request to reduce the environmental impact of your home.</p>
+                    <div id="answer-3-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">Do you offer eco-friendly renovation options?</p>
+                        <p class="accordion-desktop-answer">Absolutely. We offer energy-efficient solutions and can work with sustainable materials upon request to reduce the environmental impact of your home.</p>
                     </div>
-
-                    <div id="answer-content-4" class="accordion-answer-content" role="region" aria-hidden="true">
-                        <p>Yes, we always provide a clear estimate that includes labor, materials, and other expected costs. Our goal is full transparency and no surprises.</p>
+                    <div id="answer-4-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">Can you provide a detailed cost estimate before starting?</p>
+                        <p class="accordion-desktop-answer">Yes, we always provide a clear estimate that includes labor, materials, and other expected costs. Our goal is full transparency and no surprises.</p>
                     </div>
-                
-                    <div id="answer-content-5" class="accordion-answer-content" role="region" aria-hidden="true">
-                        <p>Structural changes, like removing walls or installing new windows and doors, tend to increase costs. We’ll always discuss options that balance budget and impact.</p>
+                    <div id="answer-5-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">What is usually the most expensive part of a renovation?</p>
+                        <p class="accordion-desktop-answer">Structural changes, like removing walls or installing new windows and doors, tend to increase costs. We’ll always discuss options that balance budget and impact.</p>
                     </div>
-                
-                    <div id="answer-content-6" class="accordion-answer-content" role="region" aria-hidden="true">
-                        <p>It depends on the scope. Smaller projects may take a few days or weeks, while larger, more detailed renovations can take several months. We’ll provide a clear timeline before we begin.</p>
+                    <div id="answer-6-desktop" class="accordion-content-desktop" role="region" aria-hidden="true">
+                        <p class="accordion-desktop-question">How long does a typical home renovation take?</p>
+                        <p class="accordion-desktop-answer">It depends on the scope. Smaller projects may take a few days or weeks, while larger, more detailed renovations can take several months. We’ll provide a clear timeline before we begin.</p>
                     </div>
                 </div>
             </div>
         </div>
-     </section>
+    </section>
     <!-- Our Service Areas -->
     <section class="areas">
         <div class="container">
-            <h2 class="areas__heading">Our Service Areas</h2>
+            <h2 class="heading">Our Service Areas</h2>
             <ul>
                 <li>
                     <p>Area-1</p>
@@ -501,8 +526,8 @@
     <!-- Related Articles -->
     <section class="related">
         <div class="container">
-            <h2>Related Articles</h2>
-            <h3>Read our latest articles</h3>
+            <h2 class="heading">Related Articles</h2>
+            <h3  class="related__subheading subheading">Read our latest articles</h3>
             <ul>
                 <li>
                     <article>
@@ -656,5 +681,8 @@
         </div>
     </div>
 </footer>
+
+    <script defer src="./js/faq.js"></script>
+
 </body>
 </html>
