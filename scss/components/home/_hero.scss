@@ -13,7 +13,7 @@
         position: relative;
     }
 
-    &__title {
+    &__heading {
         max-width: 90%;
         margin-bottom: 15px;
         color: $color-white;
@@ -32,10 +32,11 @@
            font-size: 48px;
            font-weight: 700;
            line-height: 1.36;
+            text-align: left;
         }
     }
 
-    &__subtitle {
+    &__subheading {
         margin-bottom: 20px;
         color: $color-white;
         font-size: 20px;
@@ -50,6 +51,7 @@
             margin-bottom: 60px;
             font-size: 26px;
             font-weight: 700;
+            text-align: left;
         }
     }
 
