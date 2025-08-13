@@ -1,0 +1,183 @@
+.projects {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin: 0;
+    }
+
+    &__btn {
+        padding: 8px 6px;
+        color: $color-akcent;
+        background-color: $color-bg-item;
+        border: none;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 600;
+
+        @include mq(tablet) {
+            padding: 8px 12px;
+            font-size: 20px;
+        }
+
+        @include mq(desktop) {
+            padding: 12px 16px;
+            font-size: 24px;
+        }
+
+        &.active {
+            color: $color-black;
+            background-color: $color-white;
+        }
+    }
+}
+
+.project {
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: -12px;
+        box-sizing: border-box;
+    }
+
+    &__item {
+        flex-basis: 100%;
+        // flex-grow: 1;
+        max-width: 100%;
+        max-width: 100%;
+        margin: 12px;
+        box-sizing: border-box;
+
+        @include mq(tablet) {
+            // Припустимо, breakpoint для tablet починається від 768px або 744px
+            flex-basis: calc(50% - 24px); /* Для 2 колонок з марджинами 12px по боках (12+12=24) */
+            max-width: calc(50% - 24px); /* Щоб запобігти переповненню */
+            // width: auto; /* Скидаємо фіксовану ширину, якщо була */
+        }
+
+        @include mq(desktop) { // Припустимо, breakpoint для desktop починається від 1200px
+            flex-basis: calc(33.333% - 24px); /* Для 3 колонок */
+            max-width: calc(33.333% - 24px);
+        }
+
+        &:nth-child(3) {
+            @include mq(tablet-only) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__article {
+        // color: $color-akcent;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+        background-color: $color-white;
+    }
+
+    &__title {
+        padding: 10px;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $color-black;
+    }
+    &__way {
+        display: flex;
+        align-items: center;
+        padding: 0 10px 10px;
+        // color: $color-akcent;
+
+        &>li {
+            display: flex;
+            font-size: 16px;
+            line-height: 1.25;
+            font-weight: 600;
+            color: $color-akcent;
+            white-space: nowrap;
+        }
+
+
+        &>li:not(:first-child)::before {
+            content: "• "; /* Додаємо крапку та пробіл */
+            margin-right: 5px; /* Додатковий пробіл після крапки, якщо "• " недостатньо */
+            margin-left: 5px;
+        }
+    }
+
+    &__demo-container { // <--- ДОДАЙТЕ ЦІ СТИЛІ
+        width: 100%; /* Забезпечуємо, щоб контейнер займав всю доступну ширину */
+        overflow: hidden; /* Важливо для обрізання зображення, якщо воно виходить за межі або для border-radius */
+    }
+
+    &__demo {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+    &__switcher {
+        display: flex; /* Розміщуємо мініатюри поруч */
+    // gap: 10px; /* Відступ між мініатюрами */
+    // margin-top: 15px; /* Відступ від головного зображення */
+    // justify-content: center; /* Центруємо мініатюри, якщо потрібно */
+        flex-direction: row;
+        width: 100%;
+    }
+    &__switcher-thumb {
+        position: relative; /* Для позиціонування оверлея */
+        cursor: pointer; /* Вказує, що елемент клікабельний */
+        overflow: hidden; /* Щоб оверлей не виходив за межі, якщо є border-radius */
+        flex: 1; /* Якщо хочете, щоб мініатюри ділили простір */
+        max-width: 125px; /* Приклад максимальної ширини для мініатюри */
+    }
+    &__switcher-thumb img {
+    display: block; /* Усуває зайві пробіли під зображенням */
+    width: 100%; /* Зображення заповнює свій контейнер */
+    height: auto; /* Зберігає пропорції */
+}
+
+    &__switcher-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8); /* Білий напівпрозорий оверлей (80% непрозорості) */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1; /* За замовчуванням оверлей видимий (активний стан) */
+        transition: opacity 0.3s ease; /* Плавний перехід при зміні прозорості */
+        pointer-events: none; /* Дозволяє клікам проходити крізь оверлей до батьківського елемента */
+    }
+
+    &__switcher-text {
+        color: #333; /* Колір тексту на оверлеї */
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Стан, коли мініатюра АКТИВНА - оверлей невидимий */
+    &__switcher-thumb.active &__switcher-overlay {
+        opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
+    }
+
+    &__switcher-before {
+        padding: 5px;
+        max-width: 50%;
+    }
+
+    &__switcher-after {
+        padding: 5px;
+        max-width: 50%;
+    }
+}
