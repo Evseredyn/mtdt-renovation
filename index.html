@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
 <body>
 <!--Header-->
@@ -139,23 +142,23 @@
             </form>
             <ul class="hero__list list">
                 <li class="hero__item">
-                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.png" alt="Bullet-1">
+                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.svg" alt="Bullet-1">
                     <p class="hero__description">Free Consultation</p>
                 </li>
                 <li class="hero__item">
-                    <img class="hero__con" width="25" height="25" src="./images/icon-bullet.png" alt="Bullet-2">
+                    <img class="hero__con" width="25" height="25" src="./images/icon-bullet.svg" alt="Bullet-2">
                     <p class="hero__description">Custom Planning</p>
                 </li>
                 <li class="hero__item">
-                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.png" alt="Bullet-3">
+                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.svg" alt="Bullet-3">
                     <p class="hero__description">Transparent Pricing</p>
                 </li>
                 <li class="hero__item">
-                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.png" alt="Bullet-4">
+                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.svg" alt="Bullet-4">
                     <p class="hero__description">On-Time Project Delivery</p>
                 </li>
                 <li class="hero__item">
-                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.png" alt="Bullet-5">
+                    <img class="hero__icon" width="25" height="25" src="./images/icon-bullet.svg" alt="Bullet-5">
                     <p class="hero__description">Flexible Financing Solutions Available</p>
                 </li>
             </ul>
@@ -167,95 +170,200 @@
         <div class="container">
             <h2 class="heading">Why Clients Choose Us</h2>
             <ul class="advantages__list list">
-                <li class="advantages__item">
-                    <h3 class="advantages__title">Custom Renovation Planning</h3>
-                    <p class="advantages__deskription">We design every renovation to fit your space, lifestyle, and goals - from layout to final finishes.</p>
-                </li>
-                <li class="advantages__item">
-                    <h3 class="advantages__title">Reliable Project Management</h3>
-                    <p class="advantages__deskription">Every step is scheduleed, tracked, and supervised - with clear communication from start to finish.</p>
-                </li>
-                <li class="advantages__item">
-                    <h3 class="advantages__title">Expert Hands. Professional wersigh</h3>
-                    <p class="advantages__deskription">Our renovation crews work under close su @ervision to deliver precise, reliablo, and lasting results.</p>
-                </li>
+                <div class="advantages__wrapper-bg">
+                    <li class="advantages__item">
+                        <h3 class="advantages__title">Custom Renovation Planning</h3>
+                        <p class="advantages__description">CSG did an amazing job on renovating my
+basement. Work was fast, efficient and they helped
+point out some space saving changes that really
+helped maximize the space. The basement addition
+involved adding a bathroom, doing a complete re…</p>
+                    </li>
+                    <li class="advantages__item">
+                        <h3 class="advantages__title">Reliable Project Management</h3>
+                        <p class="advantages__description">Every step is scheduleed, tracked, and supervised - with clear communication from start to finish.</p>
+                    </li>
+                    <li class="advantages__item">
+                        <h3 class="advantages__title">Expert Hands. Professional wersigh</h3>
+                        <p class="advantages__description">Our renovation crews work under close su @ervision to deliver precise, reliablo, and lasting results.</p>
+                    </li>
+                </div>
             </ul>
         </div>
     </section>
     <!-- Testimonials -->
     <section class="testimonials section">
-        <div class="container">
+        <div class="container testimonials__slider">
             <h2 class="heading">Testimonials</h2>
             <h3 class="subheading">You Can Review Us On Platform: Google My Business.</h3>
-            <ul class="testimonials__list">
+            <ul class="testimonials__list list">
                 <li class="testimonials__item">
                     <div class="testimonials__client">
                         <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
                         <div class="testimonials__card">
-                            <p class="testimonials__name">D Hankewycz</p>
+                            <p class="testimonials__name">D Hankewycz 01</p>
                             <p class="testimonials__date">Mar 10,2025</p>                            
                         </div>
-                        <div class="testimonials__sourse">
-                            <img src="./images/icon-google.svg" alt="sourse-1">
-                            <div class="testimonials__rating">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                            </div>
+                    </div>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
                         </div>
                     </div>
-                    <h3 class="about__title">Custom Renovation Planning</h3>
-                    <p class="about__deskription">We design every renovation to fit your space, lifestyle, and goals - from layout to final finishes.</p>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__customer">
-                        <img class="testimonials__img" src="./images/client-1.png" alt="client-2">
+                    <div class="testimonials__client">
+                        <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
                         <div class="testimonials__card">
-                            <p class="testimonials__name">D Hankewycz</p>
+                            <p class="testimonials__name">D Hankewycz 02</p>
                             <p class="testimonials__date">Mar 10,2025</p>                            
                         </div>
-                        <div class="testimonials__sourse">
-                            <img src="./images/icon-google.svg" alt="sourse-1">
-                            <div class="testimonials__rating">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                            </div>
+                    </div>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
                         </div>
                     </div>
-                    <h3 class="about__title">Custom Renovation Planning</h3>
-                    <p class="about__deskription">We design every renovation to fit your space, lifestyle, and goals - from layout to final finishes.</p>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__customer">
-                        <img class="testimonials__img" src="./images/client-1.png" alt="client-3">
+                    <div class="testimonials__client">
+                        <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
                         <div class="testimonials__card">
-                            <p class="testimonials__name">D Hankewycz</p>
+                            <p class="testimonials__name">D Hankewycz 03</p>
                             <p class="testimonials__date">Mar 10,2025</p>                            
                         </div>
-                        <div class="testimonials__sourse">
-                            <img src="./images/icon-google.svg" alt="sourse-1">
-                            <div class="testimonials__rating">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                                <img src="./images/icon_star.png" alt="star" class="testimonials__star">
-                            </div>
-                        </div>                        
                     </div>
-                    <h3 class="about__title">Custom Renovation Planning</h3>
-                    <p class="about__deskription">We design every renovation to fit your space, lifestyle, and goals - from layout to final finishes.</p>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                        </div>
+                    </div>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__client">
+                        <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
+                        <div class="testimonials__card">
+                            <p class="testimonials__name">D Hankewycz 04</p>
+                            <p class="testimonials__date">Mar 10,2025</p>                            
+                        </div>
+                    </div>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                        </div>
+                    </div>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__client">
+                        <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
+                        <div class="testimonials__card">
+                            <p class="testimonials__name">D Hankewycz 05</p>
+                            <p class="testimonials__date">Mar 10,2025</p>                            
+                        </div>
+                    </div>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                        </div>
+                    </div>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__client">
+                        <img class="testimonials__img" src="./images/client-1.png" alt="client-1">
+                        <div class="testimonials__card">
+                            <p class="testimonials__name">D Hankewycz 06</p>
+                            <p class="testimonials__date">Mar 10,2025</p>                            
+                        </div>
+                    </div>
+                    <div class="testimonials__sourse">
+                        <img src="./images/icon-google.svg" alt="icon google">
+                        <div class="testimonials__rating">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                            <img src="./images/icon-star.svg" alt="star" class="testimonials__star">
+                        </div>
+                    </div>
+                    <p class="testimonials__description">CSG did an amazing job on renovating my
+                        basement. Work was fast, efficient and they helped
+                        point out some space saving changes that really
+                        helped maximize the space. The basement addition
+                        involved adding a bathroom, doing a complete re…
+                    </p>
                 </li>
             </ul>
+            <div class="testimonials-slider__wrapper">
+                <button class="testimonials-slider__prev-button">
+                    <span class="testimonials-slider__icon">
+                        <img src="./images/icon-prev.svg" width="36" height="36" alt="Previous review">
+                    </span>
+                </button>
+                <button class="testimonials-slider__next-button">
+                    <span class="testimonials-slider__icon">
+                        <img src="./images/icon-next.svg" width="36" height="36" alt="Next review">
+                    </span>
+                </button>
+            </div>
         </div>
     </section>
     <!-- Recent Projects -->
-    <section class="projects">
+    <section class="projects section">
         <div class="container">
             <h2 class="heading">Recent Projects</h2>
             <h3 class="subheading">You can click before / after photos to compare</h3>
@@ -683,6 +791,8 @@
 </footer>
 
     <script defer src="./js/faq.js"></script>
+    <!-- <script src="./js/slick-slider.js"></script> -->
+    <script defer src="./js/testimonials-slider.js"></script>
 
 </body>
 </html>
