@@ -18,6 +18,7 @@
         font-size: 16px;
         line-height: 1.2;
         font-weight: 600;
+        cursor: pointer;
 
         @include mq(tablet) {
             padding: 8px 12px;
@@ -47,6 +48,7 @@
     }
 
     &__item {
+        display: block;
         flex-basis: 100%;
         // flex-grow: 1;
         max-width: 100%;
@@ -74,6 +76,11 @@
         }
     }
 
+    // Додатково, якщо ви хочете, щоб приховані елементи були повністю невидимими:
+    &__item[style*="display: none"] {
+    // Це правило буде автоматично застосовано jQuery коли FadeOut приховає елемент.
+    // Тут не потрібно нічого писати, якщо ви покладаєтесь на поведінку jQuery.
+    }
     &__article {
         // color: $color-akcent;
         margin-left: auto;

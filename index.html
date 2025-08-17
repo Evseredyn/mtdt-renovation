@@ -25,7 +25,7 @@
                     <div class="header-logo__company">mtdt_renovation</div>
                 </a>
                 <button class="mobile-menu__btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <img src="./images/icon-menu.png" alt="Mobile menu">
+                    <img src="./images/icon-menu.svg" alt="Mobile menu">
                 </button>
                 <ul class="contacts list">
                     <li class="contacts__item">
@@ -173,11 +173,7 @@
                 <div class="advantages__wrapper-bg">
                     <li class="advantages__item">
                         <h3 class="advantages__title">Custom Renovation Planning</h3>
-                        <p class="advantages__description">CSG did an amazing job on renovating my
-basement. Work was fast, efficient and they helped
-point out some space saving changes that really
-helped maximize the space. The basement addition
-involved adding a bathroom, doing a complete re…</p>
+                        <p class="advantages__description">We design every renovation to fit your space, lifestyle, and goals - from layout to final finishes.</p>
                     </li>
                     <li class="advantages__item">
                         <h3 class="advantages__title">Reliable Project Management</h3>
@@ -368,13 +364,13 @@ involved adding a bathroom, doing a complete re…</p>
             <h2 class="heading">Recent Projects</h2>
             <h3 class="subheading">You can click before / after photos to compare</h3>
             <ul class="projects__list list">
-                <li class="projects__item"><button class="projects__btn active" type="button">Home</button></li>
-                <li class="projects__item"><button class="projects__btn" type="button">Kitchen</button></li>
-                <li class="projects__item"><button class="projects__btn" type="button">Bathroom</button></li>
-                <li class="projects__item"><button class="projects__btn" type="button">Painting</button></li>
+                <li class="projects__item"><button class="projects__btn active" type="button" data-filter="home">Home</button></li>
+                <li class="projects__item"><button class="projects__btn" type="button" data-filter="kitchen">Kitchen</button></li>
+                <li class="projects__item"><button class="projects__btn" type="button" data-filter="bathroom">Bathroom</button></li>
+                <li class="projects__item"><button class="projects__btn" type="button" data-filter="painting">Painting</button></li>
             </ul>
             <ul class="project__list list">
-                <li class="project__item">                
+                <li class="project__item" data-category="home">                
                     <article class="project__article">
                         <div class="project__title">Home renovation 1</div>
                         <div class="project__props">
@@ -406,7 +402,7 @@ involved adding a bathroom, doing a complete re…</p>
                         </div>
                     </article>
                 </li>
-                <li class="project__item">                
+                <li class="project__item" data-category="home">                
                     <article class="project__article">
                         <div class="project__title">Home renovation 2</div>
                         <div class="project__props">
@@ -438,7 +434,7 @@ involved adding a bathroom, doing a complete re…</p>
                         </div>
                     </article>
                 </li>
-                <li class="project__item">                
+                <li class="project__item" data-category="home">                
                     <article class="project__article">
                         <div class="project__title">Home renovation 3</div>
                         <div class="project__props">
@@ -448,6 +444,102 @@ involved adding a bathroom, doing a complete re…</p>
                                 </li>
                                 <li>
                                     <p>Home</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project__demo-container">
+                            <img class="project__demo" src="./images/projects/project-after-large-1.jpg" alt="Home renovation 1 after">
+                        </div>
+                        <div class="project__switcher">
+                            <div class="project__switcher-thumb project__switcher-before" data-image="./images/projects/project-before-large-1.jpg">
+                                <img src="./images/projects/project-before.jpg" alt="Before view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">Before</p>
+                                </div>
+                            </div>
+                            <div class="project__switcher-thumb project__switcher-after active" data-image="./images/projects/project-after-large-1.jpg">
+                                <img src="./images/projects/project-after.jpg" alt="After view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">After</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="project__item" data-category="kitchen">                
+                    <article class="project__article">
+                        <div class="project__title">Kitchen renovation 1</div>
+                        <div class="project__props">
+                            <ul class="project__way list">
+                                <li>
+                                    <p>All</p>
+                                </li>
+                                <li>
+                                    <p>Kitchen</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project__demo-container">
+                            <img class="project__demo" src="./images/projects/project-after-large-1.jpg" alt="Home renovation 1 after">
+                        </div>
+                        <div class="project__switcher">
+                            <div class="project__switcher-thumb project__switcher-before" data-image="./images/projects/project-before-large-1.jpg">
+                                <img src="./images/projects/project-before.jpg" alt="Before view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">Before</p>
+                                </div>
+                            </div>
+                            <div class="project__switcher-thumb project__switcher-after active" data-image="./images/projects/project-after-large-1.jpg">
+                                <img src="./images/projects/project-after.jpg" alt="After view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">After</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="project__item" data-category="kitchen">                
+                    <article class="project__article">
+                        <div class="project__title">Kitchen renovation 2</div>
+                        <div class="project__props">
+                            <ul class="project__way list">
+                                <li>
+                                    <p>All</p>
+                                </li>
+                                <li>
+                                    <p>Kitchen</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project__demo-container">
+                            <img class="project__demo" src="./images/projects/project-after-large-1.jpg" alt="Home renovation 1 after">
+                        </div>
+                        <div class="project__switcher">
+                            <div class="project__switcher-thumb project__switcher-before" data-image="./images/projects/project-before-large-1.jpg">
+                                <img src="./images/projects/project-before.jpg" alt="Before view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">Before</p>
+                                </div>
+                            </div>
+                            <div class="project__switcher-thumb project__switcher-after active" data-image="./images/projects/project-after-large-1.jpg">
+                                <img src="./images/projects/project-after.jpg" alt="After view">
+                                <div class="project__switcher-overlay">
+                                    <p class="project__switcher-text">After</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="project__item" data-category="kitchen">                
+                    <article class="project__article">
+                        <div class="project__title">Kitchen renovation 3</div>
+                        <div class="project__props">
+                            <ul class="project__way list">
+                                <li>
+                                    <p>All</p>
+                                </li>
+                                <li>
+                                    <p>Kitchen</p>
                                 </li>
                             </ul>
                         </div>
@@ -860,6 +952,7 @@ involved adding a bathroom, doing a complete re…</p>
     <!-- <script src="./js/slick-slider.js"></script> -->
     <script defer src="./js/testimonials-slider.js"></script>
     <script defer src="./js/projects.js"></script>
+    <script defer src="./js/filter-projects.js"></script>
 
 </body>
 </html>
