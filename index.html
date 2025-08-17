@@ -568,52 +568,55 @@
     <!-- Get Free Estimate -->
     <section class="free-estimate">
         <div class="container">
-            <h3>Get Free Estimate</h3>
-            <p>and we will do even better for you!</p>
-            <form class="free-estimate-mob">
-                <div class="hero-form__flex">
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="person-name">Your Name *</label>
-                        <input class="hero-form__input" type="text" id="person-name" name="person" required>
+            <div class="free-estimate__wrapper-bg">
+                <h3 class="free-estimate__title">Get Free Estimate</h3>
+                <p class="free-estimate__subtitle">and we will do even better for you!</p>
+                <img class="free-estimate__img" src="./images/director.png" alt="star">
+                <form class="free-estimate-mob">
+                    <div class="free-estimate-form__flex">
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="person-name">Your Name *</label>
+                            <input class="free-estimate-form__input" type="text" id="person-name" name="person" required>
+                        </div>
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="phone-number">Phone *</label>
+                            <input class="free-estimate-form__input" type="tel" id="phone-number" name="phone" required>
+                        </div>
+                        <label class="free-estimate-form__policy-option">
+                            <input class="free-estimate-form__checkbox" type="checkbox" name="policy" checked>
+                            <span class="free-estimate-form__icon-check"></span>
+                            <span class="free-estimate-form__inner-wrapper">I agree to emailing and have accepted<a class="free-estimate-form__link link" href="#">Privacy Policy</a></span>
+                        </label>
+                        <button class="free-estimate-form__submit-btn" type="submit">Get free quote</button>
                     </div>
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="phone-number">Phone *</label>
-                        <input class="hero-form__input" type="tel" id="phone-number" name="phone" required>
+                </form>
+                <form class="free-estimate-pc">
+                    <div class="free-estimate-form__flex">
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="person-name">Your Name *</label>
+                            <input class="free-estimate-form__input" type="text" id="person-name" name="person" required>
+                        </div>
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="phone-number">Phone *</label>
+                            <input class="free-estimate-form__input" type="tel" id="phone-number" name="phone" required>
+                        </div>
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="email-address">Email *</label>
+                            <input class="free-estimate-form__input" type="email" id="email-address" name="email" required>
+                        </div>
+                        <div class="free-estimate-form__field">
+                            <label class="free-estimate-form__label" for="comment">Message</label>
+                            <textarea class="free-estimate-form__comment" id="comment" placeholder="Enter your message" rows="4"></textarea>
+                        </div>
+                        <label class="free-estimate-form__policy-option">
+                            <input class="free-estimate-form__checkbox" type="checkbox" name="policy" checked>
+                            <span class="free-estimate-form__icon-check"></span>
+                            <span class="free-estimate-form__inner-wrapper">I agree to emailing and have accepted<a class="free-estimate-form__link link" href="#">Privacy Policy</a></span>
+                        </label>
+                        <button class="free-estimate-form__submit-btn" type="submit">Get free quote</button>
                     </div>
-                    <label class="hero-form__policy-option">
-                        <input class="hero-form__checkbox" type="checkbox" name="policy" checked>
-                        <span class="hero-form__icon-check"></span>
-                        <span class="hero-form__inner-wrapper">I agree to emailing and have accepted<a class="hero-form__link link" href="#">Privacy Policy</a></span>
-                    </label>
-                    <button class="hero-form__submit-btn" type="submit">Get free quote</button>
-                </div>
-            </form>
-            <form class="free-estimate-pc">
-                <div class="hero-form__flex">
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="person-name">Your Name *</label>
-                        <input class="hero-form__input" type="text" id="person-name" name="person" required>
-                    </div>
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="phone-number">Phone *</label>
-                        <input class="hero-form__input" type="tel" id="phone-number" name="phone" required>
-                    </div>
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="email-address">Email *</label>
-                        <input class="hero-form__input" type="email" id="email-address" name="email" required>
-                    </div>
-                    <div class="hero-form__field">
-                        <label class="hero-form__label" for="comment">Message</label>
-                        <textarea class="hero-form__comment" id="comment" placeholder="Enter your message" rows="4"></textarea>
-                    </div>
-                    <label class="hero-form__policy-option">
-                        <input class="hero-form__checkbox" type="checkbox" name="policy" checked>
-                        <span class="hero-form__icon-check"></span>
-                        <span class="hero-form__inner-wrapper">I agree to emailing and have accepted<a class="hero-form__link link" href="#">Privacy Policy</a></span>
-                    </label>
-                    <button class="hero-form__submit-btn" type="submit">Get free quote</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 <!-- How We Work -->

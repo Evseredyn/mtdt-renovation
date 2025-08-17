@@ -1494,201 +1494,6 @@ p {
   margin-bottom: 15px; /* Відступ від тексту відповіді */
 }
 
-.projects__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 30px;
-}
-.projects__item {
-  margin: 0;
-}
-.projects__btn {
-  padding: 8px 6px;
-  color: #ba8f6e;
-  background-color: #073349;
-  border: none;
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 600;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .projects__btn {
-    padding: 8px 12px;
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .projects__btn {
-    padding: 12px 16px;
-    font-size: 24px;
-  }
-}
-.projects__btn.active {
-  color: #000000;
-  background-color: #FFFFFF;
-}
-
-.project {
-  /* Стан, коли мініатюра АКТИВНА - оверлей невидимий */
-}
-.project__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.project__item {
-  display: block;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-width: 100%;
-  max-width: 100%;
-  margin: 12px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-@media screen and (min-width: 768px) {
-  .project__item {
-    -ms-flex-preferred-size: calc(50% - 24px);
-        flex-basis: calc(50% - 24px); /* Для 2 колонок з марджинами 12px по боках (12+12=24) */
-    max-width: calc(50% - 24px); /* Щоб запобігти переповненню */
-  }
-}
-@media screen and (min-width: 1440px) {
-  .project__item {
-    -ms-flex-preferred-size: calc(33.333% - 24px);
-        flex-basis: calc(33.333% - 24px); /* Для 3 колонок */
-    max-width: calc(33.333% - 24px);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1439.98px) {
-  .project__item:nth-child(3) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.project__article {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15px;
-  background-color: #FFFFFF;
-}
-.project__title {
-  padding: 10px;
-  font-size: 26px;
-  line-height: 1.5;
-  font-weight: 600;
-  color: #000000;
-}
-.project__way {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 10px 10px;
-}
-.project__way > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 600;
-  color: #ba8f6e;
-  white-space: nowrap;
-}
-.project__way > li:not(:first-child)::before {
-  content: "• "; /* Додаємо крапку та пробіл */
-  margin-right: 5px; /* Додатковий пробіл після крапки, якщо "• " недостатньо */
-  margin-left: 5px;
-}
-.project__demo-container {
-  width: 100%; /* Забезпечуємо, щоб контейнер займав всю доступну ширину */
-  overflow: hidden; /* Важливо для обрізання зображення, якщо воно виходить за межі або для border-radius */
-}
-.project__demo {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 5px;
-}
-.project__switcher {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; /* Розміщуємо мініатюри поруч */
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-.project__switcher-thumb {
-  position: relative; /* Для позиціонування оверлея */
-  cursor: pointer; /* Вказує, що елемент клікабельний */
-  overflow: hidden; /* Щоб оверлей не виходив за межі, якщо є border-radius */
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; /* Якщо хочете, щоб мініатюри ділили простір */
-  max-width: 125px; /* Приклад максимальної ширини для мініатюри */
-}
-.project__switcher-thumb img {
-  display: block; /* Усуває зайві пробіли під зображенням */
-  width: 100%; /* Зображення заповнює свій контейнер */
-  height: auto; /* Зберігає пропорції */
-}
-.project__switcher-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Білий напівпрозорий оверлей (80% непрозорості) */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  opacity: 1; /* За замовчуванням оверлей видимий (активний стан) */
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; /* Плавний перехід при зміні прозорості */
-  pointer-events: none; /* Дозволяє клікам проходити крізь оверлей до батьківського елемента */
-}
-.project__switcher-text {
-  color: #333; /* Колір тексту на оверлеї */
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-}
-.project__switcher-thumb.active .project__switcher-overlay {
-  opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
-}
-.project__switcher-before {
-  padding: 5px;
-  max-width: 50%;
-}
-.project__switcher-after {
-  padding: 5px;
-  max-width: 50%;
-}
-
 .advantages__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1964,4 +1769,397 @@ p {
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
+}
+
+.projects__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+.projects__item {
+  margin: 0;
+}
+.projects__btn {
+  padding: 8px 6px;
+  color: #ba8f6e;
+  background-color: #073349;
+  border: none;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .projects__btn {
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects__btn {
+    padding: 12px 16px;
+    font-size: 24px;
+  }
+}
+.projects__btn.active {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.project {
+  /* Стан, коли мініатюра АКТИВНА - оверлей невидимий */
+}
+.project__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.project__item {
+  display: block;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-width: 100%;
+  max-width: 100%;
+  margin: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .project__item {
+    -ms-flex-preferred-size: calc(50% - 24px);
+        flex-basis: calc(50% - 24px); /* Для 2 колонок з марджинами 12px по боках (12+12=24) */
+    max-width: calc(50% - 24px); /* Щоб запобігти переповненню */
+  }
+}
+@media screen and (min-width: 1440px) {
+  .project__item {
+    -ms-flex-preferred-size: calc(33.333% - 24px);
+        flex-basis: calc(33.333% - 24px); /* Для 3 колонок */
+    max-width: calc(33.333% - 24px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439.98px) {
+  .project__item:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.project__article {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  background-color: #FFFFFF;
+}
+.project__title {
+  padding: 10px;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #000000;
+}
+.project__way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px 10px;
+}
+.project__way > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #ba8f6e;
+  white-space: nowrap;
+}
+.project__way > li:not(:first-child)::before {
+  content: "• "; /* Додаємо крапку та пробіл */
+  margin-right: 5px; /* Додатковий пробіл після крапки, якщо "• " недостатньо */
+  margin-left: 5px;
+}
+.project__demo-container {
+  width: 100%; /* Забезпечуємо, щоб контейнер займав всю доступну ширину */
+  overflow: hidden; /* Важливо для обрізання зображення, якщо воно виходить за межі або для border-radius */
+}
+.project__demo {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+.project__switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Розміщуємо мініатюри поруч */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+.project__switcher-thumb {
+  position: relative; /* Для позиціонування оверлея */
+  cursor: pointer; /* Вказує, що елемент клікабельний */
+  overflow: hidden; /* Щоб оверлей не виходив за межі, якщо є border-radius */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; /* Якщо хочете, щоб мініатюри ділили простір */
+  max-width: 125px; /* Приклад максимальної ширини для мініатюри */
+}
+.project__switcher-thumb img {
+  display: block; /* Усуває зайві пробіли під зображенням */
+  width: 100%; /* Зображення заповнює свій контейнер */
+  height: auto; /* Зберігає пропорції */
+}
+.project__switcher-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Білий напівпрозорий оверлей (80% непрозорості) */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1; /* За замовчуванням оверлей видимий (активний стан) */
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; /* Плавний перехід при зміні прозорості */
+  pointer-events: none; /* Дозволяє клікам проходити крізь оверлей до батьківського елемента */
+}
+.project__switcher-text {
+  color: #333; /* Колір тексту на оверлеї */
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+.project__switcher-thumb.active .project__switcher-overlay {
+  opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
+}
+.project__switcher-before {
+  padding: 5px;
+  max-width: 50%;
+}
+.project__switcher-after {
+  padding: 5px;
+  max-width: 50%;
+}
+
+.free-estimate__wrapper-bg {
+  position: relative;
+  padding: 16px;
+  padding-bottom: 30px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.free-estimate__title {
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  color: #ba8f6e;
+  font-size: 32px;
+  font-weight: 600;
+  max-width: 150px;
+}
+@media screen and (min-width: 768px) {
+  .free-estimate__title {
+    font-size: 52px;
+    max-width: 365px;
+  }
+}
+.free-estimate__subtitle {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  max-width: 165px;
+}
+@media screen and (min-width: 768px) {
+  .free-estimate__subtitle {
+    font-size: 34px;
+    max-width: 400px;
+  }
+}
+.free-estimate__img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .free-estimate__img {
+    top: 20px;
+    right: 40px;
+    width: 160px;
+  }
+}
+.free-estimate-form__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.free-estimate-form__field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.free-estimate-form__label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+.free-estimate-form__input, .free-estimate-form__comment {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: #F2F2F2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.free-estimate-form__input:focus, .free-estimate-form__comment:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
+          box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
+}
+.free-estimate-form__policy-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  cursor: pointer;
+}
+.free-estimate-form__inner-wrapper {
+  display: inline-block;
+}
+.free-estimate-form__link {
+  margin-left: 4px;
+  color: #ba8f6e;
+  font-weight: 400;
+}
+.free-estimate-form__checkbox {
+  /* Скрываем стандартный чекбокс */
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.free-estimate-form__icon-check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; /* Чтобы не сжимался */
+}
+.free-estimate-form.hero-form__checkbox:checked + .free-estimate-form__icon-check {
+  background-color: #11447B;
+  border-color: #11447B;
+}
+.free-estimate-form__checkbox:checked + .free-estimate-form__icon-check::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 7px;
+  height: 12px;
+  border: solid #ba8f6e;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.free-estimate-form__policy-link {
+  color: var(--primary-color); /* Цвет ссылки в тексте */
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.free-estimate-form__policy-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.free-estimate-form__submit-btn {
+  width: 70%;
+  background-color: #ba8f6e;
+  color: #FFFFFF;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.free-estimate-form__submit-btn:hover, .free-estimate-form__submit-btn:focus {
+  background-color: #CF9F77;
+}
+.free-estimate-form__btn {
+  display: inline-block;
+  width: 100%;
+  max-height: 50px;
+  padding: 15px 25px;
+  border: none;
+  background-color: #ba8f6e;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .free-estimate-form__btn {
+    width: 300px;
+  }
+}
+.free-estimate-form__btn:hover, .free-estimate-form__btn:focus {
+  background-color: #CF9F77;
+}
+.free-estimate-pc {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

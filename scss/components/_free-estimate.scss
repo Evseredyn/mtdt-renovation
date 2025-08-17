@@ -1,0 +1,215 @@
+.free-estimate {
+    &__wrapper-bg {
+        position: relative;
+        padding: 16px;
+        padding-bottom: 30px;
+        color: $color-black;
+        background-color: $color-white-bg;
+    }
+
+    &__title {
+        display: block;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-bottom: 10px;
+        color: $color-akcent;
+        font-size: 32px;
+        font-weight: 600;
+        max-width: 150px;
+
+        @include mq(tablet) {
+            font-size: 52px;
+            max-width: 365px;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 600;
+        max-width: 165px;
+
+        @include mq(tablet) {
+            font-size: 34px;
+            max-width: 400px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 120px;
+        height: auto;
+
+        @include mq(tablet) {
+        top: 20px;
+        right: 40px;
+        width: 160px;
+        }
+    }
+
+    &-mob {
+        @include mq(desctop) {
+            display: none;
+        }
+    }
+
+    &-form {
+
+        &__flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        &__field {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: $color-black;
+            font-weight: 400;
+        }
+
+        &__input,
+        &__comment {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 16px;
+            background-color: $color-bg-faq;
+            box-sizing: border-box;
+        }
+
+        &__input:focus,
+        &__comment:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
+        }
+                &__policy-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-black;
+            cursor: pointer;   
+        }
+        
+        &__inner-wrapper {
+            display: inline-block;
+        }
+
+        &__link {
+            margin-left: 4px;
+            color: $color-akcent;
+            font-weight: 400;
+        }
+                &__checkbox {
+            /* Скрываем стандартный чекбокс */
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        &__icon-check {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid $color-black;
+            border-radius: 4px;
+            position: relative;
+            margin-right: 10px;
+            flex-shrink: 0; /* Чтобы не сжимался */
+        }
+
+        &.hero-form__checkbox:checked + &__icon-check {
+            background-color: $color-dark-bg;
+            border-color: $color-dark-bg;
+        }
+
+        &__checkbox:checked + &__icon-check::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1px;
+            width: 7px;
+            height: 12px;
+            border: solid $color-akcent;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+
+        &__policy-link {
+            color: var(--primary-color); /* Цвет ссылки в тексте */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        &__policy-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        
+        &__submit-btn {
+            width: 70%;
+            background-color: $color-akcent;
+            color: $color-white;
+            padding: 15px 40px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color $duration $timing-function;
+        }
+
+        &__submit-btn:hover,
+        &__submit-btn:focus {
+            background-color: $color-btn-hover;
+        }
+        
+        &__btn {
+            display: inline-block;
+            width: 100%;
+            max-height: 50px;
+            padding: 15px 25px;
+            border: none;
+            background-color: $color-akcent;
+            color: $color-white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.3;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color $duration $timing-function;
+
+            @include mq(tablet) {
+                width: 300px;
+            }
+        }
+
+        &__btn:hover,
+        &__btn:focus {
+            background-color: $color-btn-hover;
+        }
+    }
+
+    &-pc {
+        display: none;
+
+        @include mq(desctop) {
+            display: block;
+        }
+    }
+}
