@@ -13,7 +13,7 @@
         position: relative;
     }
 
-    &__heading {
+    &__title {
         max-width: 90%;
         margin-bottom: 15px;
         color: $color-white;
@@ -32,11 +32,11 @@
            font-size: 48px;
            font-weight: 700;
            line-height: 1.36;
-            text-align: left;
+        //    text-align: left;
         }
     }
 
-    &__subheading {
+    &__subtitle {
         margin-bottom: 20px;
         color: $color-white;
         font-size: 20px;
@@ -51,7 +51,7 @@
             margin-bottom: 60px;
             font-size: 26px;
             font-weight: 700;
-            text-align: left;
+            // text-align: left;
         }
     }
 
@@ -104,6 +104,10 @@
             font-size: 14px;
             color: $color-black;
             font-weight: 400;
+
+            @include mq(desktop) {
+                font-size: 16px;
+            }
         }
 
         &__input,
@@ -113,6 +117,7 @@
             border: none;
             font-size: 16px;
             box-sizing: border-box;
+            
         }
 
         &__input:focus,
