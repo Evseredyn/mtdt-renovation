@@ -346,6 +346,10 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 p {
   margin: 0;
 }
@@ -1048,6 +1052,7 @@ p {
     font-size: 48px;
     font-weight: 700;
     line-height: 1.36;
+    text-align: left;
   }
 }
 .hero__subtitle {
@@ -1067,6 +1072,7 @@ p {
     margin-bottom: 60px;
     font-size: 26px;
     font-weight: 700;
+    text-align: left;
   }
 }
 .hero-form {
@@ -1834,7 +1840,6 @@ p {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   max-width: 100%;
-  max-width: 100%;
   margin: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2227,4 +2232,85 @@ p {
     display: flex;
     gap: 30px;
   }
+}
+
+.related-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .related-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.related__item {
+  max-width: 100%;
+  margin: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .related__item {
+    max-width: calc(50% - 24px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .related__item {
+    max-width: calc(33.3% - 24px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .related__item:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.related__card {
+  background-color: #FFFFFF;
+}
+.related__img {
+  width: 100%;
+  height: auto;
+}
+.related__details {
+  padding: 15px;
+}
+.related__head-link {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #000000;
+}
+.related__description {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #000000;
+}
+.related__btn {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #ba8f6e;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
 }/*# sourceMappingURL=main.css.map */
