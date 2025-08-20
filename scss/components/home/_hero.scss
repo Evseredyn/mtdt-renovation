@@ -10,7 +10,9 @@
     background-size: cover;
 
     &>.container {
-        position: relative;
+        @include mq(desktop) {
+         position: relative;
+        }
     }
 
     &__title {

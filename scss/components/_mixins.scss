@@ -9,6 +9,11 @@
             @content;
         }
     }
+    @if $type == "mobile-small-only" { // <--- НОВИЙ МІКСИН ДЛЯ ЕКРАНІВ ДО 480px
+        @media screen and (max-width: #{$mobile}) { // max-width: 480px
+            @content;
+        }
+    }
     @if $type == "mobile" {
         @media screen and (min-width: $mobile) {
             @content;

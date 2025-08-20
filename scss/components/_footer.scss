@@ -1,6 +1,11 @@
 .footer {
     background-color: $color-dark-bg;
-    padding: 70px 0;
+    padding-top: 30px;
+    padding-bottom: 56px;
+
+    @include mq(tablet) {
+    padding: 0;
+    }
 
     &-logo {
 
@@ -293,5 +298,100 @@
         font-size: 14px;
         font-weight: 600;
         line-height: 1.42;
+    }
+
+    &-bottom {
+
+        &__official {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+
+        @include mq(desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        }
+
+        &__copyright {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 400;
+            color: $color-white;
+
+            @include mq(desktop) {
+            font-size: 20px;
+            font-weight: 600;
+            }
+        }
+
+        &__links>a {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 400;
+            color: $color-akcent;
+            
+            @include mq(desktop) {
+            font-size: 20px;
+            font-weight: 600;
+            }
+        }
+
+        &__developer {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 400;
+            color: $color-white;
+            
+            @include mq(desktop) {
+            font-size: 20px;
+            font-weight: 600;
+            }
+        }
+
+        &__developer>a {
+            margin-left: 10px;
+            font-size: 20px;
+            color: $color-akcent;
+            
+            @include mq(desktop) {
+            font-size: 20px;
+            font-weight: 600;
+            }
+        }
+    }
+}
+
+
+.mobile-btn {
+    display: none;
+    @include mq(mobile-small-only) {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Центруємо по горизонталі */
+    transform: translateX(-50%); /* Точне центрування */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    background-color: $color-akcent;
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color $duration $timing-function;
+    }
+
+.mobile-btn:hover,
+.mobile-btn:focus {
+        background-color: $color-btn-hover;
     }
 }
