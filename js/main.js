@@ -34,3 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// JavaScript для зміни прозорості HEADER
+$(document).ready(function() {
+    const $header = $('.header'); // Зберігаємо хедер в змінну jQuery
+    const scrollThreshold = 50; // Поріг скролу в пікселях, після якого хедер стає прозорим
+
+    $(window).on('scroll', function() {
+        const scrollTop = $(this).scrollTop(); // Поточне положення скролу
+
+        if (scrollTop > scrollThreshold) {
+            $header.addClass('scrolled'); // Додаємо клас, щоб хедер став напівпрозорим
+        } else {
+            $header.removeClass('scrolled'); // Видаляємо клас, хедер повертається до початкового стану
+        }
+    });
+
+    // Викликаємо функцію один раз при завантаженні сторінки,
+    // якщо сторінка вже прокручена (наприклад, після оновлення)
+    $(window).trigger('scroll');
+});

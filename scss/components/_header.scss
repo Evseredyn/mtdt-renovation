@@ -1,11 +1,20 @@
 .header {
     background-color: $color-dark-bg;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    // background-color: rgb(17, 68, 123);
+    transition: background-color 0.3s ease;
     // &.container {
     //     padding-left: 30px;
     //     padding-right: 30px;
     // }
 
+    &.scrolled {
+            background-color: rgba(17, 68, 123, 0.95);
+    }
     &__btn {
 
         display: none;

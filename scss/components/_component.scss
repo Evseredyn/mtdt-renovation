@@ -7,9 +7,18 @@ html {
 }
 
 body {
+   padding-top: 111px;
    font-family: $main-font;
    color: $color-white;
    background-color: $color-dark-bg;
+
+   @include mq(desktop) {
+   padding-top: 175px;
+   }
+
+    @include mq(monitor) {
+   padding-top: 195px;
+   }
 }
 
 .container {

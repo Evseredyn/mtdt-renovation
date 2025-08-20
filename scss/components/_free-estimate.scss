@@ -5,6 +5,10 @@
         padding-bottom: 30px;
         color: $color-black;
         background-color: $color-white-bg;
+
+        @include mq(desktop) {
+            padding: 30px;
+        }
     }
 
     &__title {
@@ -34,7 +38,7 @@
         margin-bottom: 30px;
         font-size: 24px;
         font-weight: 600;
-        max-width: 165px;
+        max-width: 160px;
 
         @include mq(tablet) {
             font-size: 34px;
@@ -48,20 +52,22 @@
 
     &__img-director {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        // top: 20px;
+        bottom: 50%;
+        right: 10px;
         width: 120px;
         z-index: 1;
 
         @include mq(tablet) {
-        top: 20px;
+        // top: 20px;
+        bottom: 45%;
         right: 40px;
         width: 160px;
         }
 
         @include mq(desktop) {
-        top: 32px;
-        // bottom: 0px;
+        // top: 50px;
+        bottom: 0;
         right: 240px;
         width: 230px;
         }
@@ -122,9 +128,10 @@
             background-color: $color-bg-faq;
             box-sizing: border-box;
 
-            // @include mq(desktop) {
-            //     font-size: 22px;
-            // }
+            @include mq(desktop) {
+                padding: 15px;
+                font-size: 18px;
+            }
         }
 
         &__input:focus,
@@ -136,6 +143,7 @@
             display: flex;
             align-items: center;
             width: 100%;
+            margin-top: 20px;
             margin-bottom: 20px;
             font-size: 14px;
             font-weight: 400;
@@ -144,6 +152,7 @@
 
             @include mq(desktop) {
                 width: 380px;
+                margin: 0;
                 // padding-top: 5px;
             }
         }
@@ -255,6 +264,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 15px;
         }
 
         &__pc {
