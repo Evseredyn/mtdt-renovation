@@ -1968,6 +1968,51 @@ p {
   display: block;
 }
 
+.projects__title {
+  max-width: 90%;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .projects__title {
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 1.3;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects__title {
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.36;
+  }
+}
+.projects__subtitle {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .projects__subtitle {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .projects__subtitle {
+    margin-bottom: 60px;
+    font-size: 26px;
+    font-weight: 700;
+  }
+}
 .projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1983,7 +2028,7 @@ p {
 .projects__btn {
   padding: 8px 6px;
   color: #ba8f6e;
-  background-color: #073349;
+  background-color: #07386D;
   border: none;
   font-size: 16px;
   line-height: 1.2;
