@@ -3,7 +3,7 @@
 
     &__title {
         max-width: 90%;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         color: $color-white;
         font-size: 32px;
         line-height: 1.2;
@@ -11,13 +11,14 @@
         text-align: left;
     
         @include mq(tablet) {
+           margin-bottom: 30px;
            font-size: 26px;
            line-height: 1.3;
         }
 
         @include mq(desktop) {
            max-width: 600px;
-           margin-bottom: 25px;
+           margin-bottom: 40px;
            font-size: 48px;
            font-weight: 700;
            line-height: 1.36;
