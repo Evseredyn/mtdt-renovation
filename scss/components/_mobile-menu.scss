@@ -1,0 +1,196 @@
+.mobile-menu {
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 48px 40px;
+        background-color: $color-white-bg;
+        display: flex;
+        flex-direction: column;
+        z-index: 31;
+        transform: translateX(100%);
+        transition: $duration $timing-function;
+                
+        @include mq(desktop) {
+            display: none;
+        }
+    }
+    
+    &__nav.is-open {
+        transform: translateX(0);
+    }
+
+    &__item:nth-child(2) {
+        position: relative;
+
+        & > .mobile-menu__link {
+            // Створюємо псевдоелемент галочки
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin-left: 12px;
+                vertical-align: middle;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 6px solid $color-black; // Колір галочки за замовчуванням
+                transition: border-color $duration $timing-function; // Плавний перехід кольору
+            }
+        }
+        // Зміна кольору галочки при наведенні на батьківський елемент
+        &:hover > .mobile-menu__link,
+        &:focus > .mobile-menu__link {
+            color: $color-akcent;
+            &::after {
+                border-top-color: $color-akcent; // Зміна кольору галочки
+            }
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.4;
+        // letter-spacing: 0.02em;
+        color: $color-black;
+        transition: color $duration $timing-function;
+    }
+    &__link:hover,
+    &__link:focus {
+    color: $color-akcent;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // width: 40px;
+        // height: 40px;
+        padding: 0px;
+        margin: 0;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+                        
+        @include mq(tablet) {
+        right: 50px;
+        }
+    }
+
+    &__link.active {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+nav li:hover > .site-subnav__list,
+.site-subnav__list:hover {
+    display: block;
+    max-height: 350px;
+}
+
+.mobile-submenu {
+
+    &__list {
+    position: absolute;
+    z-index: 21;
+    // top: calc(100% + 15px);
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+    width: 300px;
+    max-height: 0;
+    background-color: $color-white-bg;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+    transition: max-height $duration $timing-function;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
+    &__link {
+        padding: 8px 16px;
+        font-family: $main-font;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.45;
+        color: $color-black;
+    }
+ 
+    &__link:hover,
+    &__link:focus {
+        color: $color-akcent;
+    }
+}
+
+.mobile-contacts {
+    &__list {
+        margin-top: auto;
+        margin-bottom: 64px;
+    }
+
+    &__phone {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        margin-bottom: 32px;
+    }
+
+    &__mail {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+    }
+
+    &__phone:hover,
+    &__phone:focus,
+    &__mail:hover,
+    &__mail:focus {
+        color: $color-akcent;
+    }
+}
+
+.mobile-socials {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: solid 1px rgba($color-secondary-title, $alpha: 0.2);
+    }
+
+    &__item:last-child {
+        padding-right: 0;
+        border: none;
+    }
+
+    &__item:first-child {
+        padding-left: 0;
+    }
+
+    &__link {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
+    }
+}
+

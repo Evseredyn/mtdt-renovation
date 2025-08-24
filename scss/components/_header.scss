@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 111;
+    z-index: 21;
     // background-color: rgb(17, 68, 123);
     transition: background-color 0.3s ease;
     // &.container {
@@ -229,16 +229,42 @@
         display: none;
     }
 
-    &__item:nth-child(2) {
-        @include mq(desktop) {
-        position: relative;
-        }
-    }
-
     &__list {
         display: flex;
         gap: 60px;
-     }
+    }
+
+    &__item:nth-child(2) {
+        @include mq(desktop) {
+        position: relative;
+
+            & > .site-nav__link {
+                // Створюємо псевдоелемент галочки
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: 12px;
+                    vertical-align: middle;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-top: 6px solid $color-white; // Колір галочки за замовчуванням
+                    transition: border-color $duration $timing-function; // Плавний перехід кольору
+                }
+            }
+
+            // Зміна кольору галочки при наведенні на батьківський елемент
+            &:hover > .site-nav__link,
+            &:focus > .site-nav__link {
+                color: $color-akcent;
+
+                &::after {
+                    border-top-color: $color-akcent; // Зміна кольору галочки
+                }
+            }
+        }
+    }
 
     &__link {
         position: relative;
@@ -247,7 +273,8 @@
         font-size: 22px;
         font-weight: 600;
         line-height: 1.45;
-     }
+        transition: color $duration $timing-function;
+    }
 
     &__link:hover,
     &__link:focus {
@@ -255,7 +282,7 @@
         transition: color $duration $timing-function;
     }
 
-    &__link.current {
+    &__link.active {
         font-size: 24px;
         line-height: 1.33;
     }
@@ -284,8 +311,9 @@
     &__link {
         padding: 8px 16px;
         font-family: $main-font;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
+        line-height: 1.45;
         color: $color-black;
     }
  
