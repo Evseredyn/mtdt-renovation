@@ -5,14 +5,22 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        padding: 48px 40px;
+        padding: 40px 20px;
         background-color: $color-white-bg;
         display: flex;
         flex-direction: column;
         z-index: 31;
         transform: translateX(100%);
         transition: $duration $timing-function;
+
+        // ДОДАЙТЕ ЦІ ВЛАСТИВОСТІ ДЛЯ СТАБІЛЬНОЇ ПРОКРУТКИ
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; // Для плавного скролу на iOS
                 
+        @include mq(tablet) {
+            padding: 40px;
+        }
+                   
         @include mq(desktop) {
             display: none;
         }
@@ -22,8 +30,12 @@
         transform: translateX(0);
     }
 
+    &__list {
+        padding-bottom: 30px;
+        border-bottom: solid 2px $color-akcent;
+    }
+
     &__item:nth-child(2) {
-        position: relative;
 
         & > .mobile-menu__link {
             // Створюємо псевдоелемент галочки
@@ -40,13 +52,31 @@
                 transition: border-color $duration $timing-function; // Плавний перехід кольору
             }
         }
+        
         // Зміна кольору галочки при наведенні на батьківський елемент
-        &:hover > .mobile-menu__link,
-        &:focus > .mobile-menu__link {
-            color: $color-akcent;
-            &::after {
-                border-top-color: $color-akcent; // Зміна кольору галочки
-            }
+    //     &:hover > .mobile-menu__link,
+    //     &:focus > .mobile-menu__link {
+    //         color: $color-akcent;
+    //         &::after {
+    //             border-top-color: $color-akcent; // Зміна кольору галочки
+    //         }
+    //     }
+    }
+
+    // Новий клас для активного стану (керуємо з JS)
+    &__link.select {
+        color: $color-akcent;
+        
+        &::after {
+            border-top-color: $color-akcent;
+        }
+    }
+
+    // Новий клас для відкритого підменю (керуємо з JS)
+    &__item.is-open > .mobile-menu__link {
+        &::after {
+            // border-top-color: $color-akcent;
+            transform: rotate(180deg);
         }
     }
 
@@ -62,6 +92,7 @@
         color: $color-black;
         transition: color $duration $timing-function;
     }
+    
     &__link:hover,
     &__link:focus {
     color: $color-akcent;
@@ -102,15 +133,16 @@ nav li:hover > .site-subnav__list,
 .mobile-submenu {
 
     &__list {
-    position: absolute;
-    z-index: 21;
-    // top: calc(100% + 15px);
-    top: 0;
-    left: 0;
-    display: none;
-    padding: 20px;
-    width: 300px;
-    max-height: 0;
+    // position: absolute;
+    // z-index: 21;
+    // // top: calc(100% + 15px);
+    // top: 0;
+    // left: 0;
+    // display: none;
+    margin-top: 10px;
+    padding: 10px;
+    max-width: 300px;
+    // max-height: 0;
     background-color: $color-white-bg;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
     transition: max-height $duration $timing-function;
@@ -121,7 +153,8 @@ nav li:hover > .site-subnav__list,
     }
     
     &__link {
-        padding: 8px 16px;
+        display: inline-block;
+        // padding: 8px 16px;
         font-family: $main-font;
         font-size: 20px;
         font-weight: 600;
@@ -135,62 +168,96 @@ nav li:hover > .site-subnav__list,
     }
 }
 
-.mobile-contacts {
-    &__list {
-        margin-top: auto;
-        margin-bottom: 64px;
-    }
-
-    &__phone {
-        display: inline-block;
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        margin-bottom: 32px;
-    }
-
-    &__mail {
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-    }
-
-    &__phone:hover,
-    &__phone:focus,
-    &__mail:hover,
-    &__mail:focus {
-        color: $color-akcent;
-    }
-}
-
-.mobile-socials {
-    &__list {
+.mobile-contacts {       
         display: flex;
-        flex-wrap: wrap;
-    }
+        flex-direction: column;
+        gap: 40px;
+        margin: 30px 0;
 
     &__item {
-        padding-right: 10px;
-        padding-left: 10px;
-        border-right: solid 1px rgba($color-secondary-title, $alpha: 0.2);
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
-    &__item:last-child {
-        padding-right: 0;
-        border: none;
+    &__icon {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative; // Для позиціонування псевдоелемента
+
+        // Анімація transform, якщо потрібна
+        transition: transform $duration $timing-function;
+
+        &.phone-icon {
+            background-image: url('../images/phone.png'); // Зображення за замовчуванням
+
+            &::after { // Використовуємо псевдоелемент для hover зображення
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/phone-hover.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0; // За замовчуванням приховано
+                transition: opacity $duration $timing-function; // Анімуємо прозорість
+                // transition-delay: 0.1s;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    opacity: 1; // Зображення hover стає видимим
+                }
+            }
+        }
+
+        &.email-icon {
+            background-image: url('../images/email.png');
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('../images/email-hover.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0;
+                transition: opacity $duration $timing-function;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 
-    &__item:first-child {
-        padding-left: 0;
+    &__label {
+        color: $color-label-2;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.42;
     }
 
     &__link {
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 1.8;
-        letter-spacing: 0.02em;
+        color: $color-black;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.55;
     }
 }
 

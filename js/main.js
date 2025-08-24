@@ -1,18 +1,32 @@
-// // Очікуємо, поки DOM буде повністю завантажений
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Знаходимо елемент, де потрібно відобразити рік
-//     const yearElement = document.getElementById('current-year');
+// Налаштовуємо подію для зміни кольору псевдоелемента для елемента списку навменю для мобільного
+// Знаходимо елементи
+const servicesItem = document.querySelector('.mobile-menu__item:nth-child(2)');
+const servicesLink = servicesItem.querySelector('.mobile-menu__link');
+const submenuList = servicesItem.querySelector('.mobile-submenu__list');
 
-//     // Перевіряємо, чи елемент існує, щоб уникнути помилок
-//     if (yearElement) {
-//         // Отримуємо поточний рік
-//         const currentYear = new Date().getFullYear();
+// Перевіряємо, чи існують елементи
+if (servicesItem && servicesLink && submenuList) {
+    // Додаємо слухач події на посилання "Services"
+    servicesLink.addEventListener('click', (event) => {
+        // Запобігаємо стандартній дії посилання
+        event.preventDefault();
 
-//         // Оновлюємо текстовий вміст елемента
-//         yearElement.textContent = currentYear;
-//     }
-// });
+        // Перемикаємо клас 'active' на посиланні
+        servicesLink.classList.toggle('select');
 
+        // Перемикаємо клас 'is-open' на батьківському елементі, щоб розкрити підменю
+        servicesItem.classList.toggle('is-open');
+
+        // Додаткова логіка для показу/приховування підменю
+        if (servicesItem.classList.contains('is-open')) {
+            submenuList.style.display = 'block'; // Або інша ваша логіка
+        } else {
+            submenuList.style.display = 'none'; // Або інша ваша логіка
+        }
+    });
+}
+
+// Налаштовуємо системне оновлення періоду (років) створення сайту компанії
 document.addEventListener('DOMContentLoaded', function() {
     const yearsElement = document.getElementById('copyright-years');
 

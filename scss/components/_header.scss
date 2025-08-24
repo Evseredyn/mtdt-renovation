@@ -239,6 +239,8 @@
         position: relative;
 
             & > .site-nav__link {
+
+                position: relative;
                 // Створюємо псевдоелемент галочки
                 &::after {
                     content: '';
@@ -261,10 +263,27 @@
 
                 &::after {
                     border-top-color: $color-akcent; // Зміна кольору галочки
+                    transform: rotate(180deg);
                 }
             }
         }
     }
+    
+    // // Новий клас для активного стану (керуємо з JS)
+    // &__link.select {
+    //     color: $color-akcent;
+        
+    //     &::after {
+    //         border-top-color: $color-akcent;
+    //     }
+    // }
+
+    // // Новий клас для відкритого підменю (керуємо з JS)
+    // &__item.is-open > .site-nav__link {
+    //     &::after {
+    //         transform: rotate(180deg);
+    //     }
+    // }
 
     &__link {
         position: relative;
