@@ -1,0 +1,215 @@
+.feature-description {      
+    &__wrapper {
+        // padding: 40px 20px;
+        padding-bottom: 40px;
+        background-color: $color-white;
+    }
+    &__title {
+        font-size: 18px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+        
+        @include mq(desktop) {
+        font-size: 32px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+
+        @include mq(desktop) {
+        font-size: 20px;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 16px;
+        color: $color-black;
+        font-weight: 400;
+    }
+    & img {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+}
+
+.accordion-more__wrapper {
+    padding-bottom: 40px;
+}
+.features {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        @include mq(monitor) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    &__item {
+        margin: 0;
+    }
+
+    &__btn {
+        padding: 8px 6px;
+        color: $color-akcent;
+        background-color: $color-bg-item;
+        border: none;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 600;
+        cursor: pointer;
+
+        @include mq(tablet) {
+            padding: 8px 12px;
+            font-size: 20px;
+        }
+
+        @include mq(desktop) {
+            padding: 12px 16px;
+            font-size: 24px;
+        }
+
+        &.active {
+            color: $color-black;
+            background-color: $color-white;
+        }
+    }
+}
+
+.feature {
+    &__list {
+    }
+
+    &__item {
+        padding: 40px 20px;
+        background-color: $color-white;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+
+        @include mq(desktop) {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+        text-align: center;
+        color: $color-black;
+
+        @include mq(desktop) {
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+    }
+
+    &__text {
+        margin-top: 20px;
+        font-size: 16px;
+        color: $color-black;
+        font-weight: 400;
+    }
+    
+    &-inner {
+        @include mq(tablet) {
+            display: flex;
+            justify-content: space-between;
+            // gap: 20px;
+        }
+
+        @include mq(tablet) {
+            padding: 30px 0;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 40px 0;
+        }
+
+        &__item {
+            position: relative;
+            padding-left: 20px;
+
+            @include mq(tablet) {
+                padding-left: 70px;
+            }
+        }
+
+        // &__item:not(:last-child) {
+        //     margin-bottom: 20px;
+        // }
+
+        &__item>p::before {
+            content: ''; /* Пустий вміст */
+            display: inline-block;
+            width: 6px; /* Розмір булета */
+            height: 6px;
+            background-color: $color-akcent; /* Колір булета */
+            border-radius: 50%; /* Робить булет круглим */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%); /* Центруємо по вертикалі */
+
+            @include mq(tablet) {
+                width: 50px;
+                height: 3px;
+                border-radius: 0%;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+            color: $color-black;
+            font-weight: 600;
+
+            @include mq(tablet) {
+                max-width: 270px;
+            }
+
+            @include mq(desktop) {
+                max-width: 500px;
+                font-size: 20px;
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        
+            @include mq(tablet) {
+                // margin: auto 0;
+                max-width: calc(50% - 20px);
+                height: auto;
+            }
+        
+            @include mq(desktop) {
+                margin: 30px 0;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
     &-list {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         margin: -12px;
         box-sizing: border-box;
 
@@ -47,6 +47,17 @@
 
     &__details {
         padding: 15px;
+        max-height: 200px; /* Обмеження висоти блоку */
+        overflow: hidden; /* Приховуємо все, що виходить за межі */
+        transition: max-height 0.4s ease-in-out; /* Плавний перехід */
+    }
+
+    &__details.is-expanded {
+        max-height: 1000px; /* Велика висота для повного розкриття */
+    }
+    
+    &__details.is-expanded .full-text {
+        display: inline; /* Показуємо повний текст, коли блок розкритий */
     }
 
     &__head-link {
@@ -66,6 +77,7 @@
     }
 
     &__btn {
+        padding: 20px;
         font-size: 16px;
         line-height: 1.25;
         font-weight: 700;
@@ -75,4 +87,8 @@
         background-color: transparent;
         cursor: pointer;
     }
+}
+
+.full-text {
+    display: none; /* Приховуємо повний текст за замовчуванням */
 }

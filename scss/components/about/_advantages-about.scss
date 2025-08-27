@@ -38,7 +38,7 @@
         margin-top: 30px;
         padding: 70px 20px 20px;
         background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-        url(./images/img-advantages-bg.jpg);
+        url(../images/img-advantages-bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -52,16 +52,6 @@
             padding: 90px 40px 60px;
         }
     }
-
-    &__item {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    // &__item:not(:last-child) {
-    //     margin-bottom: 30px;
-    // }
 
     &__title {
         max-width: 70%;

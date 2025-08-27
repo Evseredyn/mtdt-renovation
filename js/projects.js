@@ -1,29 +1,51 @@
 $(document).ready(function() {
 
-    // Обробник кліку для мініатюр "Before" та "After"
-    $('.project__switcher-thumb').on('click', function() {
-        const $thisThumb = $(this); // Зберігаємо посилання на натиснуту мініатюру
-        const $projectArticle = $thisThumb.closest('.project__article'); // Знаходимо батьківську картку проєкту
-        const $mainImage = $projectArticle.find('.project__demo'); // Головне демонстраційне зображення
-        const newImageUrl = $thisThumb.data('image'); // Отримуємо URL зображення з data-атрибута
+    /* --- Функціонал фільтрації (Recent Projects) --- */
 
-        // 1. Змінюємо головне демонстраційне зображення
-        $mainImage.attr('src', newImageUrl);
+    // Обробник кліку для кнопок фільтра
+    $('.projects__btn').on('click', function() {
+        const $thisButton = $(this);
+        const filterValue = $thisButton.data('filter');
 
-        // 2. Оновлюємо активний стан мініатюр (керування оверлеями)
-        $projectArticle.find('.project__switcher-thumb').removeClass('active'); // Прибираємо active з усіх мініатюр
-        $thisThumb.addClass('active'); // Додаємо active до натиснутої мініатюри
+        // Оновлюємо активний стан кнопок
+        $('.projects__btn').removeClass('active');
+        $thisButton.addClass('active');
+
+        // Фільтруємо проєкти
+        const $projectItems = $('.project__list .project__item');
+
+        $projectItems.fadeOut(300, function() {
+            if (filterValue === 'all') {
+                $projectItems.fadeIn(300);
+            } else {
+                $projectItems.filter('[data-category="' + filterValue + '"]').fadeIn(300);
+            }
+        });
     });
 
-    // Ініціалізація: За замовчуванням, робимо мініатюру After активною
-    // Це потрібно, якщо ви не додаєте клас active до HTML вручну
-    // Або просто переконайтесь, що у HTML у вас вже є клас 'active' на After за замовчуванням.
-    // Якщо у вас вже є 'active' в HTML, цей блок не є строго необхідним,
-    // але не завадить, якщо ви захочете програмно контролювати початковий стан.
-    $('.project__switcher-thumb.project__switcher-after').addClass('active');
+    // Ініціалізуємо фільтр при завантаженні сторінки
+    $('.projects__btn.active').trigger('click');
 
-    // Щоб переконатися, що перша демонстраційна картинка відповідає active мініатюрі After при завантаженні сторінки
-    // Знайдемо кожну статтю
+    /* --- Функціонал перемикача Before/After --- */
+
+    // Використовуємо делегування подій для обробки кліків
+    // Це гарантує, що перемикачі працюватимуть навіть на тих картках,
+    // які з'являються після фільтрації.
+    $('.project__list').on('click', '.project__switcher-thumb', function() {
+        const $thisThumb = $(this);
+        const $projectArticle = $thisThumb.closest('.project__article');
+        const $mainImage = $projectArticle.find('.project__demo');
+        const newImageUrl = $thisThumb.data('image');
+
+        // Змінюємо головне зображення
+        $mainImage.attr('src', newImageUrl);
+
+        // Оновлюємо активний стан мініатюр
+        $projectArticle.find('.project__switcher-thumb').removeClass('active');
+        $thisThumb.addClass('active');
+    });
+
+    // Ініціалізація перемикача при завантаженні сторінки
     $('.project__article').each(function() {
         const $article = $(this);
         const $activeThumb = $article.find('.project__switcher-thumb.active');

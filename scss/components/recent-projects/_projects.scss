@@ -81,13 +81,39 @@
 }
 
 .project {
-
     &__list {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
+        /* Видаляємо align-items: center; для коректної роботи margin: auto; */
+        justify-content: space-between;
         margin: -12px;
         box-sizing: border-box;
+
+        @include mq(tablet) {
+            flex-wrap: wrap;
+            /* Увімкнути для 2-х колонок */
+            // justify-content: space-between; 
+        }
+
+        .center-item {
+            /* Забезпечуємо, щоб елемент займав повну ширину */
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mq(tablet) {
+                flex-basis: calc(50% - 24px);
+                max-width: calc(50% - 24px);
+            }
+            @include mq(desktop) {
+                /* Замінюємо justify-content: space-between */
+                justify-content: center;
+                flex-basis: calc(33.333% - 24px);
+                max-width: calc(33.333% - 24px);
+                margin: 12px auto;
+            }
+        }
     }
 
     &__item {
@@ -99,22 +125,13 @@
         box-sizing: border-box;
 
         @include mq(tablet) {
-            // Припустимо, breakpoint для tablet починається від 768px або 744px
-            flex-basis: calc(50% - 24px); /* Для 2 колонок з марджинами 12px по боках (12+12=24) */
-            max-width: calc(50% - 24px); /* Щоб запобігти переповненню */
-            // width: auto; /* Скидаємо фіксовану ширину, якщо була */
+            flex-basis: calc(50% - 24px);
+            max-width: calc(50% - 24px);
         }
 
-        @include mq(desktop) { // Припустимо, breakpoint для desktop починається від 1200px
-            flex-basis: calc(33.333% - 24px); /* Для 3 колонок */
+        @include mq(desktop) {
+            flex-basis: calc(33.333% - 24px);
             max-width: calc(33.333% - 24px);
-        }
-
-        &:nth-child(3) {
-            @include mq(tablet-only) {
-                margin-left: auto;
-                margin-right: auto;
-            }
         }
     }
 

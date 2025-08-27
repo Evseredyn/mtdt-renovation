@@ -68,3 +68,74 @@ $(document).ready(function() {
     // якщо сторінка вже прокручена (наприклад, після оновлення)
     $(window).trigger('scroll');
 });
+
+// JavaScript для зміни для кнопки READ MORE
+document.addEventListener('DOMContentLoaded', () => {
+    const relatedCards = document.querySelectorAll('.related__card');
+    const maxHeight = 200; // Це значення має відповідати max-height в CSS
+
+    relatedCards.forEach(card => {
+        const detailsBlock = card.querySelector('.related__details');
+        const readMoreButton = card.querySelector('.related__btn');
+
+        if (!detailsBlock || !readMoreButton) {
+            return; // Виходимо, якщо елементи не знайдено
+        }
+
+        // Перевіряємо, чи вміст блоку перевищує задану висоту
+        if (detailsBlock.scrollHeight > maxHeight) {
+            readMoreButton.style.display = 'block'; // Показуємо кнопку
+        } else {
+            readMoreButton.style.display = 'none'; // Ховаємо кнопку, якщо текст поміщається
+        }
+
+        // Додаємо слухач події на кнопку "Читати більше"
+        readMoreButton.addEventListener('click', () => {
+            detailsBlock.classList.toggle('is-expanded');
+
+            if (detailsBlock.classList.contains('is-expanded')) {
+                readMoreButton.textContent = 'Read less';
+            } else {
+                readMoreButton.textContent = 'Read more';
+            }
+        });
+    });
+});
+
+// Задаємо центральне положення для останнього проєкту
+function centerLastItem() {
+    const $visibleItems = $('.project__item:visible');
+    // Перевіряємо, чи кількість видимих елементів непарна і більше одного
+    if ($visibleItems.length % 2 !== 0 && $visibleItems.length > 1) {
+        // Якщо так, додаємо клас до останнього видимого елемента
+        const $lastItem = $visibleItems.last();
+        $lastItem.addClass('center-item');
+    } else {
+        // Якщо ні, видаляємо клас з усіх елементів, щоб уникнути конфліктів
+        $('.project__item').removeClass('center-item');
+    }
+}
+
+$('.projects__btn').on('click', function() {
+    const $thisButton = $(this);
+    const filterValue = $thisButton.data('filter');
+
+    $('.projects__btn').removeClass('active');
+    $thisButton.addClass('active');
+
+    const $projectItems = $('.project__list .project__item');
+
+    $projectItems.fadeOut(300, function() {
+        if (filterValue === 'all') {
+            $projectItems.fadeIn(300, function() {
+                // Викликаємо функцію після завершення анімації
+                centerLastItem();
+            });
+        } else {
+            $projectItems.filter('[data-category="' + filterValue + '"]').fadeIn(300, function() {
+                // Викликаємо функцію після завершення анімації
+                centerLastItem();
+            });
+        }
+    });
+});

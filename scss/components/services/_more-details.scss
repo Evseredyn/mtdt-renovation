@@ -1,0 +1,156 @@
+/* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
+.accordion-more {
+    &__wrapper {
+        width: 100%;
+        /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
+        @include mq(desktop) { 
+            display: flex; /* Робимо головний контейнер Flexbox */
+            gap: 20px; /* Відстань між колонками */
+        }
+    }
+
+    &__list {
+    /* На мобільному це просто список елементів */
+        // @include mq(desktop) { /* Це ліва колонка */
+        //     flex: 0 0 40%; /* Займає 40% ширини, не зростає, не зменшується */
+        // }
+    }
+
+    &__item {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        overflow: hidden; /* Важливо для анімації max-height */
+    }
+
+    &__header {
+        background-color: $color-akcent;
+        padding: 15px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        transition: background-color $duration $timing-function;
+        @include mq(desktop) {
+            // border-radius: 4px; /* Заокруглені кути для окремих заголовків */
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0;
+        width: 100%;
+        border: none;
+        background: none;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-black;
+        cursor: pointer;
+    }
+
+    /* Стилізація іконки (+/-) */
+    &__icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        // margin-right: 15px;
+        flex-shrink: 0;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $color-white; /* Колір іконки в неактивному стані */
+            transition: transform $duration $timing-function;
+        }
+        &::before { /* Вертикальна лінія плюса */
+            top: 0;
+            left: 9px;
+            width: 2px;
+            height: 100%;
+        }
+        &::after { /* Горизонтальна лінія плюса */
+            top: 9px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $color-white;
+
+        @include mq(desktop) {
+        font-size: 22px;
+        }
+    }
+}
+
+
+/* Стилі для відкритого стану акордеону (мобільний та десктоп) */
+// .accordion-more__item.is-active .accordion-more__header{
+//     background-color: $color-white;
+// }
+// .accordion-more__item.is-active .accordion-more__header {
+//     background-color: $color-akcent;
+// }
+.accordion-more__item.is-active .accordion-more__icon::before {
+    transform: rotate(90deg) scaleY(0); /* Анімація для перетворення плюса в мінус */
+}
+.accordion-more__item.is-active .accordion-more__icon::after {
+    background-color: $color-white; /* Колір іконки в активному стані */
+}
+
+/* Контент відповіді для мобільної версії */
+.accordion-more__content {
+    background-color: $color-white;
+    background-color: $color-bg-faq;
+    padding: 0 20px; /* Паддинги з боків для згорнутого стану */
+    max-height: 0; /* Приховано за замовчуванням */
+    opacity: 0;
+    transition: max-height $duration $timing-function, opacity $duration $timing-function, padding $duration $timing-function;
+    @include mq(desktop) {
+        display: flex;
+    }
+}
+
+.accordion-more__content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $color-black;
+}
+
+.accordion-more__item.is-active .accordion-more__content {
+    max-height: 500px; /* Достатньо велике значення для розгортання */
+    overflow-y: auto;
+    opacity: 1;
+    padding: 20px; /* Паддинги для відкритого контенту */
+}
+
+.text-container {
+    &__item {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    &__item>p::before {
+        content: ''; /* Пустий вміст */
+        display: inline-block;
+        width: 6px; /* Розмір булета */
+        height: 6px;
+        background-color: $color-akcent; /* Колір булета */
+        border-radius: 50%; /* Робить булет круглим */
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); /* Центруємо по вертикалі */
+    }
+}
