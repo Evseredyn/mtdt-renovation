@@ -1,5 +1,15 @@
-.areas__img {
+.areas {
+
+    &__img {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+
+        @include mq(desktop) {
+            max-width: 90%;
+        }
+    
+        @include mq(desktop) {
+        max-width: 80%;
+        }
+    }
 }
