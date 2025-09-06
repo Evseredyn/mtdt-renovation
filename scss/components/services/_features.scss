@@ -42,6 +42,7 @@
 .accordion-more__wrapper {
     padding-bottom: 40px;
 }
+
 .features {
     &__list {
         display: flex;
@@ -192,6 +193,121 @@
 
             @include mq(desktop) {
                 max-width: 500px;
+                font-size: 20px;
+            }
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        
+            @include mq(tablet) {
+                // margin: auto 0;
+                max-width: calc(50% - 20px);
+                height: auto;
+            }
+        
+            @include mq(desktop) {
+                margin: 30px 0;
+            }
+        }
+    }
+
+    &-wrapper {
+        padding: 20px 20px 40px;
+
+            @include mq(desktop) {
+            padding: 10px 20px 20px;
+            }
+
+        &__text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 400;
+
+            @include mq(desktop) {
+            font-size: 20px;
+            }
+        }
+    }
+
+    &-block {
+        @include mq(tablet) {
+            // display: flex;
+            // justify-content: space-between;
+            // gap: 20px;
+        }
+
+        @include mq(tablet) {
+            // padding: 30px 0;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 600;
+
+            @include mq(tablet) {
+                // max-width: 270px;
+            }
+
+            @include mq(desktop) {
+                // max-width: 500px;
+                font-size: 20px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        &__item {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+
+            @include mq(tablet) {
+                padding-left: 70px;
+            }
+        }
+
+        // &__item:not(:last-child) {
+        //     margin-bottom: 20px;
+        // }
+
+        &__item>p::before {
+            content: ''; /* Пустий вміст */
+            display: inline-block;
+            width: 6px; /* Розмір булета */
+            height: 6px;
+            background-color: $color-akcent; /* Колір булета */
+            border-radius: 50%; /* Робить булет круглим */
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%); /* Центруємо по вертикалі */
+
+            @include mq(tablet) {
+                width: 50px;
+                height: 3px;
+                border-radius: 0%;
+            }
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+
+            @include mq(tablet) {
+                // max-width: 270px;
+            }
+
+            @include mq(desktop) {
+                // max-width: 500px;
                 font-size: 20px;
             }
         }
