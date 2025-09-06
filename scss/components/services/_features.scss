@@ -39,8 +39,23 @@
     }
 }
 
-.accordion-more__wrapper {
+.accordion-more {
+
+    &__wrapper {
     padding-bottom: 40px;
+    }
+
+    &__header--title {
+        margin: 40px 0 20px;
+        font-size: 18px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+        
+        @include mq(desktop) {
+        font-size: 32px;
+        }
+    }
 }
 
 .features {
@@ -98,7 +113,7 @@
 
     &__title {
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 20px;
         color: $color-black;
         font-weight: 600;
         text-align: center;
@@ -112,7 +127,7 @@
     &__subtitle {
         margin-bottom: 15px;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.2;
         font-weight: 600;
         text-align: center;
         color: $color-black;
@@ -125,7 +140,13 @@
     }
 
     &__text {
-        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: $color-black;
+        font-weight: 400;
+    }
+
+    &__text-bottom {
         font-size: 16px;
         color: $color-black;
         font-weight: 400;
@@ -147,7 +168,21 @@
             flex-direction: column;
             justify-content: space-between;
             gap: 15px;
-            padding: 40px 0;
+            // padding: 40px 0;
+
+            // &__title {
+            //     margin-bottom: -10px;
+            //     font-size: 16px;
+            //     font-weight: 600;
+            //     color: $color-black;
+            //     @include mq(tablet) {
+            //         // max-width: 270px;
+            //     }
+            //     @include mq(desktop) {
+            //         // max-width: 500px;
+            //         font-size: 20px;
+            //     }
+            // }
         }
 
         &__item {
@@ -197,6 +232,10 @@
             }
         }
 
+        &__text>span {
+            font-weight: 400;
+        }
+
         & img {
             width: 100%;
             height: auto;
@@ -215,21 +254,32 @@
     }
 
     &-wrapper {
-        padding: 20px 20px 40px;
+        padding: 20px;
+        background-color: $color-white;
 
-            @include mq(desktop) {
-            padding: 10px 20px 20px;
-            }
+        @include mq(tablet) {
+        padding: 40px 20px;
+        }
+
+        @include mq(desktop) {
+        padding: 10px 20px 20px;
+        // background-color: $color-bg-item;
+        }
 
         &__text {
             margin-bottom: 20px;
             font-size: 16px;
             font-weight: 400;
+            color: $color-black;
 
             @include mq(desktop) {
             font-size: 20px;
             }
         }
+    }
+
+    &__steps {
+        margin: 20px 0;
     }
 
     &-block {
@@ -244,11 +294,14 @@
         }
 
         &__title {
-            font-size: 16px;
+            // margin-bottom: -10px;
+            margin-bottom: 10px;
+            font-size: 18px;
             font-weight: 600;
+            color: $color-black;
 
             @include mq(tablet) {
-                // max-width: 270px;
+                // margin-bottom: 0;
             }
 
             @include mq(desktop) {
@@ -261,8 +314,12 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            gap: 15px;
-            padding: 20px 0;
+            gap: 5px;
+            // padding: 20px 0;
+
+            @include mq(desktop) {
+                gap: 15px;
+            } 
         }
 
         &__item {
@@ -300,7 +357,8 @@
 
         &__text {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 600;
+            color: $color-black;
 
             @include mq(tablet) {
                 // max-width: 270px;
@@ -310,7 +368,39 @@
                 // max-width: 500px;
                 font-size: 20px;
             }
+
+            &--bottom {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-black;
+
+                @include mq(tablet) {
+                    // max-width: 270px;
+                }
+
+                @include mq(desktop) {
+                    // max-width: 500px;
+                    font-size: 20px;
+                }
+            }
         }
+
+        // &__text-bottom {
+        //     margin-bottom: 20px;
+        //     font-size: 16px;
+        //     font-weight: 400;
+        //     color: $color-black;
+
+        //     @include mq(tablet) {
+        //         // max-width: 270px;
+        //     }
+
+        //     @include mq(desktop) {
+        //         // max-width: 500px;
+        //         font-size: 20px;
+        //     }
+        // }
 
         & img {
             width: 100%;
