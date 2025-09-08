@@ -1,15 +1,35 @@
 /* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
 .accordion-more {
+
+    &__header--title {
+        margin: 40px 0 20px;
+        font-size: 18px;
+        color: $color-black;
+        font-weight: 600;
+        text-align: center;
+        
+        @include mq(desktop) {
+        font-size: 32px;
+        }
+    }
+
     &__wrapper {
         width: 100%;
         /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
         @include mq(desktop) { 
             display: flex; /* Робимо головний контейнер Flexbox */
-            gap: 20px; /* Відстань між колонками */
+            // gap: 20px; /* Відстань між колонками */
         }
     }
 
     &__list {
+        // padding: 20px 0;
+        padding-top: 20px;
+
+        @include mq(desktop) {
+        padding: 40px 0;
+        }
+
     /* На мобільному це просто список елементів */
         // @include mq(desktop) { /* Це ліва колонка */
         //     flex: 0 0 40%; /* Займає 40% ширини, не зростає, не зменшується */

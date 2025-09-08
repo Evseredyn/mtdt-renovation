@@ -3584,22 +3584,6 @@ nav li:hover > .site-subnav__list,
   margin: 20px 0;
 }
 
-.accordion-more__wrapper {
-  padding-bottom: 40px;
-}
-.accordion-more__header--title {
-  margin: 40px 0 20px;
-  font-size: 18px;
-  color: #000000;
-  font-weight: 600;
-  text-align: center;
-}
-@media screen and (min-width: 1440px) {
-  .accordion-more__header--title {
-    font-size: 32px;
-  }
-}
-
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3751,6 +3735,7 @@ nav li:hover > .site-subnav__list,
   font-size: 16px;
   color: #000000;
   font-weight: 600;
+  max-width: 100%;
 }
 @media screen and (min-width: 768px) {
   .feature-inner__text {
@@ -3766,30 +3751,19 @@ nav li:hover > .site-subnav__list,
 .feature-inner__text > span {
   font-weight: 400;
 }
-.feature-inner img {
+.feature-inner > img {
   width: 100%;
   height: auto;
-  margin: 20px 0;
 }
 @media screen and (min-width: 768px) {
-  .feature-inner img {
+  .feature-inner > img {
     max-width: calc(50% - 20px);
     height: auto;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .feature-inner img {
-    margin: 30px 0;
   }
 }
 .feature-wrapper {
   padding: 20px;
   background-color: #FFFFFF;
-}
-@media screen and (min-width: 768px) {
-  .feature-wrapper {
-    padding: 40px 20px;
-  }
 }
 @media screen and (min-width: 1440px) {
   .feature-wrapper {
@@ -3890,19 +3864,18 @@ nav li:hover > .site-subnav__list,
     font-size: 20px;
   }
 }
-.feature-block img {
+.feature-block > img {
   width: 100%;
   height: auto;
-  margin: 20px 0;
 }
 @media screen and (min-width: 768px) {
-  .feature-block img {
+  .feature-block > img {
     max-width: calc(50% - 20px);
     height: auto;
   }
 }
 @media screen and (min-width: 1440px) {
-  .feature-block img {
+  .feature-block > img {
     margin: 30px 0;
   }
 }
@@ -3910,6 +3883,18 @@ nav li:hover > .site-subnav__list,
 /* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
 .accordion-more {
   /* Стилізація іконки (+/-) */
+}
+.accordion-more__header--title {
+  margin: 40px 0 20px;
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .accordion-more__header--title {
+    font-size: 32px;
+  }
 }
 .accordion-more__wrapper {
   width: 100%;
@@ -3920,11 +3905,16 @@ nav li:hover > .site-subnav__list,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; /* Робимо головний контейнер Flexbox */
-    gap: 20px; /* Відстань між колонками */
   }
 }
 .accordion-more__list {
+  padding-top: 20px;
   /* На мобільному це просто список елементів */
+}
+@media screen and (min-width: 1440px) {
+  .accordion-more__list {
+    padding: 40px 0;
+  }
 }
 .accordion-more__item {
   margin-bottom: 10px;
