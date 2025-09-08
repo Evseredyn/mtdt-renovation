@@ -13,7 +13,7 @@
     // }
 
     &.scrolled {
-            background-color: rgba(17, 68, 123, 0.98);
+            background-color: rgba(0, 24, 54, 0.95);
     }
     &__btn {
 
@@ -65,7 +65,9 @@
     }
 
     &__company {
-        display: none;
+        // display: none;
+                        font-size: 20px;
+                                        text-transform: uppercase;
 
             @include mq(tablet) {
                 display: inline-block;
