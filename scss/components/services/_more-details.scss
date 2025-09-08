@@ -17,7 +17,7 @@
         width: 100%;
         /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
         @include mq(desktop) { 
-            display: flex; /* Робимо головний контейнер Flexbox */
+            // display: flex; /* Робимо головний контейнер Flexbox */
             // gap: 20px; /* Відстань між колонками */
         }
     }
@@ -27,7 +27,7 @@
         padding-top: 20px;
 
         @include mq(desktop) {
-        padding: 40px 0;
+        // padding: 40px 0;
         }
 
     /* На мобільному це просто список елементів */
