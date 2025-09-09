@@ -3790,11 +3790,6 @@ nav li:hover > .site-subnav__list,
   padding: 20px;
   background-color: #FFFFFF;
 }
-@media screen and (min-width: 1440px) {
-  .feature-wrapper {
-    padding: 10px 20px 20px;
-  }
-}
 .feature-wrapper__text {
   margin-bottom: 20px;
   font-size: 16px;
@@ -3881,6 +3876,7 @@ nav li:hover > .site-subnav__list,
 .feature-block__text--bottom {
   margin-top: 20px;
   font-size: 16px;
+  line-height: 1.2;
   font-weight: 600;
   color: #000000;
 }
@@ -3888,6 +3884,9 @@ nav li:hover > .site-subnav__list,
   .feature-block__text--bottom {
     font-size: 20px;
   }
+}
+.feature-block__text > span {
+  font-weight: 400;
 }
 .feature-block > img {
   width: 100%;
