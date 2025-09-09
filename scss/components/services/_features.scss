@@ -94,7 +94,8 @@
     }
 
     &__title {
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
+        margin-top: 20px;
         font-size: 20px;
         color: $color-black;
         font-weight: 600;
@@ -107,6 +108,7 @@
     }
 
     &__subtitle {
+        margin-top: 10px;
         margin-bottom: 15px;
         font-size: 16px;
         line-height: 1.2;
