@@ -390,6 +390,32 @@
             }
         }
 
+        &__list--numbered {
+            counter-reset: numbered-item; // Унікальний лічильник для цього блоку
+        }
+
+        &__list--numbered .feature-block__item > p::before {
+            content: counter(numbered-item); // Відображаємо значення лічильника
+            counter-increment: numbered-item; // Збільшуємо лічильник
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $color-akcent;
+            color: $color-white;
+            font-weight: 700;
+            position: absolute;
+            left: 0px; // Розташовуємо зліва від тексту
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &__list--numbered>.feature-block__item {
+            padding-left: 50px;
+        }
+
         &__text>span {
             font-weight: 400;
         }
