@@ -1738,6 +1738,7 @@ nav li:hover > .site-subnav__list,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; /* Робимо головний контейнер Flexbox */
+    max-height: 600px; /* Задаємо максимальну висоту для всього блоку */
     /* max-width та margin: auto для .container вже є, тут не потрібні */
   }
 }
@@ -1750,6 +1751,8 @@ nav li:hover > .site-subnav__list,
     -webkit-box-flex: 0;
         -ms-flex: 0 0 40%;
             flex: 0 0 40%; /* Займає 40% ширини, не зростає, не зменшується */
+    max-height: 600px; /* Обмежуємо висоту списку питань */
+    overflow-y: auto; /* Додаємо вертикальну прокрутку */
     /* border: 1px solid var(--border-color); /* Можна додати свою рамку */
     /* padding: 10px; */ /* Можливі внутрішні паддинги */
   }
