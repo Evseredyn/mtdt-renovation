@@ -238,7 +238,7 @@
 
     &__item:nth-child(2) {
         @include mq(desktop) {
-        position: relative;
+            position: relative;
 
             & > .site-nav__link {
 
@@ -347,7 +347,7 @@
 nav li:hover > .site-subnav__list,
 .site-subnav__list:hover {
     display: block;
-    max-height: 350px;
+    max-height: 400px;
 }
 
     // .current.site-nav__link::after {

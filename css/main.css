@@ -1041,7 +1041,7 @@ nav li:hover > .site-subnav__list,
 nav li:hover > .site-subnav__list,
 .site-subnav__list:hover {
   display: block;
-  max-height: 350px;
+  max-height: 400px;
 }
 
 .footer {
