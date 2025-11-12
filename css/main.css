@@ -2619,7 +2619,7 @@ nav li:hover > .site-subnav__list,
 }
 .related__details {
   padding: 15px;
-  max-height: 200px; /* Обмеження висоти блоку */
+  max-height: 150px; /* Обмеження висоти блоку */
   overflow: hidden; /* Приховуємо все, що виходить за межі */
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out; /* Плавний перехід */
@@ -2637,15 +2637,15 @@ nav li:hover > .site-subnav__list,
   color: #000000;
 }
 .related__description {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
   color: #000000;
 }
 .related__btn {
-  padding: 20px;
+  padding: 10px 20px 20px 20px;
   font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
@@ -3639,7 +3639,6 @@ nav li:hover > .site-subnav__list,
   background-color: #FFFFFF;
 }
 .feature__title {
-  margin-top: 20px;
   font-size: 20px;
   color: #000000;
   font-weight: 600;
