@@ -1464,12 +1464,22 @@ nav li:hover > .site-subnav__list,
 .hero {
   padding: 20px 0;
   min-height: 650px;
-  background: url("../images/hero-1.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--1.jpeg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-repeat: no-repeat;
   background-position: center;
+}
+.hero.kitchen {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen.jpeg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen.jpeg");
   background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
 }
 @media screen and (min-width: 1440px) {
   .hero > .container {
@@ -2006,11 +2016,20 @@ nav li:hover > .site-subnav__list,
           justify-content: space-between;
   gap: 40px;
   padding: 20px 20px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../images/img-advantages-bg.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/img-advantages-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../images/folder/hero--1.jpeg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/folder/hero--1.jpeg);
   background-size: cover;
-  background-position: center;
+  background-position: 0% 70%;
   background-repeat: no-repeat;
+}
+.advantages__wrapper-bg.kitchen {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen.jpeg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
 }
 @media screen and (min-width: 768px) {
   .advantages__wrapper-bg {
