@@ -1473,8 +1473,8 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .hero.kitchen {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
