@@ -17,6 +17,15 @@
         background-position: center;
     }
 
+    &.interior {
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--interior.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        background-position: center;
+    }
+
     &>.container {
         @include mq(desktop) {
          position: relative;
