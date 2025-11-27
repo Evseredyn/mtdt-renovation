@@ -1473,8 +1473,8 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .hero.kitchen {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen.jpg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen-1.jpeg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen-1.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -1493,6 +1493,24 @@ nav li:hover > .site-subnav__list,
 .hero.interior {
   background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--interior.jpeg");
   background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--interior.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+}
+.hero.exterior {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--exterior.jpeg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--exterior.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center;
+}
+.hero.smart {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--smart.jpeg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--smart.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
