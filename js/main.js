@@ -71,32 +71,66 @@ $(document).ready(function() {
 
 // JavaScript для зміни для кнопки READ MORE
 document.addEventListener('DOMContentLoaded', () => {
+    // Встановіть це значення відповідно до вашого CSS: max-height у .related__details
+    const maxHeight = 190; 
+    
+    // Отримуємо всі картки, які потрібно обробляти
     const relatedCards = document.querySelectorAll('.related__card');
-    const maxHeight = 200; // Це значення має відповідати max-height в CSS
 
     relatedCards.forEach(card => {
         const detailsBlock = card.querySelector('.related__details');
         const readMoreButton = card.querySelector('.related__btn');
+        // !!! ОНОВЛЕНО: використовуємо новий клас .related__full-text
+        const fullTextBlock = card.querySelector('.related__full-text');
 
-        if (!detailsBlock || !readMoreButton) {
-            return; // Виходимо, якщо елементи не знайдено
+        if (!detailsBlock || !readMoreButton || !fullTextBlock) {
+            return;
         }
 
-        // Перевіряємо, чи вміст блоку перевищує задану висоту
-        if (detailsBlock.scrollHeight > maxHeight) {
-            readMoreButton.style.display = 'block'; // Показуємо кнопку
+        /* --- КРОК 1: КОНТРОЛЬ ВИДИМОСТІ КНОПКИ (Розрахунок висоти) --- */
+
+        // 1. Тимчасово показуємо повний текст, щоб scrollHeight його врахував.
+        fullTextBlock.style.display = 'block';
+        
+        // 2. Отримуємо загальну висоту всього вмісту 
+        const totalContentHeight = detailsBlock.scrollHeight;
+
+        // 3. Повертаємо блок у прихований стан.
+        fullTextBlock.style.display = 'none'; 
+        
+        // 4. Перевіряємо, чи вміст перевищує ліміт.
+        if (totalContentHeight > maxHeight) {
+            readMoreButton.style.display = 'block';
+            
+            // Якщо вміст перевищує, ми явно приховуємо fullTextBlock
+            // та згортаємо detailsBlock, щоб CSS міг застосувати обмеження.
+            detailsBlock.classList.remove('is-expanded'); 
+            fullTextBlock.hidden = true; // Використовуємо 'hidden' для надійного приховування
         } else {
-            readMoreButton.style.display = 'none'; // Ховаємо кнопку, якщо текст поміщається
+            readMoreButton.style.display = 'none';
+            // Якщо вміст поміщається, розкриваємо detailsBlock, щоб уникнути overflow: hidden
+            detailsBlock.classList.add('is-expanded'); 
+            fullTextBlock.hidden = false;
         }
 
-        // Додаємо слухач події на кнопку "Читати більше"
+        /* --- КРОК 2: СЛУХАЧ КЛІКУ (Усунення конфлікту) --- */
+
         readMoreButton.addEventListener('click', () => {
             detailsBlock.classList.toggle('is-expanded');
 
             if (detailsBlock.classList.contains('is-expanded')) {
                 readMoreButton.textContent = 'Read less';
+                
+                // При розкритті: Видаляємо всі інлайн-стилі приховування. 
+                // Це дозволяє CSS-правилу `.is-expanded .related__full-text { display: block; }` спрацювати.
+                fullTextBlock.style.display = ''; 
+                fullTextBlock.hidden = false;
             } else {
                 readMoreButton.textContent = 'Read more';
+                
+                // При згортанні: Примусово приховуємо блок.
+                fullTextBlock.hidden = true;
+                fullTextBlock.style.display = 'none';
             }
         });
     });
