@@ -53,16 +53,16 @@
     &__img-director {
         position: absolute;
         // top: 20px;
-        bottom: 55%;
-        right: 10px;
+        bottom: 57%;
+        right: 6%;
         width: 120px;
         z-index: 1;
 
         @include mq(tablet) {
         // top: 20px;
-        bottom: 45%;
-        right: 40px;
-        width: 160px;
+        bottom: 53%;
+        right: 10%;
+        width: 130px;
         }
 
         @include mq(desktop) {

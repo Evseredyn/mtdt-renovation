@@ -302,4 +302,76 @@ p {
     }
 }
 
+/* Базові стилі контейнера */
+.policy-container {
+    max-width: 1000px;
+    margin: 0 auto; /* Центрування на великих екранах */
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Використовуйте шрифт, зручний для читання */
+}
+
+/* Стилі для заголовків */
+.policy-container h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center; /* Центрування головного заголовка */
+}
+
+.policy-container h2 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333; /* Трохи темніший колір для секцій */
+}
+
+.policy-container h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Стилі для абзаців та списків */
+.policy-container p, .policy-container li {
+    line-height: 1.6;
+    margin-bottom: 1em;
+    color: #444;
+}
+
+.policy-container ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+/* --- АДАПТАЦІЯ (MEDIA QUERIES) --- */
+
+/* СТИЛІ ДЛЯ МАЛЕНЬКИХ ЕКРАНІВ (Smartphones) */
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 15px; /* Зменшуємо внутрішні відступи */
+        /* На мобільних пристроях немає потреби обмежувати max-width, 
+           але ми використовуємо padding для відступу від країв. */
+    }
+
+    .policy-container h1 {
+        font-size: 1.8em; /* Зменшуємо головний заголовок */
+        text-align: left; /* Переводимо заголовок ліворуч */
+    }
+
+    .policy-container h2 {
+        font-size: 1.4em;
+    }
+
+    .policy-container p, .policy-container li {
+        font-size: 15px; /* Забезпечуємо достатній розмір шрифту */
+    }
+}
+
+/* СТИЛІ ДЛЯ СЕРЕДНІХ ЕКРАНІВ (Tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .policy-container {
+        padding: 30px;
+        max-width: 800px;
+    }
+}
+
 
