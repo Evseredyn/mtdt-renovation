@@ -589,6 +589,69 @@ p {
   margin-bottom: 15px;
 }
 
+/* CSS/SCSS для візуальної підказки (використовуючи псевдоелемент) */
+a[target=_blank] {
+  position: relative;
+  padding-right: 15px; /* Залишаємо місце для іконки */
+}
+
+@media screen and (min-width: 768px) {
+  a[target=_blank]::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>');
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  a[target=_blank]::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>');
+  }
+}
+
+.scroll-to-top-btn {
+  display: none; /* Спочатку прихована */
+  position: fixed; /* Фіксована позиція */
+  bottom: 60px;
+  right: 20px;
+  z-index: 1000; /* Переконайтеся, що вона над іншими елементами */
+  /* Стилізація */
+  background-color: #07386D; /* Ваш акцентний колір */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 0.3s, background-color 0.3s;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+@media screen and (min-width: 768px) {
+  .scroll-to-top-btn {
+    bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .scroll-to-top-btn {
+    right: 30px;
+  }
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #ba8f6e; /* Темніший колір при наведенні */
+}
+
 .mobile-menu__nav {
   position: fixed;
   top: 0;
