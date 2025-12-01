@@ -340,6 +340,21 @@
             }
         }
 
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            
+            @include mq(tablet) {
+                flex-direction: row;
+                gap: 10px;
+            }
+            
+            @include mq(desktop) {
+                gap: 20px;
+            }
+        }
+
         &__links>a {
             font-size: 18px;
             text-align: center;
