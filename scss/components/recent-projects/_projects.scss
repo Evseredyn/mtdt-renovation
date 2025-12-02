@@ -123,6 +123,7 @@
         max-width: 100%;
         margin: 12px;
         box-sizing: border-box;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s;
 
         @include mq(tablet) {
             flex-basis: calc(50% - 24px);
@@ -135,11 +136,17 @@
         }
     }
 
-    // Додатково, якщо ви хочете, щоб приховані елементи були повністю невидимими:
-    &__item[style*="display: none"] {
-    // Це правило буде автоматично застосовано jQuery коли FadeOut приховає елемент.
-    // Тут не потрібно нічого писати, якщо ви покладаєтесь на поведінку jQuery.
+    &__item.hidden {
+        opacity: 0 !important; /* Робимо елемент повністю прозорим */
+        visibility: hidden !important; /* Робимо його неклікабельним */
     }
+
+    // Додатково, якщо ви хочете, щоб приховані елементи були повністю невидимими:
+    // &__item[style*="display: none"] {
+    // // Це правило буде автоматично застосовано jQuery коли FadeOut приховає елемент.
+    // // Тут не потрібно нічого писати, якщо ви покладаєтесь на поведінку jQuery.
+    // }
+
     &__article {
         // color: $color-akcent;
         margin-left: auto;

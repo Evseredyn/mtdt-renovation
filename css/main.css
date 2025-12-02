@@ -3427,6 +3427,8 @@ nav li:hover > .site-subnav__list,
   margin: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
 }
 @media screen and (min-width: 768px) {
   .project__item {
@@ -3441,6 +3443,10 @@ nav li:hover > .site-subnav__list,
         flex-basis: calc(33.333% - 24px);
     max-width: calc(33.333% - 24px);
   }
+}
+.project__item.hidden {
+  opacity: 0 !important; /* Робимо елемент повністю прозорим */
+  visibility: hidden !important; /* Робимо його неклікабельним */
 }
 .project__article {
   margin-left: auto;
