@@ -2841,7 +2841,7 @@ nav li:hover > .site-subnav__list,
 }
 .related__details {
   padding: 10px 15px;
-  max-height: 190px; /* Обмеження висоти блоку */
+  max-height: 200px; /* Обмеження висоти блоку */
   overflow: hidden; /* Приховуємо все, що виходить за межі */
   -webkit-transition: max-height 0.4s ease-in-out;
   transition: max-height 0.4s ease-in-out; /* Плавний перехід */
@@ -2892,7 +2892,8 @@ nav li:hover > .site-subnav__list,
   cursor: pointer;
 }
 .related__full-text {
-  display: none; /* Приховуємо повний текст за замовчуванням */
+  display: block;
+  padding-top: 5px;
 }
 .related__list {
   padding-left: 20px;
