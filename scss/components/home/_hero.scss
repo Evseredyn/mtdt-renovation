@@ -131,6 +131,56 @@
         }
     }
 
+    &__slogan {
+        display: none;
+
+        @include mq(desktop) {
+            display: block;
+            position: absolute;
+            bottom: 25%;
+            right: 500px;
+            max-width: 210px;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $color-akcent;
+            background-color: $color-white;
+            line-height: 1.5;
+            border-radius: 20px;
+            z-index: 5;
+
+            @include mq(monitor) {
+                right: 800px;
+                font-size: 22px;
+                max-width: 260px;
+            }
+
+            &::before {
+                    content: '';
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzgiIGhlaWdodD0iNzkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUxLjg1NSAxMi4xMTZMMTQuODcyIDQyLjAxM1Y1Ni41aDQxLjE4NFY0Mi4wMTNsMy4wMTUtMjkuODk3YTQuMjAyIDQuMjAyIDAgMDAtMS41MjUtMS41NDkgNC4xMTUgNC4xMTUgMCAwMC00LjE2NiAwIDQuMjAyIDQuMjAyIDAgMDAtMS41MjUgMS41NXoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=);                    width: 75px;
+                    display: block;
+                    height: 65px;
+                    position: absolute;
+                    bottom: calc(100% - 35px);
+                    transform: scaleX(-1);
+                    background-size: contain;
+                    z-index: 1;
+                    left: 90px;
+                    filter: grayscale(1) brightness(3);
+            }
+        }
+
+        &>span {
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-black;
+
+            @include mq(monitor) {
+                font-size: 18px;
+            }
+        }
+    }
+
     &-form {
         margin: 20px auto;
         padding: 20px;
@@ -304,6 +354,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        max-width: 300px;
     }
 
     &__item:not(:last-child) {
