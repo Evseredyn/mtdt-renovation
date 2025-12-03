@@ -328,8 +328,8 @@ p {
     @include mq(desktop) {
         font-size: 2.2em;
         max-width: 1000px;
-        padding: 20px;
-        text-align: center; /* Центрування головного заголовка */
+        // padding: 20px;
+        // text-align: center; /* Центрування головного заголовка */
     }
 }
 
