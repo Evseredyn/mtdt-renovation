@@ -1,4 +1,5 @@
 .hero {
+    position: relative;
     padding: 20px 0;
     min-height: 650px;
     background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--1.jpeg');
@@ -62,11 +63,11 @@
         background-position: center;
     }
 
-    &>.container {
-        @include mq(desktop) {
-         position: relative;
-        }
-    }
+    // &>.container {
+    //     @include mq(desktop) {
+    //      position: relative;
+    //     }
+    // }
 
     &__title {
         max-width: 90%;
@@ -113,6 +114,23 @@
         }
     }
 
+    &__img-director {
+        display: none;
+
+        @include mq(desktop) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 510px;
+            width: 300px;
+        }
+
+        @include mq(monitor) {
+            right: 800px;
+            width: 380px;
+        }
+    }
+
     &-form {
         margin: 20px auto;
         padding: 20px;
@@ -127,7 +145,6 @@
         }
 
         @include mq(desktop) {
-            top: 0;
             right: 25px;
             width: 420px;
         }
