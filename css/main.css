@@ -618,10 +618,10 @@ a[target=_blank] {
   position: fixed; /* Фіксована позиція */
   bottom: 60px;
   right: 20px;
-  z-index: 1000; /* Переконайтеся, що вона над іншими елементами */
+  z-index: 100; /* Переконайтеся, що вона над іншими елементами */
   /* Стилізація */
   background-color: #07386D; /* Ваш акцентний колір */
-  color: white;
+  color: #FFFFFF;
   border: none;
   border-radius: 50%;
   width: 45px;
@@ -640,9 +640,17 @@ a[target=_blank] {
     bottom: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .scroll-to-top-btn {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
     right: 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .scroll-to-top-btn {
+    right: 50px;
   }
 }
 
