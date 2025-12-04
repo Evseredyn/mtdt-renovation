@@ -650,6 +650,15 @@ a[target=_blank] {
   background-color: #ba8f6e; /* Темніший колір при наведенні */
 }
 
+section[id], :target, h2[id], div[id] {
+  scroll-margin-top: 100px;
+}
+@media screen and (min-width: 768px) {
+  section[id], :target, h2[id], div[id] {
+    scroll-margin-top: 150px;
+  }
+}
+
 .mobile-menu__nav {
   position: fixed;
   top: 0;

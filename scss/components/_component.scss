@@ -427,4 +427,11 @@ a[target="_blank"]::after {
     background-color: $color-akcent; /* Темніший колір при наведенні */
 }
 
+section[id], :target, h2[id], div[id] {
+    scroll-margin-top: 100px;
+
+    @include mq(tablet) {
+        scroll-margin-top: 150px;
+    }
+}
 
