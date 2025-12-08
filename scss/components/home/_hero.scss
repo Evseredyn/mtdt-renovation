@@ -182,25 +182,23 @@
     }
 
     &-form {
-        margin: 20px auto;
+        margin: 0 auto 20px;
         padding: 20px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.7);
 
         @include mq(desktop) {
             position: absolute;
-            top: 0;
-            right: 30px;
-            width: 410px;
-        }
-
-        @include mq(desktop) {
-            right: 25px;
+            top: 20px;
+            // right: 25px;
+            left: calc(50% + 275px);
             width: 420px;
+            margin: 0;
         }
 
         @include mq(monitor) {
-            right: 225px;
+            // right: 225px;
+            left: calc(50% + 300px);
             width: 430px;
         }
         
