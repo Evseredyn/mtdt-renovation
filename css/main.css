@@ -619,16 +619,27 @@ a[target=_blank] {
   bottom: 60px;
   right: 20px;
   z-index: 100; /* Переконайтеся, що вона над іншими елементами */
+  /* --- Зміни тут: Flexbox для ідеального центрування --- */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Увімкнути Flexbox */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Центрування по горизонталі */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Центрування по вертикалі */
+  /* --------------------------------------------------- */
   /* Стилізація */
-  background-color: #07386D; /* Ваш акцентний колір */
+  background-color: #07386D;
   color: #FFFFFF;
   border: none;
   border-radius: 50%;
   width: 45px;
   height: 45px;
   font-size: 20px;
-  line-height: 45px;
-  text-align: center;
+  /* Видаліть line-height: 45px; - вона більше не потрібна! */
+  text-align: center; /* Це більше не потрібно, але можна залишити */
   cursor: pointer;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -638,19 +649,21 @@ a[target=_blank] {
 @media screen and (min-width: 768px) {
   .scroll-to-top-btn {
     bottom: 20px;
+    left: calc(50% + 384px - 80px);
   }
 }
 @media screen and (min-width: 1440px) {
   .scroll-to-top-btn {
+    bottom: 60px;
     width: 50px;
     height: 50px;
-    line-height: 45px;
-    right: 30px;
+    /* Видаліть line-height: 45px; - вона більше не потрібна! */
+    left: calc(50% + 695px - 60px);
   }
 }
 @media screen and (min-width: 1920px) {
   .scroll-to-top-btn {
-    right: 50px;
+    left: calc(50% + 960px - 300px);
   }
 }
 

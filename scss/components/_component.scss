@@ -393,39 +393,86 @@ a[target="_blank"]::after {
     }
 }
 
+// .scroll-to-top-btn {
+//     display: none; /* Спочатку прихована */
+//     position: fixed; /* Фіксована позиція */
+//     bottom: 60px;
+//     right: 20px;
+//     z-index: 100; /* Переконайтеся, що вона над іншими елементами */
+//     /* Стилізація */
+//     background-color: $color-bg-item; /* Ваш акцентний колір */
+//     color: $color-white;
+//     border: none;
+//     border-radius: 50%;
+//     width: 45px;
+//     height: 45px;
+//     font-size: 20px;
+//     line-height: 45px;
+//     text-align: center;
+//     cursor: pointer;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+//     transition: opacity 0.3s, background-color 0.3s;
+
+//     @include mq(tablet) {
+//         bottom: 20px;
+//     }
+
+//     @include mq(desktop) {
+//         width: 50px;
+//         height: 50px;
+//         line-height: 45px;
+//         right: 30px;
+//     }
+
+//     @include mq(monitor) {
+//         right: 50px;
+//     }
+// }
+
 .scroll-to-top-btn {
     display: none; /* Спочатку прихована */
     position: fixed; /* Фіксована позиція */
     bottom: 60px;
     right: 20px;
     z-index: 100; /* Переконайтеся, що вона над іншими елементами */
+
+    /* --- Зміни тут: Flexbox для ідеального центрування --- */
+    display: flex; /* Увімкнути Flexbox */
+    justify-content: center; /* Центрування по горизонталі */
+    align-items: center; /* Центрування по вертикалі */
+    /* --------------------------------------------------- */
+
     /* Стилізація */
-    background-color: $color-bg-item; /* Ваш акцентний колір */
+    background-color: $color-bg-item;
     color: $color-white;
     border: none;
     border-radius: 50%;
     width: 45px;
     height: 45px;
     font-size: 20px;
-    line-height: 45px;
-    text-align: center;
+    /* Видаліть line-height: 45px; - вона більше не потрібна! */
+    text-align: center; /* Це більше не потрібно, але можна залишити */
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s, background-color 0.3s;
 
     @include mq(tablet) {
         bottom: 20px;
+        left: calc(50% + 384px - 80px);
     }
 
     @include mq(desktop) {
+        bottom: 60px;
         width: 50px;
         height: 50px;
-        line-height: 45px;
-        right: 30px;
+        /* Видаліть line-height: 45px; - вона більше не потрібна! */
+        // right: 30px;
+        left: calc(50% + 695px - 60px);
     }
 
     @include mq(monitor) {
-        right: 50px;
+        // right: 50px;
+        left: calc(50% + 960px - 300px);
     }
 }
 
