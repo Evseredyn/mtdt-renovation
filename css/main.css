@@ -2352,15 +2352,15 @@ nav li:hover > .site-subnav__list,
           justify-content: space-between;
   gap: 40px;
   padding: 20px 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--1.jpeg");
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--1.jpeg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/home/hero-home.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/home/hero-home.jpg");
   background-size: cover;
   background-position: 0% 70%;
   background-repeat: no-repeat;
 }
 .advantages__wrapper-bg.townhouse {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--townhouse.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--townhouse.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/townhouse/hero-townhouse.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/townhouse/hero-townhouse.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -2368,8 +2368,8 @@ nav li:hover > .site-subnav__list,
   background-position: 0% 60%;
 }
 .advantages__wrapper-bg.kitchen {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--kitchen-1.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--kitchen-1.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/kitchen/hero-kitchen.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/kitchen/hero-kitchen.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -2377,8 +2377,8 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .advantages__wrapper-bg.bathroom {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--bathroom.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--bathroom.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/bathroom/hero-bathroom.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/bathroom/hero-bathroom.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -2386,8 +2386,8 @@ nav li:hover > .site-subnav__list,
   background-position: 0% 60%;
 }
 .advantages__wrapper-bg.interior {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--interior.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--interior.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/interior/hero-interior.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/interior/hero-interior.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -2395,8 +2395,8 @@ nav li:hover > .site-subnav__list,
   background-position: 0% 60%;
 }
 .advantages__wrapper-bg.exterior {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/hero--exterior.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/hero--exterior.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/exterior/hero-exterior.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/exterior/hero-exterior.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -2404,8 +2404,8 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .advantages__wrapper-bg.smart {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/folder/smart-article-3.jpeg");
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/folder/smart-article-3.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("../images/services/smart/hero-smart.jpg");
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/services/smart/hero-smart.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
