@@ -81,6 +81,7 @@
 }
 
 .project {
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -133,6 +134,14 @@
         @include mq(desktop) {
             flex-basis: calc(33.333% - 24px);
             max-width: calc(33.333% - 24px);
+        }
+    }
+
+    &__item:nth-child(3n) {
+        
+        @include mq(tablet) {
+        margin-left: auto;
+        margin-right: auto;
         }
     }
 
@@ -245,12 +254,12 @@
     }
 
     &__switcher-before {
-        padding: 5px;
+        // padding: 5px;
         max-width: 50%;
     }
 
     &__switcher-after {
-        padding: 5px;
+        // padding: 5px;
         max-width: 50%;
     }
 }

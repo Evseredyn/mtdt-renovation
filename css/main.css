@@ -1767,11 +1767,12 @@ nav li:hover > .site-subnav__list,
     bottom: 0;
     right: 510px;
     width: 300px;
+    z-index: 1;
   }
 }
 @media screen and (min-width: 1920px) {
   .hero__img-director {
-    right: 800px;
+    right: 1000px;
     width: 380px;
   }
 }
@@ -1797,7 +1798,7 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1440px) and (min-width: 1920px) {
   .hero__slogan {
-    right: 800px;
+    right: 1000px;
     font-size: 22px;
     max-width: 260px;
   }
@@ -1841,7 +1842,7 @@ nav li:hover > .site-subnav__list,
   .hero-form {
     position: absolute;
     top: 20px;
-    left: calc(50% + 275px);
+    left: calc(50% + 270px);
     width: 420px;
     margin: 0;
   }
@@ -1997,7 +1998,23 @@ nav li:hover > .site-subnav__list,
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
-  max-width: 300px;
+  max-width: 400px;
+}
+.hero__item > img {
+  width: 25px;
+}
+@media screen and (min-width: 1440px) {
+  .hero__item > img {
+    width: 30px;
+  }
+}
+.hero__description {
+  font-size: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .hero__description {
+    font-size: 18px;
+  }
 }
 .hero__item:not(:last-child) {
   margin-bottom: 10px;
@@ -2707,7 +2724,7 @@ nav li:hover > .site-subnav__list,
 @media screen and (min-width: 1440px) {
   .free-estimate__img-director {
     bottom: 0;
-    right: 240px;
+    right: 280px;
     width: 230px;
   }
 }
@@ -3590,6 +3607,12 @@ nav li:hover > .site-subnav__list,
     max-width: calc(33.333% - 24px);
   }
 }
+@media screen and (min-width: 768px) {
+  .project__item:nth-child(3n) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .project__item.hidden {
   opacity: 0 !important; /* Робимо елемент повністю прозорим */
   visibility: hidden !important; /* Робимо його неклікабельним */
@@ -3696,11 +3719,9 @@ nav li:hover > .site-subnav__list,
   opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
 }
 .project__switcher-before {
-  padding: 5px;
   max-width: 50%;
 }
 .project__switcher-after {
-  padding: 5px;
   max-width: 50%;
 }
 
