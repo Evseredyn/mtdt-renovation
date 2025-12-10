@@ -1650,17 +1650,22 @@ nav li:hover > .site-subnav__list,
   position: relative;
   padding: 20px 0;
   min-height: 650px;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--1.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--1.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/home/hero-home.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/home/hero-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
+  background-position: 30%;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-position: center;
+  }
 }
 .hero.townhouse {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--townhouse.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--townhouse.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/townhouse/hero-townhouse.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/townhouse/hero-townhouse.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -1668,26 +1673,36 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .hero.kitchen {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--kitchen-1.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--kitchen-1.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/kitchen/hero-kitchen.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/kitchen/hero-kitchen.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
+  background-position: 60%;
+}
+@media screen and (min-width: 768px) {
+  .hero.kitchen {
+    background-position: center;
+  }
 }
 .hero.bathroom {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--bathroom.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--bathroom.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/bathroom/hero-bathroom.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/bathroom/hero-bathroom.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
+  background-position: 30%;
+}
+@media screen and (min-width: 768px) {
+  .hero.bathroom {
+    background-position: center;
+  }
 }
 .hero.interior {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--interior.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--interior.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/interior/hero-interior.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/interior/hero-interior.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
@@ -1695,22 +1710,32 @@ nav li:hover > .site-subnav__list,
   background-position: center;
 }
 .hero.exterior {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/hero--exterior.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/hero--exterior.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/exterior/hero-exterior.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/exterior/hero-exterior.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
+  background-position: 25%;
+}
+@media screen and (min-width: 768px) {
+  .hero.exterior {
+    background-position: center;
+  }
 }
 .hero.smart {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/folder/smart-article-3.jpeg");
-  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/folder/smart-article-3.jpeg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(9, 10, 15, 0.6)), to(rgba(47, 48, 58, 0.2))), url("../images/services/smart/hero-smart.jpg");
+  background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47, 48, 58, 0.2)), url("../images/services/smart/hero-smart.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
+  background-position: start;
+}
+@media screen and (min-width: 768px) {
+  .hero.smart {
+    background-position: center;
+  }
 }
 .hero__title {
   max-width: 90%;
@@ -3719,9 +3744,11 @@ nav li:hover > .site-subnav__list,
   opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
 }
 .project__switcher-before {
+  padding: 5px;
   max-width: 50%;
 }
 .project__switcher-after {
+  padding: 5px;
   max-width: 50%;
 }
 

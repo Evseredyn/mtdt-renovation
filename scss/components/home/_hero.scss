@@ -2,15 +2,19 @@
     position: relative;
     padding: 20px 0;
     min-height: 650px;
-    background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--1.jpeg');
+    background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/home/hero-home.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
-    background-position: center;
+    background-position: 30%;
+        
+        @include mq(tablet) {
+            background-position: center;
+        }
 
     &.townhouse {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--townhouse.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/townhouse/hero-townhouse.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
@@ -19,25 +23,33 @@
     }
 
     &.kitchen {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--kitchen-1.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/kitchen/hero-kitchen.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
         margin-right: auto;
-        background-position: center;
+        background-position: 60%;
+        
+        @include mq(tablet) {
+            background-position: center;
+        }
     }
 
     &.bathroom {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--bathroom.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/bathroom/hero-bathroom.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
         margin-right: auto;
-        background-position: center;
+        background-position: 30%;
+        
+        @include mq(tablet) {
+            background-position: center;
+        }
     }
 
     &.interior {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--interior.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/interior/hero-interior.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
@@ -46,28 +58,30 @@
     }
 
     &.exterior {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/hero--exterior.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/exterior/hero-exterior.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
         margin-right: auto;
-        background-position: center;
+        background-position: 25%;
+        
+        @include mq(tablet) {
+            background-position: center;
+        }
     }
 
     &.smart {
-        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/folder/smart-article-3.jpeg');
+        background: linear-gradient(to right, rgba(9, 10, 15, 0.6), rgba(47,48,58,0.2)), url('../images/services/smart/hero-smart.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         margin-left: auto;
         margin-right: auto;
-        background-position: center;
+        background-position: start;
+        
+        @include mq(tablet) {
+            background-position: center;
+        }
     }
-
-    // &>.container {
-    //     @include mq(desktop) {
-    //      position: relative;
-    //     }
-    // }
 
     &__title {
         max-width: 90%;
@@ -366,7 +380,7 @@
 
     &__description {
         font-size: 16px;
-        
+
         @include mq(desktop) {
             font-size: 18px;
         }
