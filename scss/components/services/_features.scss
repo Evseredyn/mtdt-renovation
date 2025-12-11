@@ -32,8 +32,13 @@
         line-height: 1.5;
         color: $color-black;
         font-weight: 400;
+
+        @include mq(desktop) {
+        font-size: 20px;
+        }
     }
-    & img {
+    
+    &__img {
         width: 100%;
         height: auto;
         margin: 20px 0;
@@ -128,6 +133,10 @@
         font-size: 16px;
         color: $color-black;
         font-weight: 400;
+
+        @include mq(desktop) {
+        font-size: 20px;
+        }
     }
 
     &__text-bottom {
@@ -136,24 +145,21 @@
         font-weight: 400;
 
         @include mq (desktop) {
-        font-size: 18px;
+        font-size: 20px;
         }
     }
     
     &-inner {
-        @include mq(tablet) {
             display: flex;
-            // justify-content: space-between;
+            flex-direction: column;
+            // gap: 20px;
+
+        @include mq(desktop) {
+            flex-direction: row;
             justify-content: flex-start;
-            gap: 20px;
-
-            @include mq (desktop) {
-                gap: 30px;
-            }
-        }
-
-        @include mq(tablet) {
+            gap: 50px;
             padding: 30px 0;
+            // margin: 30px 0;
         }
 
         &__list {
@@ -161,7 +167,7 @@
             flex-direction: column;
             justify-content: space-between;
             gap: 15px;
-            // padding: 40px 0;
+            padding: 20px 0; 
 
             // &__title {
             //     margin-bottom: -10px;
@@ -221,11 +227,12 @@
             max-width: 100%;
 
             @include mq(tablet) {
-                max-width: 270px;
+                // max-width: 270px;
             }
 
             @include mq(desktop) {
-                max-width: 600px;
+                font-size: 18px;
+                max-width: 520px;
                 font-size: 20px;
             }
 
@@ -242,17 +249,10 @@
         & > img {
             width: 100%;
             height: auto;
-            margin: 20px 0;
-        
-            @include mq(tablet) {
-                margin: 0;
-                max-width: calc(50% - 20px);
-                height: auto;
-            }
-        
+
             @include mq(desktop) {
-                // margin: 30px 0;
-            }
+                width: 50%;
+            }           
         }
     }
 

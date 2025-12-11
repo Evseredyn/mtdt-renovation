@@ -112,6 +112,13 @@
         font-size: 22px;
         }
     }
+
+    &__img {
+        
+        @include mq(desktop) {
+            width: 200%;
+        }
+    }
 }
 
 
@@ -131,14 +138,17 @@
 
 /* Контент відповіді для мобільної версії */
 .accordion-more__content {
-    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     background-color: $color-bg-faq;
     padding: 0 20px; /* Паддинги з боків для згорнутого стану */
     max-height: 0; /* Приховано за замовчуванням */
     opacity: 0;
     transition: max-height $duration $timing-function, opacity $duration $timing-function, padding $duration $timing-function;
     @include mq(desktop) {
-        display: flex;
+        flex-direction: row;
     }
 }
 

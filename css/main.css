@@ -4029,7 +4029,12 @@ nav li:hover > .site-subnav__list,
   color: #000000;
   font-weight: 400;
 }
-.feature-description img {
+@media screen and (min-width: 1440px) {
+  .feature-description__text {
+    font-size: 20px;
+  }
+}
+.feature-description__img {
   width: 100%;
   height: auto;
   margin: 20px 0;
@@ -4120,6 +4125,11 @@ nav li:hover > .site-subnav__list,
   color: #000000;
   font-weight: 400;
 }
+@media screen and (min-width: 1440px) {
+  .feature__text {
+    font-size: 20px;
+  }
+}
 .feature__text-bottom {
   font-size: 16px;
   color: #000000;
@@ -4127,27 +4137,28 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1440px) {
   .feature__text-bottom {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+.feature-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1440px) {
   .feature-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    gap: 20px;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1440px) {
-  .feature-inner {
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .feature-inner {
+    gap: 50px;
     padding: 30px 0;
   }
 }
@@ -4163,6 +4174,7 @@ nav li:hover > .site-subnav__list,
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
+  padding: 20px 0;
 }
 .feature-inner__item {
   position: relative;
@@ -4204,14 +4216,10 @@ nav li:hover > .site-subnav__list,
   font-weight: 600;
   max-width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .feature-inner__text {
-    max-width: 270px;
-  }
-}
 @media screen and (min-width: 1440px) {
   .feature-inner__text {
-    max-width: 600px;
+    font-size: 18px;
+    max-width: 520px;
     font-size: 20px;
   }
 }
@@ -4227,13 +4235,10 @@ nav li:hover > .site-subnav__list,
 .feature-inner > img {
   width: 100%;
   height: auto;
-  margin: 20px 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .feature-inner > img {
-    margin: 0;
-    max-width: calc(50% - 20px);
-    height: auto;
+    width: 50%;
   }
 }
 .feature-wrapper {
@@ -4496,6 +4501,11 @@ nav li:hover > .site-subnav__list,
     font-size: 22px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .accordion-more__img {
+    width: 200%;
+  }
+}
 
 /* Стилі для відкритого стану акордеону (мобільний та десктоп) */
 .accordion-more__item.is-active .accordion-more__icon::before {
@@ -4509,7 +4519,14 @@ nav li:hover > .site-subnav__list,
 
 /* Контент відповіді для мобільної версії */
 .accordion-more__content {
-  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
   background-color: #F2F2F2;
   padding: 0 20px; /* Паддинги з боків для згорнутого стану */
   max-height: 0; /* Приховано за замовчуванням */
@@ -4519,9 +4536,10 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1440px) {
   .accordion-more__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
