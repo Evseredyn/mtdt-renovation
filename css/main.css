@@ -4239,7 +4239,7 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1920px) {
   .feature-inner__text {
-    max-width: 600px;
+    max-width: 560px;
     font-size: 20px;
   }
 }
