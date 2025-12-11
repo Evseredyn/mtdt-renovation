@@ -4092,15 +4092,19 @@ nav li:hover > .site-subnav__list,
   background-color: #FFFFFF;
 }
 .feature__title {
-  margin-top: 20px;
+  margin: 20px 0 10px;
   font-size: 20px;
   color: #000000;
   font-weight: 600;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .feature__title {
+    margin: 20px 0;
+  }
+}
 @media screen and (min-width: 1440px) {
   .feature__title {
-    margin-bottom: 20px;
     font-size: 32px;
   }
 }
