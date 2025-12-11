@@ -147,19 +147,27 @@
     max-height: 0; /* Приховано за замовчуванням */
     opacity: 0;
     transition: max-height $duration $timing-function, opacity $duration $timing-function, padding $duration $timing-function;
+
     @include mq(desktop) {
         flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
     }
 }
 
 .accordion-more__img {
-    width: 630px;
+    margin: auto 0;
 }
 
 .accordion-more__content p {
     font-size: 16px;
     line-height: 1.5;
     color: $color-black;
+
+    @include mq(desktop) {
+        width: 640px;
+    }
+    
 }
 
 .accordion-more__item.is-active .accordion-more__content {

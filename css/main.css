@@ -4567,17 +4567,26 @@ nav li:hover > .site-subnav__list,
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 40px;
   }
 }
 
 .accordion-more__img {
-  width: 630px;
+  margin: auto 0;
 }
 
 .accordion-more__content p {
   font-size: 16px;
   line-height: 1.5;
   color: #000000;
+}
+@media screen and (min-width: 1440px) {
+  .accordion-more__content p {
+    width: 640px;
+  }
 }
 
 .accordion-more__item.is-active .accordion-more__content {
