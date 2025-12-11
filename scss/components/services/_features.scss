@@ -226,12 +226,13 @@
 
         &__text {
             font-size: 16px;
+            line-height: 1.2;
             color: $color-black;
             font-weight: 600;
             max-width: 100%;
 
             @include mq(tablet) {
-                // max-width: 270px;
+                max-width: 540px;
             }
 
             @include mq(desktop) {
@@ -241,7 +242,7 @@
             }
 
             @include mq(monitor) {
-                max-width: 800px;
+                max-width: 600px;
                 font-size: 20px;
             }
         }
