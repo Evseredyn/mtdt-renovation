@@ -4570,6 +4570,10 @@ nav li:hover > .site-subnav__list,
   }
 }
 
+.accordion-more__img {
+  width: 630px;
+}
+
 .accordion-more__content p {
   font-size: 16px;
   line-height: 1.5;
