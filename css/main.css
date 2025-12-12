@@ -1793,14 +1793,14 @@ nav li:hover > .site-subnav__list,
     display: block;
     position: absolute;
     bottom: 0;
-    right: 510px;
+    right: 35%;
     width: 300px;
     z-index: 1;
   }
 }
 @media screen and (min-width: 1920px) {
   .hero__img-director {
-    right: 1000px;
+    right: 42%;
     width: 380px;
   }
 }
@@ -1812,7 +1812,7 @@ nav li:hover > .site-subnav__list,
     display: block;
     position: absolute;
     bottom: 25%;
-    right: 500px;
+    right: 35%;
     max-width: 210px;
     padding: 15px 20px;
     font-size: 18px;
@@ -1826,7 +1826,7 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1440px) and (min-width: 1920px) {
   .hero__slogan {
-    right: 1000px;
+    right: 42%;
     font-size: 22px;
     max-width: 260px;
   }
