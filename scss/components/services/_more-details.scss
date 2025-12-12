@@ -24,7 +24,7 @@
 
     &__list {
         // padding: 20px 0;
-        padding-top: 20px;
+        margin: 20px 0;
 
         @include mq(desktop) {
         // padding: 40px 0;

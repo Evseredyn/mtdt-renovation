@@ -4092,7 +4092,7 @@ nav li:hover > .site-subnav__list,
   background-color: #FFFFFF;
 }
 .feature__title {
-  margin: 20px 0 10px;
+  margin-bottom: 10px;
   font-size: 20px;
   color: #000000;
   font-weight: 600;
@@ -4100,7 +4100,7 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 768px) {
   .feature__title {
-    margin: 20px 0;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -4168,11 +4168,13 @@ nav li:hover > .site-subnav__list,
     padding: 20px;
   }
 }
-.feature-inner.text-start {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  gap: 40px;
+@media screen and (min-width: 1440px) {
+  .feature-inner.text-start {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 40px;
+  }
 }
 .feature-inner__list {
   display: -webkit-box;
@@ -4418,6 +4420,19 @@ nav li:hover > .site-subnav__list,
   }
 }
 
+.feature__item {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  /* Можливо, тут має бути display: none за замовчуванням, 
+     але скрипт це контролює */
+}
+
+/* Клас, який використовується для запуску анімації зникнення */
+.feature__item.hidden {
+  opacity: 0;
+}
+
 /* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
 .accordion-more {
   /* Стилізація іконки (+/-) */
@@ -4439,7 +4454,7 @@ nav li:hover > .site-subnav__list,
   /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
 }
 .accordion-more__list {
-  padding-top: 20px;
+  margin: 20px 0;
   /* На мобільному це просто список елементів */
 }
 .accordion-more__item {

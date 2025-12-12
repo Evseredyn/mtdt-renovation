@@ -88,40 +88,117 @@
 
 // });
 
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const filterButtonsContainer = document.querySelector('.projects__list');
+//     const projectItems = document.querySelectorAll('.project__item');
+
+//     if (!filterButtonsContainer || projectItems.length === 0) {
+//         return;
+//     }
+
+//     // --- 1. ФУНКЦІЯ ФІЛЬТРАЦІЇ ---
+//     const filterProjects = (category) => {
+//         projectItems.forEach(item => {
+//             const itemCategory = item.dataset.category;
+            
+//             if (category === itemCategory) {
+//                 item.style.display = 'block';
+//             } else {
+//                 item.style.display = 'none';
+//             }
+//         });
+//     };
+
+//     // --- 2. ЛОГІКА ІНІЦІАЛІЗАЦІЇ (ВИБІР ЗА ACTIVE-КЛАСОМ) ---
+//     const initializeActiveTab = () => {
+//         // Знаходимо кнопку, яка вже має клас 'active' у HTML
+//         const activeButton = filterButtonsContainer.querySelector('.projects__btn.active');
+
+//         if (activeButton) {
+//             const defaultCategory = activeButton.dataset.filter;
+            
+//             // Застосовуємо фільтр на основі знайденого активного класу
+//             filterProjects(defaultCategory);
+//         } else {
+//             // Якщо жодна кнопка не має класу 'active' (наприклад, на сторінці 'About Us')
+//             // або ви пропустили його в HTML, за замовчуванням відкриваємо першу вкладку
+//             const firstButton = filterButtonsContainer.querySelector('.projects__btn');
+//             if (firstButton) {
+//                 firstButton.classList.add('active');
+//                 filterProjects(firstButton.dataset.filter);
+//             }
+//         }
+//     };
+
+//     // --- 3. ОБРОБНИК КНОПОК ---
+//     filterButtonsContainer.addEventListener('click', (event) => {
+//         const target = event.target;
+
+//         if (target.matches('.projects__btn')) {
+//             const selectedCategory = target.dataset.filter;
+
+//             // Оновлення активного стану
+//             filterButtonsContainer.querySelectorAll('.projects__btn').forEach(btn => {
+//                 btn.classList.remove('active');
+//             });
+//             target.classList.add('active');
+
+//             // Виклик функції фільтрації
+//             filterProjects(selectedCategory);
+//         }
+//     });
+
+//     // --- ЗАПУСК ІНІЦІАЛІЗАЦІЇ ---
+//     initializeActiveTab();
+// });
+
 document.addEventListener('DOMContentLoaded', () => {
     const filterButtonsContainer = document.querySelector('.projects__list');
     const projectItems = document.querySelectorAll('.project__item');
+    const ANIMATION_DURATION = 300; // Час анімації в мс (повинен співпадати з CSS)
 
     if (!filterButtonsContainer || projectItems.length === 0) {
         return;
     }
 
-    // --- 1. ФУНКЦІЯ ФІЛЬТРАЦІЇ ---
+    // --- 1. ФУНКЦІЯ ФІЛЬТРАЦІЇ (Анімована) ---
     const filterProjects = (category) => {
+        // 1. Початок анімації: приховуємо всі поточні елементи
         projectItems.forEach(item => {
-            const itemCategory = item.dataset.category;
-            
-            if (category === itemCategory) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
+            item.classList.add('hidden'); 
         });
+
+        // 2. Чекаємо завершення анімації приховування
+        setTimeout(() => {
+            // 3. Після анімації, фізично оновлюємо display
+            projectItems.forEach(item => {
+                const itemCategory = item.dataset.category;
+                
+                if (category === itemCategory) {
+                    // Показуємо елемент і видаляємо клас 'hidden' (запускає проявлення)
+                    item.style.display = 'block'; // Встановлюємо display
+                    item.classList.remove('hidden'); 
+                } else {
+                    // Приховуємо елемент фізично (не займає місця)
+                    item.style.display = 'none'; 
+                }
+            });
+
+            // 4. Очищення, якщо використовувався клас 'filtering'
+            // filterButtonsContainer.classList.remove('filtering');
+        }, ANIMATION_DURATION);
     };
 
-    // --- 2. ЛОГІКА ІНІЦІАЛІЗАЦІЇ (ВИБІР ЗА ACTIVE-КЛАСОМ) ---
+    // --- 2. ЛОГІКА ІНІЦІАЛІЗАЦІЇ ---
     const initializeActiveTab = () => {
-        // Знаходимо кнопку, яка вже має клас 'active' у HTML
         const activeButton = filterButtonsContainer.querySelector('.projects__btn.active');
 
         if (activeButton) {
             const defaultCategory = activeButton.dataset.filter;
-            
-            // Застосовуємо фільтр на основі знайденого активного класу
             filterProjects(defaultCategory);
         } else {
-            // Якщо жодна кнопка не має класу 'active' (наприклад, на сторінці 'About Us')
-            // або ви пропустили його в HTML, за замовчуванням відкриваємо першу вкладку
             const firstButton = filterButtonsContainer.querySelector('.projects__btn');
             if (firstButton) {
                 firstButton.classList.add('active');
