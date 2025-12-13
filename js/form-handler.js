@@ -1,0 +1,40 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('.hero-form__submit-btn');
+        const originalBtnText = submitBtn.textContent;
+        
+        // Змінюємо стан кнопки
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        const formData = new FormData(contactForm);
+
+        try {
+            // Відправка даних на PHP файл
+            const response = await fetch('send.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (result.status === 'success') {
+                alert('Thank you! Your message has been sent.');
+                contactForm.reset(); // Очищуємо форму
+            } else {
+                alert('Error: ' + result.message);
+            }
+        } catch (error) {
+            alert('Something went wrong. Please try again later.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+        }
+    });
+});
