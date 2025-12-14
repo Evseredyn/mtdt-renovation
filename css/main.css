@@ -2049,8 +2049,8 @@ nav li:hover > .site-subnav__list,
 }
 .hero__btn {
   display: inline-block;
-  width: 100%;
-  max-height: 50px;
+  width: 170px;
+  height: 50px;
   padding: 15px 25px;
   border: none;
   background-color: #ba8f6e;
@@ -2063,11 +2063,6 @@ nav li:hover > .site-subnav__list,
   cursor: pointer;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 768px) {
-  .hero__btn {
-    width: 300px;
-  }
 }
 .hero__btn:hover, .hero__btn:focus {
   background-color: #CF9F77;
@@ -3469,6 +3464,25 @@ nav li:hover > .site-subnav__list,
   .advantages-about__description {
     max-width: 90%;
     font-size: 18px;
+  }
+}
+
+.advantages-info__title {
+  display: block;
+  margin: 20px auto 10px;
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantages-info__title {
+    font-size: 52px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .advantages-info__title {
+    text-align: left;
   }
 }
 

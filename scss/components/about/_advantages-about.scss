@@ -97,3 +97,20 @@
         } 
     }
 }
+
+.advantages-info__title {
+        display: block;
+        margin: 20px auto 10px;
+        color: $color-white;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+
+        @include mq(tablet) {
+            font-size: 52px;
+        }
+
+        @include mq(desktop) {
+        text-align: left;
+        }
+    }
