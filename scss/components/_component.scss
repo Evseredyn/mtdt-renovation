@@ -199,7 +199,7 @@ p {
     transition: transform $duration $timing-function;
 
     &.instagram {
-        background-image: url('../images/instagram.png');
+        background-image: url('../images/icons/instagram.png');
 
         &::after {
             content: '';
@@ -208,7 +208,7 @@ p {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../images/instagram-hover.png');
+            background-image: url('../images/icons/instagram-hover.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -225,7 +225,7 @@ p {
     }
 
     &.facebook {
-        background-image: url('../images/facebook.png');
+        background-image: url('../images/icons/facebook.png');
 
         &::after {
             content: '';
@@ -234,7 +234,7 @@ p {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../images/facebook-hover.png');
+            background-image: url('../images/icons/facebook-hover.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -251,7 +251,7 @@ p {
     }
 
     &.google {
-        background-image: url('../images/google.png');
+        background-image: url('../images/icons/google.png');
 
         &::after {
             content: '';
@@ -260,7 +260,7 @@ p {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../images/google-hover.png');
+            background-image: url('../images/icons/google-hover.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -277,7 +277,7 @@ p {
     }
 
     &.whatsapp {
-        background-image: url('../images/whatsapp.png');
+        background-image: url('../images/icons/whatsapp.png');
 
         &::after {
             content: '';
@@ -286,7 +286,7 @@ p {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../images/whatsapp-hover.png');
+            background-image: url('../images/icons/whatsapp-hover.png');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;

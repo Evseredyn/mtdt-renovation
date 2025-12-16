@@ -435,7 +435,7 @@ p {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials__link.instagram {
-  background-image: url("../images/instagram.png");
+  background-image: url("../images/icons/instagram.png");
 }
 .socials__link.instagram::after {
   content: "";
@@ -444,7 +444,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/instagram-hover.png");
+  background-image: url("../images/icons/instagram-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -456,7 +456,7 @@ p {
   opacity: 1;
 }
 .socials__link.facebook {
-  background-image: url("../images/facebook.png");
+  background-image: url("../images/icons/facebook.png");
 }
 .socials__link.facebook::after {
   content: "";
@@ -465,7 +465,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/facebook-hover.png");
+  background-image: url("../images/icons/facebook-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -477,7 +477,7 @@ p {
   opacity: 1;
 }
 .socials__link.google {
-  background-image: url("../images/google.png");
+  background-image: url("../images/icons/google.png");
 }
 .socials__link.google::after {
   content: "";
@@ -486,7 +486,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/google-hover.png");
+  background-image: url("../images/icons/google-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -498,7 +498,7 @@ p {
   opacity: 1;
 }
 .socials__link.whatsapp {
-  background-image: url("../images/whatsapp.png");
+  background-image: url("../images/icons/whatsapp.png");
 }
 .socials__link.whatsapp::after {
   content: "";
@@ -507,7 +507,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/whatsapp-hover.png");
+  background-image: url("../images/icons/whatsapp-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -855,7 +855,7 @@ nav li:hover > .site-subnav__list,
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-contacts__icon.phone-icon {
-  background-image: url("../images/phone.png");
+  background-image: url("../images/icons/phone.png");
 }
 .mobile-contacts__icon.phone-icon::after {
   content: "";
@@ -864,7 +864,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/phone-hover.png");
+  background-image: url("../images/icons/phone-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -876,7 +876,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .mobile-contacts__icon.email-icon {
-  background-image: url("../images/email.png");
+  background-image: url("../images/icons/email.png");
 }
 .mobile-contacts__icon.email-icon::after {
   content: "";
@@ -885,7 +885,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/email-hover.png");
+  background-image: url("../images/icons/email-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -979,6 +979,10 @@ nav li:hover > .site-subnav__list,
           align-items: center;
   gap: 12px;
 }
+.header-logo__img {
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
 .header-logo__company {
   font-size: 20px;
   text-transform: uppercase;
@@ -1039,7 +1043,7 @@ nav li:hover > .site-subnav__list,
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts__icon.phone-icon {
-  background-image: url("../images/phone.png");
+  background-image: url("../images/icons/phone.png");
 }
 .contacts__icon.phone-icon::after {
   content: "";
@@ -1048,7 +1052,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/phone-hover.png");
+  background-image: url("../images/icons/phone-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1060,7 +1064,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .contacts__icon.email-icon {
-  background-image: url("../images/email.png");
+  background-image: url("../images/icons/email.png");
 }
 .contacts__icon.email-icon::after {
   content: "";
@@ -1069,7 +1073,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/email-hover.png");
+  background-image: url("../images/icons/email-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1236,6 +1240,10 @@ nav li:hover > .site-subnav__list,
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+.footer-logo__img {
+  border-radius: 50%;
+  background-color: #FFFFFF;
 }
 .footer-logo__company {
   display: inline-block;
@@ -1441,7 +1449,7 @@ nav li:hover > .site-subnav__list,
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-findus__icon.phone-icon {
-  background-image: url("../images/phone.png");
+  background-image: url("../images/icons/phone.png");
 }
 .footer-findus__icon.phone-icon::after {
   content: "";
@@ -1450,7 +1458,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/phone-hover.png");
+  background-image: url("../images/icons/phone-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1462,7 +1470,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .footer-findus__icon.email-icon {
-  background-image: url("../images/email.png");
+  background-image: url("../images/icons/email.png");
 }
 .footer-findus__icon.email-icon::after {
   content: "";
@@ -1471,7 +1479,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/email-hover.png");
+  background-image: url("../images/icons/email-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1483,7 +1491,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .footer-findus__icon.local-icon {
-  background-image: url("../images/local.png");
+  background-image: url("../images/icons/local.png");
 }
 .footer-findus__icon.local-icon::after {
   content: "";
@@ -1492,7 +1500,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/local-hover.png");
+  background-image: url("../images/icons/local-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3353,6 +3361,7 @@ nav li:hover > .site-subnav__list,
   -webkit-box-shadow: 0 0 0 2px rgb(0, 24, 54) inset;
           box-shadow: 0 0 0 2px rgb(0, 24, 54) inset;
   border: solid rgb(0, 24, 54) 2px;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 1440px) {
   .advantages-about__img {
@@ -3891,7 +3900,7 @@ nav li:hover > .site-subnav__list,
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reach-us__icon.phone-icon {
-  background-image: url("../images/phone.png");
+  background-image: url("../images/icons/phone.png");
 }
 .reach-us__icon.phone-icon::after {
   content: "";
@@ -3900,7 +3909,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/phone-hover.png");
+  background-image: url("../images/icons/phone-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3912,7 +3921,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .reach-us__icon.email-icon {
-  background-image: url("../images/email.png");
+  background-image: url("../images/icons/email.png");
 }
 .reach-us__icon.email-icon::after {
   content: "";
@@ -3921,7 +3930,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/email-hover.png");
+  background-image: url("../images/icons/email-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3933,7 +3942,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .reach-us__icon.clock-icon {
-  background-image: url("../images/clock.png");
+  background-image: url("../images/icons/clock.png");
 }
 .reach-us__icon.clock-icon::after {
   content: "";
@@ -3942,7 +3951,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/clock-hover.png");
+  background-image: url("../images/icons/clock-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3954,7 +3963,7 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
 }
 .reach-us__icon.local-icon {
-  background-image: url("../images/local.png");
+  background-image: url("../images/icons/local.png");
 }
 .reach-us__icon.local-icon::after {
   content: "";
@@ -3963,7 +3972,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/local-hover.png");
+  background-image: url("../images/icons/local-hover.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
