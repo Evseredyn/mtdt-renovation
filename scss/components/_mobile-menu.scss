@@ -13,9 +13,8 @@
         transform: translateX(100%);
         transition: $duration $timing-function;
 
-        // ДОДАЙТЕ ЦІ ВЛАСТИВОСТІ ДЛЯ СТАБІЛЬНОЇ ПРОКРУТКИ
         overflow-y: auto;
-        -webkit-overflow-scrolling: touch; // Для плавного скролу на iOS
+        -webkit-overflow-scrolling: touch;
                 
         @include mq(tablet) {
             padding: 40px;
@@ -38,7 +37,6 @@
     &__item:nth-child(2) {
 
         & > .mobile-menu__link {
-            // Створюємо псевдоелемент галочки
             &::after {
                 content: '';
                 display: inline-block;
@@ -48,22 +46,12 @@
                 vertical-align: middle;
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
-                border-top: 6px solid $color-black; // Колір галочки за замовчуванням
-                transition: border-color $duration $timing-function; // Плавний перехід кольору
+                border-top: 6px solid $color-black;
+                transition: border-color $duration $timing-function;
             }
         }
-        
-        // Зміна кольору галочки при наведенні на батьківський елемент
-    //     &:hover > .mobile-menu__link,
-    //     &:focus > .mobile-menu__link {
-    //         color: $color-akcent;
-    //         &::after {
-    //             border-top-color: $color-akcent; // Зміна кольору галочки
-    //         }
-    //     }
     }
 
-    // Новий клас для активного стану (керуємо з JS)
     &__link.select {
         color: $color-akcent;
         
@@ -72,10 +60,8 @@
         }
     }
 
-    // Новий клас для відкритого підменю (керуємо з JS)
     &__item.is-open > .mobile-menu__link {
         &::after {
-            // border-top-color: $color-akcent;
             transform: rotate(180deg);
         }
     }
@@ -88,7 +74,6 @@
         font-size: 22px;
         font-weight: 600;
         line-height: 1.4;
-        // letter-spacing: 0.02em;
         color: $color-black;
         transition: color $duration $timing-function;
     }
@@ -105,8 +90,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // width: 40px;
-        // height: 40px;
         padding: 0px;
         margin: 0;
         cursor: pointer;
@@ -133,16 +116,9 @@ nav li:hover > .site-subnav__list,
 .mobile-submenu {
 
     &__list {
-    // position: absolute;
-    // z-index: 21;
-    // // top: calc(100% + 15px);
-    // top: 0;
-    // left: 0;
-    // display: none;
     margin-top: 10px;
     padding: 10px;
     max-width: 300px;
-    // max-height: 0;
     background-color: $color-white-bg;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
     transition: max-height $duration $timing-function;
@@ -154,7 +130,6 @@ nav li:hover > .site-subnav__list,
     
     &__link {
         display: inline-block;
-        // padding: 8px 16px;
         font-family: $main-font;
         font-size: 20px;
         font-weight: 600;
@@ -187,15 +162,13 @@ nav li:hover > .site-subnav__list,
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        position: relative; // Для позиціонування псевдоелемента
-
-        // Анімація transform, якщо потрібна
+        position: relative;
         transition: transform $duration $timing-function;
 
         &.phone-icon {
-            background-image: url('../images/icons/phone.png'); // Зображення за замовчуванням
+            background-image: url('../images/icons/phone.png');
 
-            &::after { // Використовуємо псевдоелемент для hover зображення
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -206,15 +179,14 @@ nav li:hover > .site-subnav__list,
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                opacity: 0; // За замовчуванням приховано
-                transition: opacity $duration $timing-function; // Анімуємо прозорість
-                // transition-delay: 0.1s;
+                opacity: 0;
+                transition: opacity $duration $timing-function;
             }
 
             &:hover,
             &:focus {
                 &::after {
-                    opacity: 1; // Зображення hover стає видимим
+                    opacity: 1;
                 }
             }
         }

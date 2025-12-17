@@ -45,7 +45,6 @@
 .reach-us {
 
     color: $color-black;
-    // background-color: $color-bg-faq;
         @include mq(desktop) {
             padding: 60px 45px;
         }
@@ -92,16 +91,15 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        position: relative; // Для позиціонування псевдоелемента
+        position: relative;
         flex-shrink: 0;
 
-        // Анімація transform, якщо потрібна
         transition: transform $duration $timing-function;
 
         &.phone-icon {
-            background-image: url('../images/icons/phone.png'); // Зображення за замовчуванням
+            background-image: url('../images/icons/phone.png');
 
-            &::after { // Використовуємо псевдоелемент для hover зображення
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -112,15 +110,14 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                opacity: 0; // За замовчуванням приховано
-                transition: opacity $duration $timing-function; // Анімуємо прозорість
-                // transition-delay: 0.1s;
+                opacity: 0;
+                transition: opacity $duration $timing-function;
             }
 
             &:hover,
             &:focus {
                 &::after {
-                    opacity: 1; // Зображення hover стає видимим
+                    opacity: 1;
                 }
             }
         }
@@ -231,22 +228,19 @@
         }
 }
 
-// Загальні стилі для батьківського контейнера мапи
 .map {
-    width: 100%; // Контейнер займає всю доступну ширину
-    height: 300px; // Задаємо фіксовану висоту для мобільних
-    overflow: hidden; // Запобігаємо виходу карти за межі контейнера
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 
     @include mq(desktop) {
         padding: 10px;
-        // На десктопах дозволяємо мапі займати всю доступну висоту
-        height: 600px; // Налаштуйте цю висоту під свої потреби
+        height: 600px;
     }
 }
 
-// Стилі для iframe всередині блоку .map
 .map iframe {
-    width: 100%; // Робимо iframe адаптивним
-    height: 100%; // Робимо iframe адаптивним
-    border: none; // Прибираємо стандартну рамку
+    width: 100%;
+    height: 100%;
+    border: none;
 }

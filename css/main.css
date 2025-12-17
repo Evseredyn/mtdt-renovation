@@ -519,10 +519,9 @@ p {
   opacity: 1;
 }
 
-/* Базові стилі контейнера */
 .policy-container {
   padding: 15px;
-  font-family: Arial, sans-serif; /* Використовуйте шрифт, зручний для читання */
+  font-family: Arial, sans-serif;
 }
 @media screen and (min-width: 768px) {
   .policy-container {
@@ -537,7 +536,6 @@ p {
   }
 }
 
-/* Стилі для заголовків */
 .policy-container h1 {
   font-size: 1.8em;
   margin-bottom: 20px;
@@ -555,7 +553,7 @@ p {
   font-size: 1.4em;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #555; /* Трохи темніший колір для секцій */
+  color: #555;
 }
 @media screen and (min-width: 1440px) {
   .policy-container h2 {
@@ -569,7 +567,6 @@ p {
   color: #666;
 }
 
-/* Стилі для абзаців та списків */
 .policy-container p, .policy-container li {
   font-size: 15px;
   line-height: 1.6;
@@ -578,7 +575,7 @@ p {
 }
 @media screen and (min-width: 1440px) {
   .policy-container p, .policy-container li {
-    font-size: 16px; /* Забезпечуємо достатній розмір шрифту */
+    font-size: 16px;
   }
 }
 
@@ -587,7 +584,6 @@ p {
   margin-bottom: 15px;
 }
 
-/* CSS/SCSS для візуальної підказки (використовуючи псевдоелемент) */
 .link-external {
   position: relative;
   padding-right: 15px;
@@ -617,23 +613,20 @@ p {
 }
 
 .scroll-to-top-btn {
-  display: none; /* Спочатку прихована */
-  position: fixed; /* Фіксована позиція */
+  display: none;
+  position: fixed;
   bottom: 60px;
   right: 20px;
-  z-index: 100; /* Переконайтеся, що вона над іншими елементами */
-  /* --- Зміни тут: Flexbox для ідеального центрування --- */
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /* Увімкнути Flexbox */
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; /* Центрування по горизонталі */
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; /* Центрування по вертикалі */
-  /* --------------------------------------------------- */
-  /* Стилізація */
+          align-items: center;
   background-color: #07386D;
   color: #FFFFFF;
   border: none;
@@ -641,8 +634,7 @@ p {
   width: 45px;
   height: 45px;
   font-size: 20px;
-  /* Видаліть line-height: 45px; - вона більше не потрібна! */
-  text-align: center; /* Це більше не потрібно, але можна залишити */
+  text-align: center;
   cursor: pointer;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -660,7 +652,6 @@ p {
     bottom: 60px;
     width: 50px;
     height: 50px;
-    /* Видаліть line-height: 45px; - вона більше не потрібна! */
     left: calc(50% + 695px - 60px);
   }
 }
@@ -671,7 +662,7 @@ p {
 }
 
 .scroll-to-top-btn:hover {
-  background-color: #ba8f6e; /* Темніший колір при наведенні */
+  background-color: #ba8f6e;
 }
 
 section[id], :target, h2[id], div[id] {
@@ -1626,9 +1617,9 @@ nav li:hover > .site-subnav__list,
   .mobile-btn {
     position: fixed;
     bottom: 0;
-    left: 50%; /* Центруємо по горизонталі */
+    left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); /* Точне центрування */
+            transform: translateX(-50%);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1960,7 +1951,6 @@ nav li:hover > .site-subnav__list,
   font-weight: 400;
 }
 .hero-form__checkbox {
-  /* Скрываем стандартный чекбокс */
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -1976,7 +1966,7 @@ nav li:hover > .site-subnav__list,
   position: relative;
   margin-right: 10px;
   -ms-flex-negative: 0;
-      flex-shrink: 0; /* Чтобы не сжимался */
+      flex-shrink: 0;
 }
 .hero-form.hero-form__checkbox:checked + .hero-form__icon-check {
   background-color: rgb(0, 24, 54);
@@ -1995,7 +1985,7 @@ nav li:hover > .site-subnav__list,
           transform: rotate(45deg);
 }
 .hero-form__policy-link {
-  color: var(--primary-color); /* Цвет ссылки в тексте */
+  color: var(--primary-color);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -2080,33 +2070,25 @@ nav li:hover > .site-subnav__list,
   color: #ba8f6e;
 }
 
-/* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
 .accordion-two-column-wrapper {
   width: 100%;
-  /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
 }
 @media screen and (min-width: 1440px) {
   .accordion-two-column-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; /* Робимо головний контейнер Flexbox */
-    max-height: 600px; /* Задаємо максимальну висоту для всього блоку */
-    /* max-width та margin: auto для .container вже є, тут не потрібні */
+    display: flex;
+    max-height: 600px;
   }
 }
 
-.accordion-questions-list {
-  /* На мобільному це просто список елементів */
-}
 @media screen and (min-width: 1440px) {
-  .accordion-questions-list { /* Це ліва колонка */
+  .accordion-questions-list {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 40%;
-            flex: 0 0 40%; /* Займає 40% ширини, не зростає, не зменшується */
-    max-height: 600px; /* Обмежуємо висоту списку питань */
-    overflow-y: auto; /* Додаємо вертикальну прокрутку */
-    /* border: 1px solid var(--border-color); /* Можна додати свою рамку */
-    /* padding: 10px; */ /* Можливі внутрішні паддинги */
+            flex: 0 0 40%;
+    max-height: 600px;
+    overflow-y: auto;
   }
 }
 
@@ -2114,8 +2096,9 @@ nav li:hover > .site-subnav__list,
   margin-bottom: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden; /* Важливо для анімації max-height */
+  overflow: hidden;
 }
+
 .accordion-header {
   background-color: #FFFFFF;
   padding: 15px 20px;
@@ -2131,6 +2114,7 @@ nav li:hover > .site-subnav__list,
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .accordion-toggle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2157,7 +2141,6 @@ nav li:hover > .site-subnav__list,
   cursor: pointer;
 }
 
-/* Стилізація іконки (+/-) */
 .accordion-icon {
   display: inline-block;
   width: 20px;
@@ -2171,21 +2154,21 @@ nav li:hover > .site-subnav__list,
 .accordion-icon::after {
   content: "";
   position: absolute;
-  background-color: #000000; /* Колір іконки в неактивному стані */
+  background-color: #000000;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-icon::before { /* Вертикальна лінія плюса */
+.accordion-icon::before {
   top: 0;
   left: 9px;
   width: 2px;
   height: 100%;
 }
 
-.accordion-icon::after { /* Горизонтальна лінія плюса */
+.accordion-icon::after {
   top: 9px;
   left: 0;
   width: 100%;
@@ -2198,30 +2181,28 @@ nav li:hover > .site-subnav__list,
   font-weight: 600;
 }
 
-/* Стилі для відкритого стану акордеону (мобільний та десктоп) */
 .accordion-item.is-active .accordion-header {
   background-color: #ba8f6e;
 }
 
 .accordion-item.is-active .accordion-header .accordion-question-text {
-  color: #FFFFFF; /* Змінюємо колір тексту питання */
+  color: #FFFFFF;
 }
 
 .accordion-item.is-active .accordion-icon::before {
   -webkit-transform: rotate(90deg) scaleY(0);
-          transform: rotate(90deg) scaleY(0); /* Анімація для перетворення плюса в мінус */
+          transform: rotate(90deg) scaleY(0);
 }
 
 .accordion-item.is-active .accordion-icon::after {
-  background-color: #FFFFFF; /* Колір іконки в активному стані */
+  background-color: #FFFFFF;
 }
 
-/* Контент відповіді для мобільної версії */
 .accordion-content-mobile {
   background-color: #FFFFFF;
   background-color: #F2F2F2;
-  padding: 0 20px; /* Паддинги з боків для згорнутого стану */
-  max-height: 0; /* Приховано за замовчуванням */
+  padding: 0 20px;
+  max-height: 0;
   opacity: 0;
   -webkit-transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2239,23 +2220,22 @@ nav li:hover > .site-subnav__list,
 }
 
 .accordion-item.is-active .accordion-content-mobile {
-  max-height: 500px; /* Достатньо велике значення для розгортання */
+  max-height: 500px;
   opacity: 1;
-  padding: 20px; /* Паддинги для відкритого контенту */
+  padding: 20px;
 }
 
-/* Права колонка з відповідями для десктопу - за замовчуванням прихована на мобільному */
 .accordion-answer-display-desktop {
-  display: none; /* Приховано на мобільному */
+  display: none;
 }
 @media screen and (min-width: 1440px) {
   .accordion-answer-display-desktop {
-    position: relative; /* Важливо для абсолютного позиціонування відповідей всередині */
-    display: block; /* Права колонка стає видимою */
+    position: relative;
+    display: block;
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1; /* Займає весь залишок простору */
-    padding: 20px; /* Паддинги для правої колонки */
+            flex: 1;
+    padding: 20px;
     background-color: #F2F2F2;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2263,25 +2243,24 @@ nav li:hover > .site-subnav__list,
 }
 
 .accordion-content-desktop {
-  position: absolute; /* Всі відповіді позиціонуються абсолютно */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px; /* Паддинги для вмісту відповіді */
+  padding: 20px;
   background-color: #FFFFFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   opacity: 0;
-  visibility: hidden; /* Ховаємо, щоб не займало місця */
+  visibility: hidden;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: auto; /* Додаємо прокрутку, якщо контент більший */
-  /* Стилі для контенту відповідей у правій колонці */
+  overflow-y: auto;
 }
 @media screen and (min-width: 1440px) {
   .accordion-content-desktop {
-    display: block; /* Забезпечуємо відображення */
+    display: block;
   }
 }
 .accordion-content-desktop.is-active {
@@ -2293,7 +2272,7 @@ nav li:hover > .site-subnav__list,
   line-height: 1.3;
   font-weight: 600;
   color: #000000;
-  margin-bottom: 25px; /* Відступ від тексту відповіді */
+  margin-bottom: 25px;
 }
 
 .accordion-desktop-answer {
@@ -2301,7 +2280,7 @@ nav li:hover > .site-subnav__list,
   line-height: 1.3;
   font-weight: 400;
   color: #000000;
-  margin-bottom: 15px; /* Відступ від тексту відповіді */
+  margin-bottom: 15px;
 }
 
 .areas__img {
@@ -2676,8 +2655,6 @@ nav li:hover > .site-subnav__list,
 }
 
 .testimonials-slider__icon img {
-  /* width: 32px;
-  height: 32px; */
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
@@ -2857,7 +2834,6 @@ nav li:hover > .site-subnav__list,
   font-weight: 400;
 }
 .free-estimate-form__checkbox {
-  /* Скрываем стандартный чекбокс */
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -2873,7 +2849,7 @@ nav li:hover > .site-subnav__list,
   position: relative;
   margin-right: 10px;
   -ms-flex-negative: 0;
-      flex-shrink: 0; /* Чтобы не сжимался */
+      flex-shrink: 0;
 }
 .free-estimate-form.hero-form__checkbox:checked + .free-estimate-form__icon-check {
   background-color: rgb(0, 24, 54);
@@ -2892,7 +2868,7 @@ nav li:hover > .site-subnav__list,
           transform: rotate(45deg);
 }
 .free-estimate-form__policy-link {
-  color: var(--primary-color); /* Цвет ссылки в тексте */
+  color: var(--primary-color);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -3033,19 +3009,19 @@ nav li:hover > .site-subnav__list,
 }
 .related__details {
   padding: 10px 15px;
-  max-height: 200px; /* Обмеження висоти блоку */
-  overflow: hidden; /* Приховуємо все, що виходить за межі */
+  max-height: 200px;
+  overflow: hidden;
   -webkit-transition: max-height 0.4s ease-in-out;
-  transition: max-height 0.4s ease-in-out; /* Плавний перехід */
+  transition: max-height 0.4s ease-in-out;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 .related__details.is-expanded {
-  max-height: 1000px; /* Велика висота для повного розкриття */
+  max-height: 1000px;
 }
 .related__details.is-expanded .related__full-text {
-  display: block; /* Показуємо повний текст, коли блок розкритий */
+  display: block;
 }
 .related__head-link {
   font-size: 18px;
@@ -3237,7 +3213,6 @@ nav li:hover > .site-subnav__list,
   font-weight: 400;
 }
 .contact-us-form__checkbox {
-  /* Скрываем стандартный чекбокс */
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -3253,7 +3228,7 @@ nav li:hover > .site-subnav__list,
   position: relative;
   margin-right: 10px;
   -ms-flex-negative: 0;
-      flex-shrink: 0; /* Чтобы не сжимался */
+      flex-shrink: 0;
 }
 .contact-us-form.hero-form__checkbox:checked + .contact-us-form__icon-check {
   background-color: rgb(0, 24, 54);
@@ -3272,7 +3247,7 @@ nav li:hover > .site-subnav__list,
           transform: rotate(45deg);
 }
 .contact-us-form__policy-link {
-  color: var(--primary-color); /* Цвет ссылки в тексте */
+  color: var(--primary-color);
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -3584,16 +3559,12 @@ nav li:hover > .site-subnav__list,
   background-color: #FFFFFF;
 }
 
-.project {
-  /* Стан, коли мініатюра АКТИВНА - оверлей невидимий */
-}
 .project__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* Видаляємо align-items: center; для коректної роботи margin: auto; */
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -3605,11 +3576,9 @@ nav li:hover > .site-subnav__list,
   .project__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    /* Увімкнути для 2-х колонок */
   }
 }
 .project__list .center-item {
-  /* Забезпечуємо, щоб елемент займав повну ширину */
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   max-width: 100%;
@@ -3625,7 +3594,6 @@ nav li:hover > .site-subnav__list,
 }
 @media screen and (min-width: 1440px) {
   .project__list .center-item {
-    /* Замінюємо justify-content: space-between */
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3670,8 +3638,8 @@ nav li:hover > .site-subnav__list,
   }
 }
 .project__item.hidden {
-  opacity: 0 !important; /* Робимо елемент повністю прозорим */
-  visibility: hidden !important; /* Робимо його неклікабельним */
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 .project__article {
   margin-left: auto;
@@ -3706,13 +3674,13 @@ nav li:hover > .site-subnav__list,
   white-space: nowrap;
 }
 .project__way > li:not(:first-child)::before {
-  content: "• "; /* Додаємо крапку та пробіл */
-  margin-right: 5px; /* Додатковий пробіл після крапки, якщо "• " недостатньо */
+  content: "• ";
+  margin-right: 5px;
   margin-left: 5px;
 }
 .project__demo-container {
-  width: 100%; /* Забезпечуємо, щоб контейнер займав всю доступну ширину */
-  overflow: hidden; /* Важливо для обрізання зображення, якщо воно виходить за межі або для border-radius */
+  width: 100%;
+  overflow: hidden;
 }
 .project__demo {
   display: block;
@@ -3723,7 +3691,7 @@ nav li:hover > .site-subnav__list,
 .project__switcher {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; /* Розміщуємо мініатюри поруч */
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -3731,18 +3699,18 @@ nav li:hover > .site-subnav__list,
   width: 100%;
 }
 .project__switcher-thumb {
-  position: relative; /* Для позиціонування оверлея */
-  cursor: pointer; /* Вказує, що елемент клікабельний */
-  overflow: hidden; /* Щоб оверлей не виходив за межі, якщо є border-radius */
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
   -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1; /* Якщо хочете, щоб мініатюри ділили простір */
-  max-width: 125px; /* Приклад максимальної ширини для мініатюри */
+          flex: 1;
+  max-width: 125px;
 }
 .project__switcher-thumb img {
-  display: block; /* Усуває зайві пробіли під зображенням */
-  width: 100%; /* Зображення заповнює свій контейнер */
-  height: auto; /* Зберігає пропорції */
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .project__switcher-overlay {
   position: absolute;
@@ -3750,7 +3718,7 @@ nav li:hover > .site-subnav__list,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Білий напівпрозорий оверлей (80% непрозорості) */
+  background-color: rgba(255, 255, 255, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3760,19 +3728,19 @@ nav li:hover > .site-subnav__list,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 1; /* За замовчуванням оверлей видимий (активний стан) */
+  opacity: 1;
   -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; /* Плавний перехід при зміні прозорості */
-  pointer-events: none; /* Дозволяє клікам проходити крізь оверлей до батьківського елемента */
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 .project__switcher-text {
-  color: #333; /* Колір тексту на оверлеї */
+  color: #333;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
 }
 .project__switcher-thumb.active .project__switcher-overlay {
-  opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
+  opacity: 0;
 }
 .project__switcher-before {
   padding: 5px;
@@ -4236,17 +4204,17 @@ nav li:hover > .site-subnav__list,
   }
 }
 .feature-inner__item > p::before {
-  content: ""; /* Пустий вміст */
+  content: "";
   display: inline-block;
-  width: 6px; /* Розмір булета */
+  width: 6px;
   height: 6px;
-  background-color: #ba8f6e; /* Колір булета */
-  border-radius: 50%; /* Робить булет круглим */
+  background-color: #ba8f6e;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); /* Центруємо по вертикалі */
+          transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
   .feature-inner__item > p::before {
@@ -4359,17 +4327,17 @@ nav li:hover > .site-subnav__list,
   }
 }
 .feature-block__item > p::before {
-  content: ""; /* Пустий вміст */
+  content: "";
   display: inline-block;
-  width: 6px; /* Розмір булета */
+  width: 6px;
   height: 6px;
-  background-color: #ba8f6e; /* Колір булета */
-  border-radius: 50%; /* Робить булет круглим */
+  background-color: #ba8f6e;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); /* Центруємо по вертикалі */
+          transform: translateY(-50%);
 }
 @media screen and (min-width: 768px) {
   .feature-block__item > p::before {
@@ -4455,19 +4423,12 @@ nav li:hover > .site-subnav__list,
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  /* Можливо, тут має бути display: none за замовчуванням, 
-     але скрипт це контролює */
 }
 
-/* Клас, який використовується для запуску анімації зникнення */
 .feature__item.hidden {
   opacity: 0;
 }
 
-/* --- Базові стилі для всіх розмірів (Мобільна версія за замовчуванням) --- */
-.accordion-more {
-  /* Стилізація іконки (+/-) */
-}
 .accordion-more__header--title {
   margin: 40px 0 20px;
   font-size: 18px;
@@ -4482,17 +4443,15 @@ nav li:hover > .site-subnav__list,
 }
 .accordion-more__wrapper {
   width: 100%;
-  /* На мобільному цей контейнер не буде flex, елементи йдуть один за одним */
 }
 .accordion-more__list {
   margin: 20px 0;
-  /* На мобільному це просто список елементів */
 }
 .accordion-more__item {
   margin-bottom: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden; /* Важливо для анімації max-height */
+  overflow: hidden;
 }
 .accordion-more__header {
   background-color: #ba8f6e;
@@ -4545,19 +4504,19 @@ nav li:hover > .site-subnav__list,
 .accordion-more__icon::before, .accordion-more__icon::after {
   content: "";
   position: absolute;
-  background-color: #FFFFFF; /* Колір іконки в неактивному стані */
+  background-color: #FFFFFF;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.accordion-more__icon::before { /* Вертикальна лінія плюса */
+.accordion-more__icon::before {
   top: 0;
   left: 9px;
   width: 2px;
   height: 100%;
 }
-.accordion-more__icon::after { /* Горизонтальна лінія плюса */
+.accordion-more__icon::after {
   top: 9px;
   left: 0;
   width: 100%;
@@ -4580,17 +4539,15 @@ nav li:hover > .site-subnav__list,
   }
 }
 
-/* Стилі для відкритого стану акордеону (мобільний та десктоп) */
 .accordion-more__item.is-active .accordion-more__icon::before {
   -webkit-transform: rotate(90deg) scaleY(0);
-          transform: rotate(90deg) scaleY(0); /* Анімація для перетворення плюса в мінус */
+          transform: rotate(90deg) scaleY(0);
 }
 
 .accordion-more__item.is-active .accordion-more__icon::after {
-  background-color: #FFFFFF; /* Колір іконки в активному стані */
+  background-color: #FFFFFF;
 }
 
-/* Контент відповіді для мобільної версії */
 .accordion-more__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4601,8 +4558,8 @@ nav li:hover > .site-subnav__list,
           flex-direction: column;
   gap: 20px;
   background-color: #F2F2F2;
-  padding: 0 20px; /* Паддинги з боків для згорнутого стану */
-  max-height: 0; /* Приховано за замовчуванням */
+  padding: 0 20px;
+  max-height: 0;
   opacity: 0;
   -webkit-transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), padding 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -4636,10 +4593,10 @@ nav li:hover > .site-subnav__list,
 }
 
 .accordion-more__item.is-active .accordion-more__content {
-  max-height: 500px; /* Достатньо велике значення для розгортання */
+  max-height: 500px;
   overflow-y: auto;
   opacity: 1;
-  padding: 20px; /* Паддинги для відкритого контенту */
+  padding: 20px;
 }
 
 .text-container__item {
@@ -4647,15 +4604,15 @@ nav li:hover > .site-subnav__list,
   padding-left: 20px;
 }
 .text-container__item > p::before {
-  content: ""; /* Пустий вміст */
+  content: "";
   display: inline-block;
-  width: 6px; /* Розмір булета */
+  width: 6px;
   height: 6px;
-  background-color: #ba8f6e; /* Колір булета */
-  border-radius: 50%; /* Робить булет круглим */
+  background-color: #ba8f6e;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); /* Центруємо по вертикалі */
+          transform: translateY(-50%);
 }/*# sourceMappingURL=main.css.map */

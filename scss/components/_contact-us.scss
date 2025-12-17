@@ -41,27 +41,6 @@
         }
     }
 
-    // &__img-director {
-    //     position: absolute;
-    //     top: 20px;
-    //     right: 20px;
-    //     width: 120px;
-    //     z-index: 1;
-
-    //     @include mq(tablet) {
-    //     top: 20px;
-    //     right: 40px;
-    //     width: 160px;
-    //     }
-
-    //     @include mq(desktop) {
-    //     top: 30px;
-    //     // bottom: 0px;
-    //     right: 240px;
-    //     width: 250px;
-    //     }
-    // }
-
     &__img-interior {
         display: none;
 
@@ -70,7 +49,6 @@
             top: 0px;
             right: 0px;
             display: block;
-            // width: 120px;
             height: 100%;
         }
     }
@@ -90,7 +68,6 @@
 
         &__field {
             width: 100%;
-            // margin-bottom: 20px;
 
             @include mq(desktop) {
                 width: 380px;
@@ -118,9 +95,6 @@
             background-color: $color-bg-faq;
             box-sizing: border-box;
 
-            // @include mq(desktop) {
-            //     font-size: 22px;
-            // }
         }
 
         &__input:focus,
@@ -142,7 +116,6 @@
             @include mq(desktop) {
                 width: 380px;
                 margin: 0;
-                // padding-top: 5px;
             }
         }
         
@@ -155,8 +128,7 @@
             color: $color-akcent;
             font-weight: 400;
         }
-                &__checkbox {
-            /* Скрываем стандартный чекбокс */
+        &__checkbox {
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -172,7 +144,7 @@
             border-radius: 4px;
             position: relative;
             margin-right: 10px;
-            flex-shrink: 0; /* Чтобы не сжимался */
+            flex-shrink: 0;
         }
 
         &.hero-form__checkbox:checked + &__icon-check {
@@ -193,7 +165,7 @@
         }
 
         &__policy-link {
-            color: var(--primary-color); /* Цвет ссылки в тексте */
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }

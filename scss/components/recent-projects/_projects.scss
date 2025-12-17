@@ -85,19 +85,15 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        /* Видаляємо align-items: center; для коректної роботи margin: auto; */
         justify-content: space-between;
         margin: -12px;
         box-sizing: border-box;
 
         @include mq(tablet) {
             flex-wrap: wrap;
-            /* Увімкнути для 2-х колонок */
-            // justify-content: space-between; 
         }
 
         .center-item {
-            /* Забезпечуємо, щоб елемент займав повну ширину */
             flex-basis: 100%;
             max-width: 100%;
             margin-left: auto;
@@ -108,7 +104,6 @@
                 max-width: calc(50% - 24px);
             }
             @include mq(desktop) {
-                /* Замінюємо justify-content: space-between */
                 justify-content: center;
                 flex-basis: calc(33.333% - 24px);
                 max-width: calc(33.333% - 24px);
@@ -146,18 +141,11 @@
     }
 
     &__item.hidden {
-        opacity: 0 !important; /* Робимо елемент повністю прозорим */
-        visibility: hidden !important; /* Робимо його неклікабельним */
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
 
-    // Додатково, якщо ви хочете, щоб приховані елементи були повністю невидимими:
-    // &__item[style*="display: none"] {
-    // // Це правило буде автоматично застосовано jQuery коли FadeOut приховає елемент.
-    // // Тут не потрібно нічого писати, якщо ви покладаєтесь на поведінку jQuery.
-    // }
-
     &__article {
-        // color: $color-akcent;
         margin-left: auto;
         margin-right: auto;
         padding: 15px;
@@ -175,7 +163,6 @@
         display: flex;
         align-items: center;
         padding: 0 10px 10px;
-        // color: $color-akcent;
 
         &>li {
             display: flex;
@@ -188,15 +175,15 @@
 
 
         &>li:not(:first-child)::before {
-            content: "• "; /* Додаємо крапку та пробіл */
-            margin-right: 5px; /* Додатковий пробіл після крапки, якщо "• " недостатньо */
+            content: "• ";
+            margin-right: 5px;
             margin-left: 5px;
         }
     }
 
-    &__demo-container { // <--- ДОДАЙТЕ ЦІ СТИЛІ
-        width: 100%; /* Забезпечуємо, щоб контейнер займав всю доступну ширину */
-        overflow: hidden; /* Важливо для обрізання зображення, якщо воно виходить за межі або для border-radius */
+    &__demo-container {
+        width: 100%;
+        overflow: hidden;
     }
 
     &__demo {
@@ -206,24 +193,21 @@
         padding: 5px;
     }
     &__switcher {
-        display: flex; /* Розміщуємо мініатюри поруч */
-    // gap: 10px; /* Відступ між мініатюрами */
-    // margin-top: 15px; /* Відступ від головного зображення */
-    // justify-content: center; /* Центруємо мініатюри, якщо потрібно */
+        display: flex;
         flex-direction: row;
         width: 100%;
     }
     &__switcher-thumb {
-        position: relative; /* Для позиціонування оверлея */
-        cursor: pointer; /* Вказує, що елемент клікабельний */
-        overflow: hidden; /* Щоб оверлей не виходив за межі, якщо є border-radius */
-        flex: 1; /* Якщо хочете, щоб мініатюри ділили простір */
-        max-width: 125px; /* Приклад максимальної ширини для мініатюри */
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        flex: 1;
+        max-width: 125px;
     }
     &__switcher-thumb img {
-    display: block; /* Усуває зайві пробіли під зображенням */
-    width: 100%; /* Зображення заповнює свій контейнер */
-    height: auto; /* Зберігає пропорції */
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
     &__switcher-overlay {
@@ -232,25 +216,24 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.8); /* Білий напівпрозорий оверлей (80% непрозорості) */
+        background-color: rgba(255, 255, 255, 0.8);
         display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 1; /* За замовчуванням оверлей видимий (активний стан) */
-        transition: opacity 0.3s ease; /* Плавний перехід при зміні прозорості */
-        pointer-events: none; /* Дозволяє клікам проходити крізь оверлей до батьківського елемента */
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
     }
 
     &__switcher-text {
-        color: #333; /* Колір тексту на оверлеї */
+        color: #333;
         font-weight: bold;
         font-size: 16px;
         text-align: center;
     }
 
-    /* Стан, коли мініатюра АКТИВНА - оверлей невидимий */
     &__switcher-thumb.active &__switcher-overlay {
-        opacity: 0; /* Робимо оверлей прозорим для активної мініатюри */
+        opacity: 0;
     }
 
     &__switcher-before {

@@ -24,7 +24,7 @@
 
 
         @include mq(desktop) {
-        position: relative; // Важливо! Це батьківський елемент для абсолютного позиціонування
+        position: relative;
         max-width: 250px;
         text-align: center;
         margin-left: auto;
@@ -35,14 +35,11 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 30px; // Налаштуйте, щоб лінія була на рівні іконки
-                    right: -145px; // Позиціонування від правого краю елемента, з відступом
-                    width: 195px; // Ширина лінії
+                    top: 30px;
+                    right: -145px;
+                    width: 195px;
                     height: 2px;
                     background-color: #A9A9A9;
-                    
-                    // Додаткове центрування, якщо потрібно (може бути не потрібним)
-                    // transform: translateY(-50%);
                 }
             }
         }
@@ -53,14 +50,11 @@
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 30px; // Налаштуйте, щоб лінія була на рівні іконки
-                    right: -155px; // Позиціонування від правого краю елемента, з відступом
-                    width: 200px; // Ширина лінії
+                    top: 30px;
+                    right: -155px;
+                    width: 200px;
                     height: 2px;
                     background-color: #A9A9A9;
-                    
-                    // Додаткове центрування, якщо потрібно (може бути не потрібним)
-                    // transform: translateY(-50%);
                 }
             }
         }

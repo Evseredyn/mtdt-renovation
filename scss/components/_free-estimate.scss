@@ -52,21 +52,18 @@
 
     &__img-director {
         position: absolute;
-        // top: 20px;
         bottom: 57%;
         right: 6%;
         width: 120px;
         z-index: 1;
 
         @include mq(tablet) {
-        // top: 20px;
         bottom: 53%;
         right: 10%;
         width: 130px;
         }
 
         @include mq(desktop) {
-        // top: 50px;
         bottom: 0;
         right: 280px;
         width: 230px;
@@ -81,7 +78,6 @@
             top: 0px;
             right: 0px;
             display: block;
-            // width: 120px;
             height: 100%;
         }
     }
@@ -101,7 +97,6 @@
 
         &__field {
             width: 100%;
-            // margin-bottom: 20px;
 
             @include mq(desktop) {
                 width: 380px;
@@ -155,7 +150,6 @@
             @include mq(desktop) {
                 width: 380px;
                 margin: 0;
-                // padding-top: 5px;
             }
         }
         
@@ -169,7 +163,6 @@
             font-weight: 400;
         }
         &__checkbox {
-            /* Скрываем стандартный чекбокс */
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -185,7 +178,7 @@
             border-radius: 4px;
             position: relative;
             margin-right: 10px;
-            flex-shrink: 0; /* Чтобы не сжимался */
+            flex-shrink: 0;
         }
 
         &.hero-form__checkbox:checked + &__icon-check {
@@ -206,7 +199,7 @@
         }
 
         &__policy-link {
-            color: var(--primary-color); /* Цвет ссылки в тексте */
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }

@@ -1,9 +1,5 @@
 html {
    scroll-behavior: smooth;
-//        box-sizing: border-box;
-// }
-// *, *::before, *::after {
-//     box-sizing: inherit;
 }
 
 body {
@@ -84,13 +80,6 @@ body {
    list-style: none;
 }
 
-// .header,
-// .features,
-// .ourwork,
-// .clients {
-//    background-color: $color-white-bg;
-// }
-
 
 .visually-hidden {
    position: absolute;
@@ -106,11 +95,6 @@ body {
    overflow: hidden;
 }
 
-.active {
-//    color: $color-black;
-//    background-color: $color-white-bg;  
-}
-
 h1,
 h2,
 h3,
@@ -123,7 +107,6 @@ h6 {
 img {
    display: block;
    max-width: 100%;
-//    width: 100%;
    height: auto;
 }
 
@@ -193,9 +176,7 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative; // Для позиціонування псевдоелемента
-
-    // Анімація transform, якщо потрібна
+    position: relative;
     transition: transform $duration $timing-function;
 
     &.instagram {
@@ -303,11 +284,9 @@ p {
     }
 }
 
-/* Базові стилі контейнера */
 .policy-container {
     padding: 15px;
-    font-family: Arial, sans-serif; /* Використовуйте шрифт, зручний для читання */
-
+    font-family: Arial, sans-serif;
     @include mq(tablet) {
         max-width: 800px;
         padding: 30px;
@@ -319,7 +298,6 @@ p {
     }
 }
 
-/* Стилі для заголовків */
 .policy-container h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
@@ -329,8 +307,6 @@ p {
     @include mq(desktop) {
         font-size: 2.2em;
         max-width: 1000px;
-        // padding: 20px;
-        // text-align: center; /* Центрування головного заголовка */
     }
 }
 
@@ -338,7 +314,7 @@ p {
     font-size: 1.4em;
     margin-top: 30px;
     margin-bottom: 15px;
-    color: #555; /* Трохи темніший колір для секцій */
+    color: #555;
 
     @include mq(desktop) {
         font-size: 1.6em;
@@ -351,7 +327,6 @@ p {
     color: #666;
 }
 
-/* Стилі для абзаців та списків */
 .policy-container p, .policy-container li {
     font-size: 15px;
     line-height: 1.6;
@@ -359,7 +334,7 @@ p {
     color: #777;
 
     @include mq(desktop) {
-    font-size: 16px; /* Забезпечуємо достатній розмір шрифту */
+    font-size: 16px;
 
     }
 }
@@ -369,13 +344,12 @@ p {
     margin-bottom: 15px;
 }
 
-/* CSS/SCSS для візуальної підказки (використовуючи псевдоелемент) */
 .link-external {
     position: relative;
     padding-right: 15px; 
 
     &::after {
-        display: none; // За замовчуванням прихована (на мобільних)
+        display: none;
 
         @include mq(tablet) {
             display: inline-block;
@@ -395,80 +369,18 @@ p {
         }
     }
 }
-// a[target="_blank"] {
-//     position: relative;
-//     padding-right: 15px; /* Залишаємо місце для іконки */
-// }
-
-// a[target="_blank"]::after {
-
-//     @include mq(tablet) {
-//     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>');
-//     position: absolute;
-//     top: 50%;
-//     right: 0;
-//     transform: translateY(-50%);
-//     display: inline-block;
-//     width: 10px;
-//     height: 10px;
-//     margin-left: 5px;
-//     }
-
-//     @include mq(desktop) {
-//     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>');
-//     }
-// }
-
-// .scroll-to-top-btn {
-//     display: none; /* Спочатку прихована */
-//     position: fixed; /* Фіксована позиція */
-//     bottom: 60px;
-//     right: 20px;
-//     z-index: 100; /* Переконайтеся, що вона над іншими елементами */
-//     /* Стилізація */
-//     background-color: $color-bg-item; /* Ваш акцентний колір */
-//     color: $color-white;
-//     border: none;
-//     border-radius: 50%;
-//     width: 45px;
-//     height: 45px;
-//     font-size: 20px;
-//     line-height: 45px;
-//     text-align: center;
-//     cursor: pointer;
-//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-//     transition: opacity 0.3s, background-color 0.3s;
-
-//     @include mq(tablet) {
-//         bottom: 20px;
-//     }
-
-//     @include mq(desktop) {
-//         width: 50px;
-//         height: 50px;
-//         line-height: 45px;
-//         right: 30px;
-//     }
-
-//     @include mq(monitor) {
-//         right: 50px;
-//     }
-// }
 
 .scroll-to-top-btn {
-    display: none; /* Спочатку прихована */
-    position: fixed; /* Фіксована позиція */
+    display: none;
+    position: fixed;
     bottom: 60px;
     right: 20px;
-    z-index: 100; /* Переконайтеся, що вона над іншими елементами */
+    z-index: 100;
 
-    /* --- Зміни тут: Flexbox для ідеального центрування --- */
-    display: flex; /* Увімкнути Flexbox */
-    justify-content: center; /* Центрування по горизонталі */
-    align-items: center; /* Центрування по вертикалі */
-    /* --------------------------------------------------- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    /* Стилізація */
     background-color: $color-bg-item;
     color: $color-white;
     border: none;
@@ -476,8 +388,7 @@ p {
     width: 45px;
     height: 45px;
     font-size: 20px;
-    /* Видаліть line-height: 45px; - вона більше не потрібна! */
-    text-align: center; /* Це більше не потрібно, але можна залишити */
+    text-align: center;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s, background-color 0.3s;
@@ -491,19 +402,16 @@ p {
         bottom: 60px;
         width: 50px;
         height: 50px;
-        /* Видаліть line-height: 45px; - вона більше не потрібна! */
-        // right: 30px;
         left: calc(50% + 695px - 60px);
     }
 
     @include mq(monitor) {
-        // right: 50px;
         left: calc(50% + 960px - 300px);
     }
 }
 
 .scroll-to-top-btn:hover {
-    background-color: $color-akcent; /* Темніший колір при наведенні */
+    background-color: $color-akcent;
 }
 
 section[id], :target, h2[id], div[id] {

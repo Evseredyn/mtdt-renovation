@@ -2,7 +2,6 @@
     &-list {
         display: flex;
         flex-direction: column;
-        // align-items: center;
         margin: -12px;
         box-sizing: border-box;
 
@@ -14,18 +13,15 @@
 
     &__item {
         max-width: 100%;
-        // flex-basis: 100%;
         margin: 12px;
         box-sizing: border-box;
 
         @include mq(tablet) {
             max-width: calc(50% - 24px);
-            // flex-basis: calc(50% - 24px);
         }
 
         @include mq(desktop) {
             max-width: calc(33.333% - 24px);
-            // flex-basis: calc(50% - 24px);
         }
     }
 
@@ -50,18 +46,18 @@
 
     &__details {
         padding: 10px 15px;
-        max-height: 200px; /* Обмеження висоти блоку */
-        overflow: hidden; /* Приховуємо все, що виходить за межі */
-        transition: max-height 0.4s ease-in-out; /* Плавний перехід */
+        max-height: 200px;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
         flex-grow: 1;
     }
 
     &__details.is-expanded {
-        max-height: 1000px; /* Велика висота для повного розкриття */
+        max-height: 1000px;
     }
     
     &__details.is-expanded .related__full-text {
-        display: block; /* Показуємо повний текст, коли блок розкритий */
+        display: block;
     }
 
     &__head-link {
@@ -106,16 +102,13 @@
     }
 
     &__full-text {
-        // display: none; /* Приховуємо повний текст за замовчуванням */
         display: block;
         padding-top: 5px;
     }
 
     &__list {
-        // margin-top: 1em; 
-        // margin-bottom: 1em; // Відступи між списками та іншим текстом
-        padding-left: 20px; // Стандартний відступ для маркерів
-        list-style: disc; // Використання стандартних маркерів
+        padding-left: 20px;
+        list-style: disc;
     }
 
     &__list li {

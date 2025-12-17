@@ -1,18 +1,12 @@
 .advantages {
 
     &__list {
-        // width: 240px;
-        // height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
         margin-top: 40px;
         padding: 0;
-        // background-image: url(../images/img-advantages-bg.jpg);
-        // background-size: cover; /* Для адаптивного відображення фону */
-        // background-position: center; /* Для центрування фону */
-        // background-repeat: no-repeat; /* Щоб уникнути повторення */
 
         @include mq(desktop) {
             flex-direction: row;
@@ -86,43 +80,6 @@
             background-position: center;
         }
 
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // background-size: cover;
-        // background-color: #C4C4C4;
-        // background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/img-advantages-bg.jpg);
-        // background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_sm.webp) 1x);
-
-        // @include mq(retina) {
-        //    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/hero/bg-hero_sm@2x.jpg);
-        //    @media (min-device-pixel-ratio: 2),
-        //    (-webkit-min-device-pixel-ratio: 2),
-        //    (min-resolution: 192dpi),
-        //    (min-resolution: 2dppx) {
-        //        background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_sm@2x.webp) 2x);
-        //    }
-        // }
-
-        // @include mq(tablet) {
-        //    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/hero/bg-hero_md.jpg);
-        //    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_md.webp) 1x);
-        
-        //    @include mq(retina) {
-        //       background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/hero/bg-hero_md@2x.jpg);
-        //       background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_md@2x.webp) 2x);
-        //    }
-        // }
-    
-        // @include mq(desktop) {
-        //    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/hero/bg-hero_lg.jpg);
-        //    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_lg.webp) 1x);
-        
-        //    @include mq(retina) {
-        //       background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), url(../images/hero/bg-hero_lg@2x.jpg);
-        //       background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)), -webkit-image-set(url(../images/hero/bg-hero_lg@2x.webp) 2x);
-        //    }
-        // }
-
         @include mq(tablet) {
             padding: 30px 60px;
         }
@@ -135,13 +92,7 @@
 
     &__item {
         text-align: center;
-        // margin-left: auto;
-        // margin-right: auto;
     }
-
-    // &__item:not(:last-child) {
-    //     margin-bottom: 30px;
-    // }
 
     &__title {
         max-width: 70%;
@@ -177,7 +128,6 @@
         margin-right: auto;
 
         @include mq(tablet) {
-        // max-width: 90%;
         font-size: 16px;
         }
         

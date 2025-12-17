@@ -9,8 +9,8 @@
             @content;
         }
     }
-    @if $type == "mobile-small-only" { // <--- НОВИЙ МІКСИН ДЛЯ ЕКРАНІВ ДО 480px
-        @media screen and (max-width: #{$mobile}) { // max-width: 480px
+    @if $type == "mobile-small-only" {
+        @media screen and (max-width: #{$mobile}) {
             @content;
         }
     }

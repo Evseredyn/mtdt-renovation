@@ -5,12 +5,7 @@
     left: 0;
     width: 100%;
     z-index: 21;
-    // background-color: rgb(17, 68, 123);
     transition: background-color 0.3s ease;
-    // &.container {
-    //     padding-left: 30px;
-    //     padding-right: 30px;
-    // }
 
     &.scrolled {
             background-color: rgba(0, 24, 54, 0.95);
@@ -70,19 +65,18 @@
     }
 
     &__company {
-        // display: none;
-                        font-size: 20px;
-                                        text-transform: uppercase;
+        font-size: 20px;
+        text-transform: uppercase;
 
-            @include mq(tablet) {
-                display: inline-block;
-                color: $color-white;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 1.3;
-                letter-spacing: 0.03em;
-                text-transform: uppercase;
-            }
+        @include mq(tablet) {
+            display: inline-block;
+            color: $color-white;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -115,15 +109,14 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        position: relative; // Для позиціонування псевдоелемента
+        position: relative;
 
-        // Анімація transform, якщо потрібна
         transition: transform $duration $timing-function;
 
         &.phone-icon {
-            background-image: url('../images/icons/phone.png'); // Зображення за замовчуванням
+            background-image: url('../images/icons/phone.png');
 
-            &::after { // Використовуємо псевдоелемент для hover зображення
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -134,15 +127,14 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                opacity: 0; // За замовчуванням приховано
-                transition: opacity $duration $timing-function; // Анімуємо прозорість
-                // transition-delay: 0.1s;
+                opacity: 0;
+                transition: opacity $duration $timing-function;
             }
 
             &:hover,
             &:focus {
                 &::after {
-                    opacity: 1; // Зображення hover стає видимим
+                    opacity: 1;
                 }
             }
         }
@@ -189,35 +181,6 @@
     }
 }
 
-
-
-// .contacts__icon {
-//     display: inline-block;
-//     width: 48px;
-//     height: 48px;
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     transition: opacity $duration $timing-function;
-//     transition-delay: 0.1s;
-
-//     &.phone-icon {
-//         background-image: url('../images/phone.png');
-
-//         &:hover {
-//             background-image: url('../images/phone-hover.png');
-//         }
-//     }
-
-//     &.email-icon {
-//         background-image: url('../images/email.png');
-
-//         &:hover {
-//             background-image: url('../images/email-hover.png');
-//         }
-//     }
-// }
-
 .bottom-header-tier {
         display: none;
 
@@ -248,7 +211,6 @@
             & > .site-nav__link {
 
                 position: relative;
-                // Створюємо псевдоелемент галочки
                 &::after {
                     content: '';
                     display: inline-block;
@@ -258,39 +220,22 @@
                     vertical-align: middle;
                     border-left: 6px solid transparent;
                     border-right: 6px solid transparent;
-                    border-top: 6px solid $color-white; // Колір галочки за замовчуванням
-                    transition: border-color $duration $timing-function; // Плавний перехід кольору
+                    border-top: 6px solid $color-white;
+                    transition: border-color $duration $timing-function;
                 }
             }
 
-            // Зміна кольору галочки при наведенні на батьківський елемент
             &:hover > .site-nav__link,
             &:focus > .site-nav__link {
                 color: $color-akcent;
 
                 &::after {
-                    border-top-color: $color-akcent; // Зміна кольору галочки
+                    border-top-color: $color-akcent;
                     transform: rotate(180deg);
                 }
             }
         }
     }
-    
-    // // Новий клас для активного стану (керуємо з JS)
-    // &__link.select {
-    //     color: $color-akcent;
-        
-    //     &::after {
-    //         border-top-color: $color-akcent;
-    //     }
-    // }
-
-    // // Новий клас для відкритого підменю (керуємо з JS)
-    // &__item.is-open > .site-nav__link {
-    //     &::after {
-    //         transform: rotate(180deg);
-    //     }
-    // }
 
     &__link {
         position: relative;
@@ -354,19 +299,6 @@ nav li:hover > .site-subnav__list,
     display: block;
     max-height: 400px;
 }
-
-    // .current.site-nav__link::after {
-    //     content: "";
-    //     position: absolute;
-    //     left: 0;
-    //     bottom: 0;
-    //     display: block;
-    //     width: 100%;
-    //     height: 2px;
-    //     border-radius: 2px;
-    //     background-color: $color-white;
-    //     opacity: 1;
-    //     }
 
 
 

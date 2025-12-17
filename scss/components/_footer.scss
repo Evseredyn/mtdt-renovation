@@ -32,16 +32,6 @@
                 line-height: 1.3;
                 letter-spacing: 0.03em;
                 text-transform: uppercase;
-
-            // @include mq(tablet) {
-            //     display: inline-block;
-            //     color: $color-white;
-            //     font-size: 18px;
-            //     font-weight: 600;
-            //     line-height: 1.3;
-            //     letter-spacing: 0.03em;
-            //     text-transform: uppercase;
-            // }
         }
     }
 
@@ -76,7 +66,6 @@
         }     
 
         &__btn { 
-            // display: inline-block;
             display: none;
             width: 100%;
             padding: 15px 25px;
@@ -125,15 +114,6 @@
             margin-bottom: 5px;
         }
     }
-    // &-thumb {
-    //     display: flex;
-    //     flex-direction: column;
-
-    //     @include mq(tablet) {
-    //         flex-direction: row;
-    //         justify-content: space-between;
-    //     }
-    // }
 
     &-links {
 
@@ -201,11 +181,6 @@
             gap: 20px;
         }
 
-        // @include mq(desktop) {          
-        //     display: flex;
-        //     gap: 40px;
-        // }
-
         &__list>li:not(:last-child) {
             margin-bottom: 20px;
         }
@@ -217,15 +192,14 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            position: relative; // Для позиціонування псевдоелемента
+            position: relative;
 
-            // Анімація transform, якщо потрібна
             transition: transform $duration $timing-function;
 
             &.phone-icon {
-                background-image: url('../images/icons/phone.png'); // Зображення за замовчуванням
+                background-image: url('../images/icons/phone.png');
 
-                &::after { // Використовуємо псевдоелемент для hover зображення
+                &::after {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -236,15 +210,14 @@
                     background-size: contain;
                     background-repeat: no-repeat;
                     background-position: center;
-                    opacity: 0; // За замовчуванням приховано
-                    transition: opacity $duration $timing-function; // Анімуємо прозорість
-                    // transition-delay: 0.1s;
+                    opacity: 0;
+                    transition: opacity $duration $timing-function;
                 }
 
                 &:hover,
                 &:focus {
                     &::after {
-                        opacity: 1; // Зображення hover стає видимим
+                        opacity: 1;
                     }
                 }
             }
@@ -402,8 +375,8 @@
     @include mq(mobile-small-only) {
     position: fixed;
     bottom: 0;
-    left: 50%; /* Центруємо по горизонталі */
-    transform: translateX(-50%); /* Точне центрування */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     gap: 10px;

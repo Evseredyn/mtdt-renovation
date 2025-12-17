@@ -72,12 +72,10 @@
 .testimonials-slider__prev-button,
 .testimonials-slider__next-button {
 
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .testimonials-slider__icon img {
-  /* width: 32px;
-  height: 32px; */
-  object-fit: contain;
-  display: block;
+    object-fit: contain;
+    display: block;
 }

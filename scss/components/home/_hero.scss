@@ -104,7 +104,6 @@
            font-size: 48px;
            font-weight: 700;
            line-height: 1.36;
-        //    text-align: left;
         }
     }
 
@@ -124,7 +123,6 @@
             margin-bottom: 60px;
             font-size: 26px;
             font-weight: 700;
-            // text-align: left;
         }
     }
 
@@ -205,14 +203,12 @@
         @include mq(desktop) {
             position: absolute;
             top: 20px;
-            // right: 25px;
             left: calc(50% + 270px);
             width: 420px;
             margin: 0;
         }
 
         @include mq(monitor) {
-            // right: 225px;
             left: calc(50% + 300px);
             width: 430px;
         }
@@ -263,10 +259,6 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(185, 142, 109, 0.4);
         }
-        // &__comment {
-        //     resize: vertical;
-        //     min-height: 80px;
-        // }
 
         &__policy-option {
             display: flex;
@@ -290,7 +282,6 @@
         }
         
         &__checkbox {
-            /* Скрываем стандартный чекбокс */
             position: absolute;
             opacity: 0;
             cursor: pointer;
@@ -306,7 +297,7 @@
             border-radius: 4px;
             position: relative;
             margin-right: 10px;
-            flex-shrink: 0; /* Чтобы не сжимался */
+            flex-shrink: 0;
         }
 
         &.hero-form__checkbox:checked + &__icon-check {
@@ -327,7 +318,7 @@
         }
 
         &__policy-link {
-            color: var(--primary-color); /* Цвет ссылки в тексте */
+            color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -405,10 +396,6 @@
         text-transform: uppercase;
         cursor: pointer;
         transition: background-color $duration $timing-function;
-
-        @include mq(tablet) {
-            // width: 300px;
-        }
     }
 
     &__btn:hover,

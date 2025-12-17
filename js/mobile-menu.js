@@ -18,7 +18,6 @@
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
 
-  // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
@@ -26,44 +25,3 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
-
-// (() => {
-//   const mobileMenu = document.querySelector('.js-menu-container');
-//   const openMenuBtn = document.querySelector('.js-open-menu');
-//   const closeMenuBtn = document.querySelector('.js-close-menu');
-//   const body = document.body;
-
-//   if (!mobileMenu || !openMenuBtn || !closeMenuBtn) {
-//     console.error('Mobile menu elements not found in the DOM.');
-//     return; // Зупиняємо виконання скрипта, якщо елементи не знайдено
-//   }
-
-//   const toggleMenu = () => {
-//     const isMenuOpen = mobileMenu.classList.contains('is-open');
-
-//     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-//     mobileMenu.classList.toggle('is-open');
-
-//     // Перевіряємо, чи доступна бібліотека bodyScrollLock
-//     if (window.bodyScrollLock) {
-//         if (!isMenuOpen) {
-//             window.bodyScrollLock.disableBodyScroll(body);
-//         } else {
-//             window.bodyScrollLock.enableBodyScroll(body);
-//         }
-//     }
-//   };
-
-//   openMenuBtn.addEventListener('click', toggleMenu);
-//   closeMenuBtn.addEventListener('click', toggleMenu);
-
-//   // Close the mobile menu on wider screens if the device orientation changes
-//   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-//     if (!e.matches) return;
-//     mobileMenu.classList.remove('is-open');
-//     openMenuBtn.setAttribute('aria-expanded', false);
-//     if (window.bodyScrollLock) {
-//       window.bodyScrollLock.enableBodyScroll(body);
-//     }
-//   });
-// })();

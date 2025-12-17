@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const isActive = accordionItem.classList.contains('is-active');
 
-        // Закриваємо всі інші відкриті акордеони
         document.querySelectorAll('.accordion-more__item.is-active').forEach(item => {
             if (item !== accordionItem) {
                 const toggle = item.querySelector('.accordion-more__toggle');
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Перемикаємо поточний акордеон
         if (isActive) {
             accordionItem.classList.remove('is-active');
             clickedToggle.setAttribute('aria-expanded', 'false');
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', () => handleAccordionToggle(toggle));
     });
 
-    // Ініціалізуємо стан першого елемента акордеону
     const firstItem = document.querySelector('.accordion-more__item');
     if (firstItem) {
         firstItem.classList.add('is-active');

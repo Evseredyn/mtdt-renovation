@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const submitBtn = contactForm.querySelector('.hero-form__submit-btn');
         const originalBtnText = submitBtn.textContent;
         
-        // Змінюємо стан кнопки
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
         const formData = new FormData(contactForm);
 
         try {
-            // Відправка даних на PHP файл
             const response = await fetch('send.php', {
                 method: 'POST',
                 body: formData
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (result.status === 'success') {
                 alert('Thank you! Your message has been sent.');
-                contactForm.reset(); // Очищуємо форму
+                contactForm.reset();
             } else {
                 alert('Error: ' + result.message);
             }
