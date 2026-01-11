@@ -18,17 +18,30 @@ if (servicesItem && servicesLink && submenuList) {
     });
 }
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const yearsElement = document.getElementById('current-year');
+
+//     if (yearsElement) {
+//         const startYear = yearsElement.textContent;
+//         const currentYear = new Date().getFullYear();
+
+//         if (parseInt(startYear) < currentYear) {
+//             yearsElement.textContent = `${startYear}-${currentYear}`;
+//         } else {
+//             yearsElement.textContent = startYear;
+//         }
+//     }
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
-    const yearsElement = document.getElementById('copyright-years');
+    const yearsElement = document.getElementById('current-year');
 
     if (yearsElement) {
-        const startYear = yearsElement.textContent;
+        const startYear = yearsElement.textContent.trim();
         const currentYear = new Date().getFullYear();
 
         if (parseInt(startYear) < currentYear) {
-            yearsElement.textContent = `${startYear}-${currentYear}`;
-        } else {
-            yearsElement.textContent = startYear;
+            yearsElement.textContent = `${startYear}–${currentYear}`;
         }
     }
 });
