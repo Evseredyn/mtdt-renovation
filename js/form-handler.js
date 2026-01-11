@@ -82,59 +82,62 @@
 // });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Більш надійний вибір усіх форм на сторінці
-    const forms = document.querySelectorAll('form[class*="form"]');
+    // 1. Знаходимо абсолютно всі форми на сторінці
+    const allForms = document.querySelectorAll('form');
     
-    console.log(`Знайдено форм на сторінці: ${forms.length}`); // Перевір це в консолі!
+    console.log(`System: Found ${allForms.length} forms to initialize.`);
 
-    forms.forEach((form, index) => {
-        console.log(`Форма №${index + 1} клас:`, form.className);
-
+    allForms.forEach((form, index) => {
         form.addEventListener('submit', async (e) => {
+            // 2. Зупиняємо стандартну поведінку (перезавантаження та дані в URL)
             e.preventDefault();
 
+            // Знаходимо кнопку саме в тій формі, яку зараз відправляють
             const submitBtn = form.querySelector('button[type="submit"]');
-            if (!submitBtn) return; // Захист, якщо в формі немає кнопки
+            const originalBtnText = submitBtn ? submitBtn.textContent : 'Submit';
 
-            const originalText = submitBtn.textContent;
+            // Збираємо дані конкретної форми
             const formData = new FormData(form);
 
             try {
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
+                // Візуальна індикація завантаження
+                if (submitBtn) {
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                }
 
+                // 3. Відправляємо дані на send.php
                 const response = await fetch('send.php', {
                     method: 'POST',
                     body: formData
                 });
 
-                // 2. Перевіряємо, чи взагалі прийшла відповідь від сервера
-                if (!response.ok) {
-                    throw new Error(`Server error: ${response.status}`);
-                }
-
-                // 3. Читаємо відповідь як текст, щоб уникнути помилки JSON
+                // Отримуємо відповідь як текст (для безпеки, якщо там не JSON)
                 const responseText = await response.text();
                 
                 try {
                     const result = JSON.parse(responseText);
+                    
                     if (result.status === 'success') {
                         alert('Success! Your message has been sent.');
-                        form.reset();
+                        form.reset(); // Очищуємо лише ту форму, яку відправили
                     } else {
-                        alert('PHP Error: ' + result.message);
+                        alert('Server error: ' + result.message);
                     }
-                } catch (jsonError) {
-                    console.error('Server returned non-JSON:', responseText);
-                    alert('Server returned an invalid response. Check console.');
+                } catch (jsonErr) {
+                    console.error('Invalid JSON from server:', responseText);
+                    alert('Server error. Please check the logs.');
                 }
 
             } catch (error) {
-                console.error('Fetch error:', error);
-                alert('Connection error: ' + error.message);
+                console.error('Submission error:', error);
+                alert('Connection error. Make sure you are testing on a real hosting/server.');
             } finally {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+                // Повертаємо кнопку в робочий стан
+                if (submitBtn) {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
             }
         });
     });
